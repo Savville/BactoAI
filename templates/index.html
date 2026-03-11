@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BactoAI - Genomic Resistance Predictor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo">Bacto<span class="gradient-text">AI</span></h1>
+            <p class="subtitle">AI-powered antibiotic resistance prediction from whole genome sequences.</p>
+        </header>
+
+        <div class="card upload-card" id="upload-card">
+            <div class="drop-zone" id="drop-zone">
+                <input type="file" id="file-input" accept=".fna,.fasta,.gz" hidden>
+                <div class="icon-container">
+                    <i class="ph ph-dna"></i>
+                </div>
+                <h3>Upload Genome</h3>
+                <p>Drag & drop your <span>.fna</span> or <span>.fasta</span> file here, or click to browse.</p>
+            </div>
+            
+            <div class="upload-progress hidden" id="loading-state">
+                <div class="spinner"></div>
+                <p>Analyzing DNA sequence...</p>
+                <span class="subtext">Extracting k-mers and projecting into model space...</span>
+            </div>
+        </div>
+
+        <div class="card results-card hidden" id="results-card">
+            <div class="results-header">
+                <h2>Prediction Results</h2>
+                <p id="filename-display" class="filename"></p>
+            </div>
+
+            <div class="results-grid" id="results-container">
+                <!-- Results injected here by JS -->
+            </div>
+
+            <button class="btn-primary mt-4" onclick="resetApp()">
+                <i class="ph ph-arrow-counter-clockwise"></i> Analyze Another Genome
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const uploadCard = document.getElementById('upload-card');
+        const loadingState = document.getElementById('loading-state');
+        const resultsCard = document.getElementById('results-card');
+        const resultsContainer = document.getElementById('results-container');
+        const filenameDisplay = document.getElementById('filename-display');
+
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        // Highlight drop zone
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.add('highlight'), false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.remove('highlight'), false);
+        });
+
+        // Handle drop & click
+        dropZone.addEventListener('drop', handleDrop, false);
+        dropZone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            if (files.length === 0) return;
+            const file = files[0];
+            
+            // UI Transition
+            dropZone.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+
+            // Build payload
+            const formData = new FormData();
+            formData.append('file', file);
+
+            // Fetch
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) throw new Error("Network response error");
+                return response.json();
+            })
+            .then(data => {
+                displayResults(data);
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Error predicting resistance. Make sure the file is a valid genome.");
+                resetApp();
+            });
+        }
+
+        function displayResults(data) {
+            uploadCard.classList.add('hidden');
+            loadingState.classList.add('hidden');
+            resultsCard.classList.remove('hidden');
+            
+            filenameDisplay.innerHTML = `<i class="ph-fill ph-file-code"></i> ${data.filename}`;
+            resultsContainer.innerHTML = '';
+
+            data.results.forEach(res => {
+                const isResistant = res.probability >= 0.5;
+                const statusClass = isResistant ? 'status-resistant' : 'status-susceptible';
+                const statusIcon = isResistant ? 'ph-warning-circle' : 'ph-check-circle';
+                const percent = (res.probability * 100).toFixed(1);
+                
+                const html = `
+                    <div class="result-row ${statusClass}">
+                        <div class="result-info">
+                            <span class="drug-name">${res.antibiotic}</span>
+                            <div class="status-badge">
+                                <i class="ph-fill ${statusIcon}"></i>
+                                ${res.label}
+                            </div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: ${percent}%;"></div>
+                        </div>
+                        <div class="percent">${percent}% <span class="subtext">Probability</span></div>
+                    </div>
+                `;
+                resultsContainer.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        function resetApp() {
+            resultsCard.classList.add('hidden');
+            uploadCard.classList.remove('hidden');
+            loadingState.classList.add('hidden');
+            dropZone.classList.remove('hidden');
+            fileInput.value = "";
+        }
+    </script>
+</body>
+</html>
