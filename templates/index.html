@@ -19,8 +19,18 @@
 
     <main class="container">
         <header class="header">
-            <h1 class="logo">Bacto<span class="gradient-text">AI</span></h1>
-            <p class="subtitle">AI-powered antibiotic resistance prediction from whole genome sequences.</p>
+            <div class="header-left">
+                <h1 class="logo">Bacto<span class="gradient-text">AI</span></h1>
+                <p class="subtitle">AI-powered antibiotic resistance prediction from whole genome sequences.</p>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="{{ url_for('index') }}" class="nav-link active">Predict</a>
+                    <a href="{{ url_for('history') }}" class="nav-link">History</a>
+                </nav>
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
         </header>
 
         <div class="card upload-card" id="upload-card">
@@ -32,7 +42,18 @@
                 <h3>Upload Genome</h3>
                 <p>Drag & drop your <span>.fna</span> or <span>.fasta</span> file here, or click to browse.</p>
             </div>
-            
+
+            <div class="upload-form-fields" id="upload-fields">
+                <div class="form-group">
+                    <label for="sample_id">Sample ID</label>
+                    <input type="text" id="sample_id" name="sample_id" placeholder="e.g., PAT-001, KEN-2024-001">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes (optional)</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Patient info, source, etc."></textarea>
+                </div>
+            </div>
+
             <div class="upload-progress hidden" id="loading-state">
                 <div class="spinner"></div>
                 <p>Analyzing DNA sequence...</p>
@@ -118,11 +139,14 @@
             
             // UI Transition
             dropZone.classList.add('hidden');
+            document.getElementById('upload-fields').classList.add('hidden');
             loadingState.classList.remove('hidden');
 
             // Build payload
             const formData = new FormData();
             formData.append('file', file);
+            formData.append('sample_id', document.getElementById('sample_id').value);
+            formData.append('notes', document.getElementById('notes').value);
 
             // Fetch
             fetch('/predict', {
@@ -203,7 +227,10 @@
             uploadCard.classList.remove('hidden');
             loadingState.classList.add('hidden');
             dropZone.classList.remove('hidden');
+            document.getElementById('upload-fields').classList.remove('hidden');
             fileInput.value = "";
+            document.getElementById('sample_id').value = "";
+            document.getElementById('notes').value = "";
         }
 
         function runValidation() {
