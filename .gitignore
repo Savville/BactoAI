@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment / Secrets
+.env
+secret.json
+credentials.json
+*.pem
+*.key
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Kilo AI Assistant
+.kilo/
+.kilocode/
+.opencode/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Internal / Not for GitHub
+DOCS/
+deliverables/
+test.zip
+test_dataset/
+test_genomes/
+E.coli isolates.csv
+Bacto AI logo.png
+Bacto AI slide.png
+
+# Raw data and genomes (too large for GitHub)
+data/genomes/
+data/train_genomes/
+data/test_genomes/
+data/*.csv
+data/*.zip
+
+# DO NOT ignore the models and transformers - we need these in production!
+!data/models/
+!data/transformers/
+!data/models_v4/
+!data/transformers_v4/
+!data/bigquery_output/
+
+# Old pipeline versions (kept for reference but not tracked)
+bactoai_pipeline_v2.py
+bactoai_pipeline_v3.py
+
+# Helper/Debug scripts (not part of the product)
+check_schema.py
+check_ast_schema.py
+debug_sql.py
+test_bq.py
+calibration_fast.py
+calibration_validation.py
+calibration_validation_fast.py
+analyze_model_trustworthiness.py
+quick_bayesian_analysis.py
