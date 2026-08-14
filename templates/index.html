@@ -40,6 +40,20 @@
             </div>
         </div>
 
+        <div class="card validation-card" id="validation-card">
+            <div class="results-header">
+                <h2>Validation</h2>
+                <p>Use genomes in <strong>data/test_genomes</strong> for validation and <strong>data/train_genomes</strong> for training.</p>
+            </div>
+
+            <button class="btn-primary" type="button" onclick="runValidation()">
+                <i class="ph ph-chart-line-up"></i> Run Validation
+            </button>
+
+            <div class="validation-summary hidden" id="validation-summary"></div>
+            <div class="results-grid validation-results hidden" id="validation-results"></div>
+        </div>
+
         <div class="card results-card hidden" id="results-card">
             <div class="results-header">
                 <h2>Prediction Results</h2>
@@ -64,6 +78,8 @@
         const resultsCard = document.getElementById('results-card');
         const resultsContainer = document.getElementById('results-container');
         const filenameDisplay = document.getElementById('filename-display');
+        const validationSummary = document.getElementById('validation-summary');
+        const validationResults = document.getElementById('validation-results');
 
         // Prevent default drag behaviors
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -137,9 +153,20 @@
 
             data.results.forEach(res => {
                 const isResistant = res.probability >= 0.5;
-                const statusClass = isResistant ? 'status-resistant' : 'status-susceptible';
-                const statusIcon = isResistant ? 'ph-warning-circle' : 'ph-check-circle';
+                let statusClass = 'status-susceptible';
+                let statusIcon = 'ph-check-circle';
+                
+                if (res.status === 'uncertain') {
+                    statusClass = 'status-uncertain';
+                    statusIcon = 'ph-question';
+                } else if (res.status === 'resistant') {
+                    statusClass = 'status-resistant';
+                    statusIcon = 'ph-warning-circle';
+                }
+
                 const percent = (res.probability * 100).toFixed(1);
+                const lower = (res.lower_bound * 100).toFixed(1);
+                const upper = (res.upper_bound * 100).toFixed(1);
                 
                 const html = `
                     <div class="result-row ${statusClass}">
@@ -153,7 +180,18 @@
                         <div class="bar-container">
                             <div class="bar-fill" style="width: ${percent}%;"></div>
                         </div>
-                        <div class="percent">${percent}% <span class="subtext">Probability</span></div>
+                        <div class="percent-section">
+                            <div class="percent">${percent}% <span class="subtext">Bayesian Mean Prob</span></div>
+                        </div>
+                        <div class="bayesian-metrics">
+                            <div class="credible-interval">
+                                <i class="ph ph-chart-bell"></i> 95% Credible Interval: 
+                                <strong>[${lower}% &ndash; ${upper}%]</strong>
+                            </div>
+                            <div class="recommendation-alert alert-${res.status}">
+                                <i class="ph ph-info"></i> ${res.recommendation}
+                            </div>
+                        </div>
                     </div>
                 `;
                 resultsContainer.insertAdjacentHTML('beforeend', html);
@@ -166,6 +204,56 @@
             loadingState.classList.add('hidden');
             dropZone.classList.remove('hidden');
             fileInput.value = "";
+        }
+
+        function runValidation() {
+            validationSummary.classList.add('hidden');
+            validationResults.classList.add('hidden');
+            validationSummary.innerHTML = '<p>Running validation...</p>';
+
+            fetch('/validate')
+                .then(response => {
+                    if (!response.ok) throw new Error('Validation request failed');
+                    return response.json();
+                })
+                .then(data => {
+                    validationSummary.classList.remove('hidden');
+                    validationResults.classList.remove('hidden');
+                    validationResults.innerHTML = '';
+
+                    const antibioticCards = data.antibiotics.map(item => {
+                        const accuracy = item.accuracy === null ? 'n/a' : `${(item.accuracy * 100).toFixed(1)}%`;
+                        const rocAuc = item.roc_auc === null ? 'n/a' : item.roc_auc.toFixed(3);
+                        return `
+                            <div class="result-row">
+                                <div class="result-info">
+                                    <span class="drug-name">${item.antibiotic}</span>
+                                    <div class="status-badge status-uncertain">Validation</div>
+                                </div>
+                                <div class="bayesian-metrics">
+                                    <div><strong>Accuracy:</strong> ${accuracy}</div>
+                                    <div><strong>ROC-AUC:</strong> ${rocAuc}</div>
+                                    <div><strong>Test samples:</strong> ${item.test_samples}</div>
+                                    <div><strong>Missing genomes:</strong> ${item.missing_genomes}</div>
+                                    ${item.message ? `<div class="recommendation-alert alert-uncertain">${item.message}</div>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    validationSummary.innerHTML = `
+                        <p><strong>Validation split:</strong> ${(data.test_size * 100).toFixed(0)}% held out</p>
+                        <p><strong>Random state:</strong> ${data.random_state}</p>
+                        <p><strong>Training folder:</strong> ${data.train_genomes_dir}</p>
+                        <p><strong>Test folder:</strong> ${data.test_genomes_dir}</p>
+                    `;
+
+                    validationResults.innerHTML = antibioticCards;
+                })
+                .catch(error => {
+                    validationSummary.classList.remove('hidden');
+                    validationSummary.innerHTML = `<p>Validation failed: ${error.message}</p>`;
+                });
         }
     </script>
 </body>
