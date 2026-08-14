@@ -1,0 +1,5 @@
+country,antibiotic,total_tests,resistant_count,susceptible_count,resistance_rate,resistance_rate_ci_lower,resistance_rate_ci_upper
+Kenya: Nairobi,cefoxitin,12,4,8,0.3571,0.086,0.6283
+Kenya: Nairobi,ceftriaxone,12,6,6,0.5,0.2171,0.7829
+Kenya: Nairobi,ciprofloxacin,11,6,5,0.5385,0.2439,0.8331
+Kenya: Nairobi,gentamicin,11,4,7,0.3846,0.0971,0.6721

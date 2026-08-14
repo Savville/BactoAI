@@ -1,0 +1,567 @@
+{
+  "USA: District of Columbia": {
+    "meropenem_rate": 0.0014,
+    "ciprofloxacin_rate": 0.1694,
+    "cefotaxime_rate": 0.32
+  },
+  "USA": {
+    "meropenem_rate": 0.5409,
+    "ciprofloxacin_rate": 0.2083,
+    "cefotaxime_rate": 0.9403
+  },
+  "USA:Boston": {
+    "meropenem_rate": 0.1076,
+    "ciprofloxacin_rate": 0.5397,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:GA": {
+    "meropenem_rate": 0.0019,
+    "ciprofloxacin_rate": 0.0847,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:CA": {
+    "meropenem_rate": 0.0018,
+    "ciprofloxacin_rate": 0.1127,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:TN": {
+    "meropenem_rate": 0.0019,
+    "ciprofloxacin_rate": 0.0953,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:Washington, DC": {
+    "meropenem_rate": 0.317,
+    "ciprofloxacin_rate": 0.8814,
+    "cefotaxime_rate": 0.9631
+  },
+  "USA:CO": {
+    "meropenem_rate": 0.002,
+    "ciprofloxacin_rate": 0.096,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:TX": {
+    "meropenem_rate": 0.0018,
+    "ciprofloxacin_rate": 0.1145,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:PA": {
+    "meropenem_rate": 0.0022,
+    "ciprofloxacin_rate": 0.0906,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:MD": {
+    "meropenem_rate": 0.0023,
+    "ciprofloxacin_rate": 0.0799,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:IA": {
+    "meropenem_rate": 0.0019,
+    "ciprofloxacin_rate": 0.0946,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:NM": {
+    "meropenem_rate": 0.0034,
+    "ciprofloxacin_rate": 0.0838,
+    "cefotaxime_rate": 0.5
+  },
+  "Netherlands": {
+    "meropenem_rate": 0.003,
+    "ciprofloxacin_rate": 0.4837,
+    "cefotaxime_rate": 0.9
+  },
+  "USA:NY": {
+    "meropenem_rate": 0.0025,
+    "ciprofloxacin_rate": 0.0971,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:SC": {
+    "meropenem_rate": 0.0023,
+    "ciprofloxacin_rate": 0.1421,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:MN": {
+    "meropenem_rate": 0.0039,
+    "ciprofloxacin_rate": 0.0876,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:OR": {
+    "meropenem_rate": 0.0028,
+    "ciprofloxacin_rate": 0.0429,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: California": {
+    "meropenem_rate": 0.068,
+    "ciprofloxacin_rate": 0.3368,
+    "cefotaxime_rate": 0.625
+  },
+  "USA:KS": {
+    "meropenem_rate": 0.0028,
+    "ciprofloxacin_rate": 0.1239,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:NC": {
+    "meropenem_rate": 0.003,
+    "ciprofloxacin_rate": 0.1194,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:MO": {
+    "meropenem_rate": 0.0034,
+    "ciprofloxacin_rate": 0.1548,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:SD": {
+    "meropenem_rate": 0.003,
+    "ciprofloxacin_rate": 0.1273,
+    "cefotaxime_rate": 0.5
+  },
+  "Mexico": {
+    "meropenem_rate": 0.0188,
+    "ciprofloxacin_rate": 0.822,
+    "cefotaxime_rate": 0.1282
+  },
+  "USA:WA": {
+    "meropenem_rate": 0.0048,
+    "ciprofloxacin_rate": 0.118,
+    "cefotaxime_rate": 0.5
+  },
+  "Canada: Quebec": {
+    "meropenem_rate": 0.0056,
+    "ciprofloxacin_rate": 0.0278,
+    "cefotaxime_rate": 0.6441
+  },
+  "USA:CT": {
+    "meropenem_rate": 0.0088,
+    "ciprofloxacin_rate": 0.0714,
+    "cefotaxime_rate": 0.3333
+  },
+  "USA:LA": {
+    "meropenem_rate": 0.0097,
+    "ciprofloxacin_rate": 0.1146,
+    "cefotaxime_rate": 0.5
+  },
+  "Canada:Ontario": {
+    "meropenem_rate": 0.0164,
+    "ciprofloxacin_rate": 0.0181,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Texas": {
+    "meropenem_rate": 0.7931,
+    "ciprofloxacin_rate": 0.9643,
+    "cefotaxime_rate": 0.7857
+  },
+  "Canada:Quebec": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0031,
+    "cefotaxime_rate": 0.5
+  },
+  "Tunisia: Sfax": {
+    "meropenem_rate": 0.7097,
+    "ciprofloxacin_rate": 0.94,
+    "cefotaxime_rate": 0.951
+  },
+  "Israel": {
+    "meropenem_rate": 0.0526,
+    "ciprofloxacin_rate": 0.4599,
+    "cefotaxime_rate": 0.5
+  },
+  "Pakistan": {
+    "meropenem_rate": 0.7328,
+    "ciprofloxacin_rate": 0.3905,
+    "cefotaxime_rate": 0.7705
+  },
+  "Australia: Queensland": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.037,
+    "cefotaxime_rate": 0.5
+  },
+  "Norway": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.5,
+    "cefotaxime_rate": 0.0037
+  },
+  "Brazil": {
+    "meropenem_rate": 0.1705,
+    "ciprofloxacin_rate": 0.1374,
+    "cefotaxime_rate": 0.5
+  },
+  "Viet Nam": {
+    "meropenem_rate": 0.0597,
+    "ciprofloxacin_rate": 0.623,
+    "cefotaxime_rate": 0.5
+  },
+  "Canada": {
+    "meropenem_rate": 0.3333,
+    "ciprofloxacin_rate": 0.0612,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Rochester, NY": {
+    "meropenem_rate": 0.1597,
+    "ciprofloxacin_rate": 0.6947,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:OH": {
+    "meropenem_rate": 0.0111,
+    "ciprofloxacin_rate": 0.113,
+    "cefotaxime_rate": 0.2
+  },
+  "Thailand": {
+    "meropenem_rate": 0.449,
+    "ciprofloxacin_rate": 0.1856,
+    "cefotaxime_rate": 0.8571
+  },
+  "Hong Kong": {
+    "meropenem_rate": 0.6667,
+    "ciprofloxacin_rate": 0.7704,
+    "cefotaxime_rate": 0.6667
+  },
+  "Canada:British Columbia": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0051,
+    "cefotaxime_rate": 0.5
+  },
+  "Nigeria": {
+    "meropenem_rate": 0.2273,
+    "ciprofloxacin_rate": 0.3043,
+    "cefotaxime_rate": 0.5
+  },
+  "Brazil: Curitiba": {
+    "meropenem_rate": 0.7558,
+    "ciprofloxacin_rate": 0.5208,
+    "cefotaxime_rate": 0.9556
+  },
+  "USA: Nashville, TN": {
+    "meropenem_rate": 0.0444,
+    "ciprofloxacin_rate": 0.2033,
+    "cefotaxime_rate": 0.5
+  },
+  "Zambia": {
+    "meropenem_rate": 0.8659,
+    "ciprofloxacin_rate": 0.061,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:ND": {
+    "meropenem_rate": 0.0152,
+    "ciprofloxacin_rate": 0.2174,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Minnesota": {
+    "meropenem_rate": 0.0308,
+    "ciprofloxacin_rate": 0.4462,
+    "cefotaxime_rate": 0.75
+  },
+  "Portugal": {
+    "meropenem_rate": 0.0732,
+    "ciprofloxacin_rate": 0.878,
+    "cefotaxime_rate": 0.3415
+  },
+  "Canada:Alberta": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0175,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:NE": {
+    "meropenem_rate": 0.0833,
+    "ciprofloxacin_rate": 0.2421,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Irvine, CA": {
+    "meropenem_rate": 0.3143,
+    "ciprofloxacin_rate": 0.4286,
+    "cefotaxime_rate": 0.5946
+  },
+  "USA:WI": {
+    "meropenem_rate": 0.0417,
+    "ciprofloxacin_rate": 0.175,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:RI": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.5,
+    "cefotaxime_rate": 0.037
+  },
+  "USA:IL": {
+    "meropenem_rate": 0.0303,
+    "ciprofloxacin_rate": 0.087,
+    "cefotaxime_rate": 0.5
+  },
+  "Germany: Dresden-Kaditz": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.1398,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: NM": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.012,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Rochester, MN": {
+    "meropenem_rate": 0.825,
+    "ciprofloxacin_rate": 0.825,
+    "cefotaxime_rate": 0.5
+  },
+  "Germany": {
+    "meropenem_rate": 0.2051,
+    "ciprofloxacin_rate": 0.3077,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:HI": {
+    "meropenem_rate": 0.0263,
+    "ciprofloxacin_rate": 0.0789,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: MD": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0137,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:MI": {
+    "meropenem_rate": 0.05,
+    "ciprofloxacin_rate": 0.1698,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:FL": {
+    "meropenem_rate": 0.0357,
+    "ciprofloxacin_rate": 0.0682,
+    "cefotaxime_rate": 0.5
+  },
+  "Egypt": {
+    "meropenem_rate": 0.2,
+    "ciprofloxacin_rate": 0.0278,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:VA": {
+    "meropenem_rate": 0.0526,
+    "ciprofloxacin_rate": 0.0227,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: GA": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0172,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: NY": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0175,
+    "cefotaxime_rate": 0.5
+  },
+  "Guadeloupe": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.5172,
+    "cefotaxime_rate": 0.9655
+  },
+  "Ireland": {
+    "meropenem_rate": 0.8868,
+    "ciprofloxacin_rate": 0.5,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:NJ": {
+    "meropenem_rate": 0.0556,
+    "ciprofloxacin_rate": 0.1351,
+    "cefotaxime_rate": 0.5
+  },
+  "South Africa": {
+    "meropenem_rate": 0.4,
+    "ciprofloxacin_rate": 0.3556,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: PA": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0213,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:ME": {
+    "meropenem_rate": 0.04,
+    "ciprofloxacin_rate": 0.0455,
+    "cefotaxime_rate": 0.5
+  },
+  "Algeria: Batna": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.7727,
+    "cefotaxime_rate": 0.96
+  },
+  "not collected": {
+    "meropenem_rate": 0.0435,
+    "ciprofloxacin_rate": 0.7826,
+    "cefotaxime_rate": 0.6667
+  },
+  "USA:UT": {
+    "meropenem_rate": 0.0769,
+    "ciprofloxacin_rate": 0.1515,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:KY": {
+    "meropenem_rate": 0.0588,
+    "ciprofloxacin_rate": 0.069,
+    "cefotaxime_rate": 0.5
+  },
+  "Taiwan": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.3571,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: CA": {
+    "meropenem_rate": 0.2,
+    "ciprofloxacin_rate": 0.027,
+    "cefotaxime_rate": 0.5
+  },
+  "Mexico: Mexico City": {
+    "meropenem_rate": 0.9524,
+    "ciprofloxacin_rate": 0.9048,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:OK": {
+    "meropenem_rate": 0.0526,
+    "ciprofloxacin_rate": 0.1739,
+    "cefotaxime_rate": 0.5
+  },
+  "Australia: WA": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.3333,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: CT": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0263,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:AL": {
+    "meropenem_rate": 0.0667,
+    "ciprofloxacin_rate": 0.04,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: MN": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0278,
+    "cefotaxime_rate": 0.6667
+  },
+  "Greece": {
+    "meropenem_rate": 0.8421,
+    "ciprofloxacin_rate": 0.8421,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:ID": {
+    "meropenem_rate": 0.1,
+    "ciprofloxacin_rate": 0.1111,
+    "cefotaxime_rate": 0.5
+  },
+  "South Africa: Pretoria": {
+    "meropenem_rate": 0.625,
+    "ciprofloxacin_rate": 0.8182,
+    "cefotaxime_rate": 0.8182
+  },
+  "USA: CO": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0303,
+    "cefotaxime_rate": 0.5
+  },
+  "Nepal": {
+    "meropenem_rate": 0.7778,
+    "ciprofloxacin_rate": 0.2941,
+    "cefotaxime_rate": 0.5
+  },
+  "Dominican Republic": {
+    "meropenem_rate": 0.75,
+    "ciprofloxacin_rate": 0.9032,
+    "cefotaxime_rate": 0.5
+  },
+  "USA:Cincinnati": {
+    "meropenem_rate": 0.0588,
+    "ciprofloxacin_rate": 0.2353,
+    "cefotaxime_rate": 0.5
+  },
+  "Nigeria: Jos": {
+    "meropenem_rate": 0.0833,
+    "ciprofloxacin_rate": 0.0833,
+    "cefotaxime_rate": 0.0833
+  },
+  "South Korea": {
+    "meropenem_rate": 0.25,
+    "ciprofloxacin_rate": 0.3214,
+    "cefotaxime_rate": 0.5
+  },
+  "Kazakhstan: Almaty": {
+    "meropenem_rate": 0.0769,
+    "ciprofloxacin_rate": 0.1667,
+    "cefotaxime_rate": 0.5
+  },
+  "Jordan": {
+    "meropenem_rate": 0.4167,
+    "ciprofloxacin_rate": 0.4545,
+    "cefotaxime_rate": 0.7778
+  },
+  "Kenya: Nairobi": {
+    "meropenem_rate": 0.5556,
+    "ciprofloxacin_rate": 0.5385,
+    "cefotaxime_rate": 0.7778
+  },
+  "Germany: Cologne": {
+    "meropenem_rate": 0.1429,
+    "ciprofloxacin_rate": 0.0714,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: LA": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.04,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: TN": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0417,
+    "cefotaxime_rate": 0.5
+  },
+  "Afghanistan": {
+    "meropenem_rate": 0.5833,
+    "ciprofloxacin_rate": 0.8333,
+    "cefotaxime_rate": 0.75
+  },
+  "USA:IN": {
+    "meropenem_rate": 0.1111,
+    "ciprofloxacin_rate": 0.0588,
+    "cefotaxime_rate": 0.5
+  },
+  "India": {
+    "meropenem_rate": 0.8333,
+    "ciprofloxacin_rate": 0.5,
+    "cefotaxime_rate": 0.9091
+  },
+  "USA:AR": {
+    "meropenem_rate": 0.1111,
+    "ciprofloxacin_rate": 0.125,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: OR": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.0435,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Virginia": {
+    "meropenem_rate": 0.3333,
+    "ciprofloxacin_rate": 0.3333,
+    "cefotaxime_rate": 0.3333
+  },
+  "Australia: ACT": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.2273,
+    "cefotaxime_rate": 0.5
+  },
+  "Australia: SA": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.1364,
+    "cefotaxime_rate": 0.5
+  },
+  "USA: Alaska": {
+    "meropenem_rate": 0.3,
+    "ciprofloxacin_rate": 0.9,
+    "cefotaxime_rate": 0.1667
+  },
+  "Australia: VIC": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.2273,
+    "cefotaxime_rate": 0.5
+  },
+  "Australia: NSW": {
+    "meropenem_rate": 0.5,
+    "ciprofloxacin_rate": 0.1818,
+    "cefotaxime_rate": 0.5
+  }
+}

@@ -1,0 +1,8 @@
+target_acc,taxgroup_name,antibiotic,phenotype,asm_acc,resistant,collection_date,geo_loc_name,isolation_source
+PDT001128397.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019927405.1,0,2019-03-26,Kenya: Nairobi,wound
+PDT001128398.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019927425.1,0,2019-02-12,Kenya: Nairobi,wound
+PDT001128409.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019927655.1,0,2018-09-26,Kenya: Nairobi,Enviromental
+PDT001128408.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019927625.1,1,2018-04-12,Kenya: Nairobi,Enviromental
+PDT001149149.1,Klebsiella pneumoniae,meropenem,resistant,GCA_020407015.1,1,2015-11-16,Kenya: Nairobi,not collected
+PDT001128445.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019928365.1,1,2015-09-29,Kenya: Nairobi,blood
+PDT001128447.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019928405.1,1,2015-07-12,Kenya: Nairobi,urine
