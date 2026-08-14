@@ -1,0 +1,24 @@
+{
+  "antibiotic": "ciprofloxacin",
+  "num_models": 5,
+  "accuracy": 0.8181818181818182,
+  "roc_auc": 0.8772994129158512,
+  "n_test_resistant": 70,
+  "n_test_susceptible": 73,
+  "use_smote": false,
+  "seeds_used": [
+    42,
+    123,
+    456,
+    789,
+    1024
+  ],
+  "per_model_aucs": [
+    0.8786692759295499,
+    0.8780821917808218,
+    0.8769080234833659,
+    0.8767123287671232,
+    0.8769080234833659
+  ],
+  "trained_at": "2026-07-23T06:57:38.466740"
+}
