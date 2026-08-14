@@ -27,7 +27,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Background Animated Blobs */
@@ -325,4 +326,75 @@ body {
 
 .mt-4 {
     margin-top: 2rem;
+}
+
+/* Bayesian Metrics */
+.percent-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bayesian-metrics {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.credible-interval {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.credible-interval strong {
+    color: var(--text-primary);
+}
+
+.recommendation-alert {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 0.25rem;
+}
+
+.alert-uncertain {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.alert-resistant {
+    background: var(--resistant-bg);
+    color: var(--resistant);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.alert-susceptible {
+    background: var(--susceptible-bg);
+    color: var(--susceptible);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-uncertain {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.status-uncertain .status-badge {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.status-uncertain .bar-fill {
+    background: #f59e0b;
+    box-shadow: 0 0 10px #f59e0b;
 }
