@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission History - BactoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo"><a href="{{ url_for('index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <p class="subtitle">Submission History</p>
+            </div>
+            <div class="header-right">
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
+        </header>
+
+        <div class="card">
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Sample ID</th>
+                            <th>Meropenem</th>
+                            <th>Ciprofloxacin</th>
+                            <th>Cefotaxime</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sub in submissions %}
+                        <tr>
+                            <td class="text-muted">{{ sub.submitted_at }}</td>
+                            <td><strong>{{ sub.sample_id }}</strong></td>
+                            <td>
+                                {% if sub.meropenem_label %}
+                                    <span class="badge badge-{{ sub.meropenem_label|lower }}">{{ sub.meropenem_label }}</span>
+                                    <small class="text-muted">({{ "%.1f"|format(sub.meropenem_prob * 100) }}%)</small>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if sub.ciprofloxacin_label %}
+                                    <span class="badge badge-{{ sub.ciprofloxacin_label|lower }}">{{ sub.ciprofloxacin_label }}</span>
+                                    <small class="text-muted">({{ "%.1f"|format(sub.ciprofloxacin_prob * 100) }}%)</small>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if sub.cefotaxime_label %}
+                                    <span class="badge badge-{{ sub.cefotaxime_label|lower }}">{{ sub.cefotaxime_label }}</span>
+                                    <small class="text-muted">({{ "%.1f"|format(sub.cefotaxime_prob * 100) }}%)</small>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                            <td class="text-muted notes-cell">{{ sub.notes or '—' }}</td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="6" class="empty-row">
+                                <i class="ph ph-clipboard-text"></i>
+                                <p>No submissions yet. <a href="{{ url_for('index') }}">Analyze your first genome</a>.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
