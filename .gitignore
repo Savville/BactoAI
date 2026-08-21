@@ -69,3 +69,14 @@ calibration_validation.py
 calibration_validation_fast.py
 analyze_model_trustworthiness.py
 quick_bayesian_analysis.py
+
+# Testing
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# New package structure
+bactoai/__pycache__/
+bactoai/**/__pycache__/
+tests/__pycache__/

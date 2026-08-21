@@ -720,3 +720,162 @@ body {
     color: var(--text-primary);
     background: rgba(255, 255, 255, 0.05);
 }
+
+/* ===== Stats Grid ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* ===== Card Title ===== */
+.card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header-flex .card-title {
+    margin-bottom: 0;
+}
+
+/* ===== Feedback Form ===== */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feedback-form select {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+/* ===== Feedback Stats ===== */
+.feedback-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feedback-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.feedback-antibiotic {
+    font-weight: 600;
+}
+
+.feedback-accuracy {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ===== Bulk Results ===== */
+.bulk-result-item {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bulk-result-item h4 {
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 1rem;
+    color: var(--accent-1);
+}
+
+/* ===== Inline Form ===== */
+.inline-form {
+    display: inline;
+}
+
+.role-select {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+/* ===== API Docs ===== */
+.api-docs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.api-docs h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.api-docs p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.api-docs pre {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.api-docs code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-1);
+}
+
+/* ===== Utility ===== */
+.mt-4 {
+    margin-top: 2rem;
+}
