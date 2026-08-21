@@ -14,26 +14,18 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from bactoai.app import create_app
 from bactoai.config import TestingConfig
-from bactoai.database import get_db, close_db, init_db
+from bactoai.database import get_db, init_db
 
 
 @pytest.fixture
 def app():
     """Create a test application instance."""
-    # Create a temp directory for test data
     with tempfile.TemporaryDirectory() as tmpdir:
-        # Override config to use temp directory
+        # Create a test-specific config
         class TestConfig(TestingConfig):
-            def __init__(self):
-                pass
+            DB_PATH = os.path.join(tmpdir, "test.db")
 
-        test_config = TestingConfig()
-        test_config.DB_PATH = os.path.join(tmpdir, "test.db")
-
-        app = create_app(config_class=TestingConfig)
-
-        # Override the DB_PATH after creation
-        app.config["DB_PATH"] = os.path.join(tmpdir, "test.db")
+        app = create_app(config_class=TestConfig)
 
         with app.app_context():
             init_db()
@@ -78,13 +70,8 @@ def admin_client(client):
         "password": "adminpass123",
         "clinic_name": "Admin Hospital",
     })
-    # Set as admin directly in DB
-    from bactoai.database import get_db
-    with client.session_transaction() as sess:
-        pass  # Force session creation
 
-    # We need to modify the user role after creation
-    # First get the app context
+    # Set as admin directly in DB
     from flask import current_app
     with current_app.app_context():
         db = get_db()

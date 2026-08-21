@@ -67,6 +67,7 @@ class TestingConfig(Config):
     DB_PATH = ":memory:"
     WTF_CSRF_ENABLED = False
     SESSION_COOKIE_SECURE = False
+    SKIP_MODEL_LOADING = True
 
 
 config_map = {

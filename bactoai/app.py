@@ -52,7 +52,8 @@ def create_app(config_class=Config):
     with app.app_context():
         init_db()
 
-    # Load prediction assets
-    load_prediction_assets(app)
+    # Load prediction assets (skip in testing)
+    if not app.config.get("SKIP_MODEL_LOADING"):
+        load_prediction_assets(app)
 
     return app
