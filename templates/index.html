@@ -35,12 +35,13 @@
 
         <div class="card upload-card" id="upload-card">
             <div class="drop-zone" id="drop-zone">
-                <input type="file" id="file-input" accept=".fna,.fasta,.gz" hidden>
+                <input type="file" id="file-input" accept=".fna,.fasta,.gz" hidden multiple>
                 <div class="icon-container">
                     <i class="ph ph-dna"></i>
                 </div>
                 <h3>Upload Genome</h3>
-                <p>Drag & drop your <span>.fna</span> or <span>.fasta</span> file here, or click to browse.</p>
+                <p>Drag & drop your <span>.fna</span> or <span>.fasta</span> file(s) here, or click to browse.</p>
+                <p class="subtext">Single file for quick analysis, or multiple files for bulk upload.</p>
             </div>
 
             <div class="upload-form-fields" id="upload-fields">
@@ -135,35 +136,99 @@
 
         function handleFiles(files) {
             if (files.length === 0) return;
-            const file = files[0];
-            
+
             // UI Transition
             dropZone.classList.add('hidden');
             document.getElementById('upload-fields').classList.add('hidden');
             loadingState.classList.remove('hidden');
 
-            // Build payload
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('sample_id', document.getElementById('sample_id').value);
-            formData.append('notes', document.getElementById('notes').value);
+            let promise;
+            if (files.length === 1) {
+                // Single file upload
+                const formData = new FormData();
+                formData.append('file', files[0]);
+                formData.append('sample_id', document.getElementById('sample_id').value);
+                formData.append('notes', document.getElementById('notes').value);
+                promise = fetch('/predict', { method: 'POST', body: formData }).then(r => r.json());
+            } else {
+                // Bulk upload
+                const formData = new FormData();
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('files', files[i]);
+                }
+                formData.append('notes', document.getElementById('notes').value);
+                loadingState.querySelector('p').textContent = `Analyzing ${files.length} genomes...`;
+                promise = fetch('/predict/bulk', { method: 'POST', body: formData }).then(r => r.json());
+            }
 
-            // Fetch
-            fetch('/predict', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) throw new Error("Network response error");
-                return response.json();
-            })
+            promise
             .then(data => {
-                displayResults(data);
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                if (files.length === 1) {
+                    displayResults(data);
+                } else {
+                    displayBulkResults(data);
+                }
             })
             .catch(error => {
                 console.error(error);
-                alert("Error predicting resistance. Make sure the file is a valid genome.");
+                showError(error.message || "An error occurred. Please ensure the file(s) are valid FASTA genomes.");
                 resetApp();
+            });
+        }
+
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'alert alert-error';
+            errorDiv.innerHTML = `<i class="ph ph-warning-circle"></i> ${message}`;
+            const container = document.querySelector('.container');
+            container.insertBefore(errorDiv, container.firstChild.nextSibling);
+            setTimeout(() => errorDiv.remove(), 10000);
+        }
+
+        function displayBulkResults(data) {
+            uploadCard.classList.add('hidden');
+            loadingState.classList.add('hidden');
+            resultsCard.classList.remove('hidden');
+
+            filenameDisplay.innerHTML = `<i class="ph-fill ph-files"></i> ${data.processed} genomes processed`;
+            resultsContainer.innerHTML = '';
+
+            if (data.error_details && data.error_details.length > 0) {
+                const errorSummary = document.createElement('div');
+                errorSummary.className = 'alert alert-warning';
+                errorSummary.innerHTML = `<i class="ph ph-warning"></i> ${data.errors} file(s) had errors.`;
+                resultsContainer.appendChild(errorSummary);
+            }
+
+            data.results.forEach(result => {
+                const subDiv = document.createElement('div');
+                subDiv.className = 'bulk-result-item';
+                subDiv.innerHTML = `<h4>${result.filename}</h4>`;
+
+                result.results.forEach(res => {
+                    const isResistant = res.probability >= 0.5;
+                    let statusClass = 'status-susceptible';
+                    if (res.status === 'uncertain') statusClass = 'status-uncertain';
+                    else if (res.status === 'resistant') statusClass = 'status-resistant';
+
+                    const percent = (res.probability * 100).toFixed(1);
+                    subDiv.innerHTML += `
+                        <div class="result-row ${statusClass}">
+                            <div class="result-info">
+                                <span class="drug-name">${res.antibiotic}</span>
+                                <div class="status-badge">${res.label}</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: ${percent}%;"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                resultsContainer.appendChild(subDiv);
             });
         }
 

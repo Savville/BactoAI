@@ -27,6 +27,12 @@
         </header>
 
         <div class="card">
+            <div class="card-header-flex">
+                <h2 class="card-title">Submissions</h2>
+                <a href="{{ url_for('main.export_csv') }}" class="btn-secondary btn-sm">
+                    <i class="ph ph-download-simple"></i> Export CSV
+                </a>
+            </div>
             <div class="table-responsive">
                 <table class="data-table">
                     <thead>
@@ -43,7 +49,7 @@
                         {% for sub in submissions %}
                         <tr>
                             <td class="text-muted">{{ sub.submitted_at }}</td>
-                            <td><strong>{{ sub.sample_id }}</strong></td>
+                            <td><a href="{{ url_for('main.submission_detail', submission_id=sub.id) }}"><strong>{{ sub.sample_id }}</strong></a></td>
                             <td>
                                 {% if sub.meropenem_label %}
                                     <span class="badge badge-{{ sub.meropenem_label|lower }}">{{ sub.meropenem_label }}</span>

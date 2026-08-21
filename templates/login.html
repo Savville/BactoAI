@@ -1,7 +1,8 @@
 {% extends "auth_base.html" %}
 {% block subtitle %}Sign in to your account{% endblock %}
 {% block content %}
-<form method="POST" action="{{ url_for('login') }}" class="auth-form">
+<form method="POST" action="{{ url_for('auth.login') }}" class="auth-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required autofocus>
@@ -16,5 +17,5 @@
 </form>
 {% endblock %}
 {% block footer %}
-<p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+<p>Don't have an account? <a href="{{ url_for('auth.register') }}">Register here</a></p>
 {% endblock %}
