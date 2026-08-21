@@ -6,16 +6,25 @@ Central configuration for all environments.
 
 import os
 import secrets
-from pathlib import Path
 
-from bactoai_pipeline import (
-    ANTIBIOTIC_FILES,
-    DATA_DIR,
-    GENOMES_DIR,
-    KMER_SIZE,
-    NUM_ENSEMBLE_MODELS,
-    TRANSFORMERS_DIR,
-)
+
+# =====================================================================
+# ML Pipeline Constants (defined here to avoid importing heavy deps)
+# =====================================================================
+
+DATA_DIR = "data"
+MODELS_DIR = os.path.join(DATA_DIR, "models_v4")
+TRANSFORMERS_DIR = os.path.join(DATA_DIR, "transformers_v4")
+GENOMES_DIR = os.path.join(DATA_DIR, "genomes")
+
+ANTIBIOTIC_FILES = {
+    "meropenem": os.path.join(DATA_DIR, "metadata_meropenem.csv"),
+    "ciprofloxacin": os.path.join(DATA_DIR, "metadata_ciprofloxacin.csv"),
+    "cefotaxime": os.path.join(DATA_DIR, "metadata_cefotaxime.csv"),
+}
+
+KMER_SIZE = 5
+NUM_ENSEMBLE_MODELS = 5
 
 
 class Config:
@@ -29,7 +38,7 @@ class Config:
 
     # ML Pipeline
     ANTIBIOTIC_ORDER = ["meropenem", "ciprofloxacin", "cefotaxime"]
-    MODEL_DIR = os.path.join(DATA_DIR, "models_v4")
+    MODEL_DIR = MODELS_DIR
     TRAIN_GENOMES_DIR = os.path.join(DATA_DIR, "train_genomes")
     TEST_GENOMES_DIR = os.path.join(DATA_DIR, "test_genomes")
     VALIDATION_TEST_SIZE = 0.25

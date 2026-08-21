@@ -2,6 +2,7 @@
 BactoAI Prediction Module
 ==========================
 Handles model loading, genome prediction, and result classification.
+All ML imports are lazy (inside functions) to avoid loading heavy deps at startup.
 """
 
 import os
@@ -9,23 +10,38 @@ import tempfile
 import shutil
 from pathlib import Path
 
-import joblib
-import numpy as np
-from scipy.sparse import csr_matrix, hstack
-
-from bactoai_pipeline import (
+from bactoai.config import (
     ANTIBIOTIC_FILES,
     DATA_DIR,
     GENOMES_DIR,
     KMER_SIZE,
     NUM_ENSEMBLE_MODELS,
     TRANSFORMERS_DIR,
-    build_kmers,
-    extract_gene_signatures,
-    get_adaptive_threshold,
-    get_confidence_level,
-    read_fasta,
 )
+
+
+# =====================================================================
+# Lazy imports (only loaded when prediction functions are called)
+# =====================================================================
+
+def _get_pipeline():
+    """Import pipeline functions lazily to avoid loading heavy deps at startup."""
+    from bactoai_pipeline import (
+        build_kmers,
+        extract_gene_signatures,
+        get_adaptive_threshold,
+        get_confidence_level,
+        read_fasta,
+    )
+    return build_kmers, extract_gene_signatures, get_adaptive_threshold, get_confidence_level, read_fasta
+
+
+def _get_ml_deps():
+    """Import ML dependencies lazily."""
+    import joblib
+    import numpy as np
+    from scipy.sparse import csr_matrix, hstack
+    return joblib, np, csr_matrix, hstack
 
 
 # =====================================================================
@@ -34,13 +50,15 @@ from bactoai_pipeline import (
 
 def load_prediction_assets(app):
     """Load all prediction models and transformers into the app config."""
+    joblib, _, _, _ = _get_ml_deps()
+
     assets = {}
     startup_error = None
 
     try:
         for antibiotic in app.config["ANTIBIOTIC_ORDER"]:
             vectorizer_path = os.path.join(TRANSFORMERS_DIR, f"vectorizer_{antibiotic}.joblib")
-            selector_path = os.path.join(TRANSFORMERS_DIR, f"selector_{antibiotic}.joblib")
+            selector_path = os.path.join(TRANSFORMERS_DIR, "selector_{antibiotic}.joblib")
 
             if not os.path.exists(vectorizer_path):
                 raise FileNotFoundError(f"Missing vectorizer: {vectorizer_path}")
@@ -87,6 +105,7 @@ def get_prediction_assets(app=None):
 
 def _classify_result(mean_prob, uncertainty):
     """Classify a prediction result based on probability and uncertainty."""
+    _, _, get_adaptive_threshold, get_confidence_level, _ = _get_pipeline()
     confidence, _ = get_confidence_level(uncertainty, mean_prob)
     threshold = get_adaptive_threshold(mean_prob, uncertainty)
     label = "RESISTANT" if mean_prob >= threshold else "SUSCEPTIBLE"
@@ -105,9 +124,12 @@ def _classify_result(mean_prob, uncertainty):
 
 
 def predict_single_antibiotic(antibiotic, genome_path, assets=None):
-    """Run prediction for a single antibiotic on a genome file."""
+    """Run prediction for a single antibiotic on a genome path."""
     if assets is None:
         assets = get_prediction_assets()
+
+    _, np, csr_matrix, hstack = _get_ml_deps()
+    build_kmers, extract_gene_signatures, _, _, read_fasta = _get_pipeline()
 
     asset = assets[antibiotic]
     sequence = read_fasta(genome_path)

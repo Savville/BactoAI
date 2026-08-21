@@ -305,7 +305,7 @@ def validate():
     import pandas as pd
     from sklearn.metrics import accuracy_score, roc_auc_score
     from sklearn.model_selection import train_test_split
-    from bactoai_pipeline import ANTIBIOTIC_FILES, DATA_DIR, GENOMES_DIR
+    from bactoai.config import ANTIBIOTIC_FILES, DATA_DIR, GENOMES_DIR
 
     if current_app.config.get("STARTUP_ERROR"):
         return jsonify({
