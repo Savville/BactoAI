@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Detail - BactoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo"><a href="{{ url_for('main.index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <p class="subtitle">Submission Detail</p>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="{{ url_for('main.index') }}" class="nav-link">Predict</a>
+                    <a href="{{ url_for('main.history') }}" class="nav-link active">History</a>
+                </nav>
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <i class="ph ph-warning-circle"></i> {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Prediction Results -->
+        <div class="card">
+            <div class="results-header">
+                <h2>Prediction Results</h2>
+                <p class="filename"><i class="ph-fill ph-file-code"></i> {{ submission.filename }}</p>
+                <p class="text-muted">Sample: {{ submission.sample_id }} | {{ submission.submitted_at }}</p>
+            </div>
+
+            <div class="results-grid">
+                {% for antibiotic in ['Meropenem', 'Ciprofloxacin', 'Cefotaxime'] %}
+                {% set label_key = antibiotic|lower + '_label' %}
+                {% set prob_key = antibiotic|lower + '_prob' %}
+                {% set conf_key = antibiotic|lower + '_confidence' %}
+                {% if submission[label_key] %}
+                {% set status = submission[label_key]|lower %}
+                <div class="result-row status-{{ status }}">
+                    <div class="result-info">
+                        <span class="drug-name">{{ antibiotic }}</span>
+                        <div class="status-badge">
+                            <i class="ph-fill {% if status == 'resistant' %}ph-warning-circle{% else %}ph-check-circle{% endif %}"></i>
+                            {{ submission[label_key] }}
+                        </div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: {{ (submission[prob_key] * 100) if submission[prob_key] else 0 }}%;"></div>
+                    </div>
+                    <div class="percent-section">
+                        <div class="percent">
+                            {{ "%.1f"|format(submission[prob_key] * 100) if submission[prob_key] else 'N/A' }}%
+                            <span class="subtext">{{ submission[conf_key] or '' }} confidence</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="card mt-4">
+            <h2 class="card-title">Submit Lab-Confirmed Feedback</h2>
+            <p class="text-muted">Help improve BactoAI by recording the actual laboratory results for this sample.</p>
+
+            <form method="POST" action="{{ url_for('main.submit_feedback') }}" class="feedback-form">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="submission_id" value="{{ submission.id }}">
+
+                <div class="form-group">
+                    <label for="antibiotic">Antibiotic</label>
+                    <select id="antibiotic" name="antibiotic" required>
+                        <option value="">Select antibiotic...</option>
+                        <option value="meropenem">Meropenem</option>
+                        <option value="ciprofloxacin">Ciprofloxacin</option>
+                        <option value="cefotaxime">Cefotaxime</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actual_label">Actual Result</label>
+                    <select id="actual_label" name="actual_label" required>
+                        <option value="">Select result...</option>
+                        <option value="RESISTANT">Resistant</option>
+                        <option value="SUSCEPTIBLE">Susceptible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actual_value">MIC Value (optional)</label>
+                    <input type="text" id="actual_value" name="actual_value" placeholder="e.g., >32 µg/mL">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes (optional)</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Method, observations, etc."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="ph ph-paper-plane-right"></i> Submit Feedback
+                </button>
+            </form>
+        </div>
+
+        <!-- Previous Feedback -->
+        {% if feedback %}
+        <div class="card mt-4">
+            <h2 class="card-title">Previous Feedback</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Antibiotic</th>
+                            <th>Predicted</th>
+                            <th>Actual</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for fb in feedback %}
+                        <tr>
+                            <td class="text-muted">{{ fb.created_at }}</td>
+                            <td>{{ fb.antibiotic | capitalize }}</td>
+                            <td><span class="badge badge-{{ fb.predicted_label|lower }}">{{ fb.predicted_label }}</span></td>
+                            <td><span class="badge badge-{{ fb.actual_label|lower }}">{{ fb.actual_label }}</span></td>
+                            <td class="text-muted">{{ fb.notes or '—' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('main.history') }}" class="btn-secondary mt-4">
+            <i class="ph ph-arrow-left"></i> Back to History
+        </a>
+    </main>
+</body>
+</html>

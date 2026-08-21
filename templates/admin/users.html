@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - BactoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container" style="max-width: 900px;">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo"><a href="{{ url_for('main.index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <p class="subtitle">User Management</p>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="{{ url_for('admin.dashboard') }}" class="nav-link">Dashboard</a>
+                    <a href="{{ url_for('admin.users') }}" class="nav-link active">Users</a>
+                    <a href="{{ url_for('main.index') }}" class="nav-link">Predict</a>
+                </nav>
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <i class="ph ph-warning-circle"></i> {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="card">
+            <h2 class="card-title">All Users</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Clinic</th>
+                            <th>Role</th>
+                            <th>Joined</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td><strong>{{ user.username }}</strong></td>
+                            <td class="text-muted">{{ user.clinic_name or '—' }}</td>
+                            <td>
+                                <form method="POST" action="{{ url_for('admin.update_user_role', user_id=user.id) }}" class="inline-form">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <select name="role" onchange="this.form.submit()" class="role-select">
+                                        <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin</option>
+                                        <option value="lab_tech" {% if user.role == 'lab_tech' %}selected{% endif %}>Lab Tech</option>
+                                        <option value="viewer" {% if user.role == 'viewer' %}selected{% endif %}>Viewer</option>
+                                    </select>
+                                </form>
+                            </td>
+                            <td class="text-muted">{{ user.created_at }}</td>
+                            <td>
+                                {% if user.is_active %}
+                                    <span class="badge badge-susceptible">Active</span>
+                                {% else %}
+                                    <span class="badge badge-resistant">Inactive</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <form method="POST" action="{{ url_for('admin.toggle_user', user_id=user.id) }}" class="inline-form">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn-secondary btn-sm">
+                                        {% if user.is_active %}
+                                            <i class="ph ph-user-minus"></i> Deactivate
+                                        {% else %}
+                                            <i class="ph ph-user-plus"></i> Activate
+                                        {% endif %}
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

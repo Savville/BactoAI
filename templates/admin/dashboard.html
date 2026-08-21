@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - BactoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container" style="max-width: 900px;">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo"><a href="{{ url_for('main.index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <p class="subtitle">Admin Dashboard</p>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="{{ url_for('admin.dashboard') }}" class="nav-link active">Dashboard</a>
+                    <a href="{{ url_for('admin.users') }}" class="nav-link">Users</a>
+                    <a href="{{ url_for('main.index') }}" class="nav-link">Predict</a>
+                </nav>
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-users"></i></div>
+                <div class="stat-value">{{ stats.total_users }}</div>
+                <div class="stat-label">Total Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-dna"></i></div>
+                <div class="stat-value">{{ stats.total_submissions }}</div>
+                <div class="stat-label">Total Predictions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-clipboard-text"></i></div>
+                <div class="stat-value">{{ stats.total_feedback }}</div>
+                <div class="stat-label">Feedback Entries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-calendar"></i></div>
+                <div class="stat-value">{{ stats.recent_submissions }}</div>
+                <div class="stat-label">This Week</div>
+            </div>
+        </div>
+
+        <!-- Feedback Accuracy -->
+        {% if feedback_stats %}
+        <div class="card mt-4">
+            <h2 class="card-title">Feedback Accuracy</h2>
+            <div class="feedback-stats">
+                {% for fb in feedback_stats %}
+                <div class="feedback-stat-item">
+                    <span class="feedback-antibiotic">{{ fb.antibiotic | capitalize }}</span>
+                    <span class="feedback-accuracy">
+                        {% if fb.total > 0 %}
+                            {{ "%.1f"|format(fb.correct / fb.total * 100) }}% ({{ fb.correct }}/{{ fb.total }})
+                        {% else %}
+                            No data
+                        {% endif %}
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Recent Submissions -->
+        <div class="card mt-4">
+            <h2 class="card-title">Recent Submissions</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>User</th>
+                            <th>Sample ID</th>
+                            <th>Meropenem</th>
+                            <th>Ciprofloxacin</th>
+                            <th>Cefotaxime</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sub in recent_submissions %}
+                        <tr>
+                            <td class="text-muted">{{ sub.submitted_at }}</td>
+                            <td>{{ sub.username }}<br><small class="text-muted">{{ sub.clinic_name or '' }}</small></td>
+                            <td><strong>{{ sub.sample_id }}</strong></td>
+                            <td>
+                                {% if sub.meropenem_label %}
+                                    <span class="badge badge-{{ sub.meropenem_label|lower }}">{{ sub.meropenem_label }}</span>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if sub.ciprofloxacin_label %}
+                                    <span class="badge badge-{{ sub.ciprofloxacin_label|lower }}">{{ sub.ciprofloxacin_label }}</span>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if sub.cefotaxime_label %}
+                                    <span class="badge badge-{{ sub.cefotaxime_label|lower }}">{{ sub.cefotaxime_label }}</span>
+                                {% else %}
+                                    <span class="text-muted">—</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="6" class="empty-row">No submissions yet.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

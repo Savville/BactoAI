@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Keys - BactoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo"><a href="{{ url_for('main.index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <p class="subtitle">API Keys</p>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="{{ url_for('main.index') }}" class="nav-link">Predict</a>
+                    <a href="{{ url_for('main.history') }}" class="nav-link">History</a>
+                </nav>
+                <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+            </div>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <i class="ph ph-warning-circle"></i> {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="card">
+            <h2 class="card-title">Generate New API Key</h2>
+            <p class="text-muted">API keys allow programmatic access to BactoAI predictions. Keep your keys secure!</p>
+
+            <form method="POST" action="{{ url_for('auth.api_keys') }}" class="feedback-form">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div class="form-group">
+                    <label for="name">Key Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., Hospital LIMS Integration">
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="ph ph-key"></i> Generate API Key
+                </button>
+            </form>
+        </div>
+
+        {% if api_keys %}
+        <div class="card mt-4">
+            <h2 class="card-title">Your API Keys</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Prefix</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Last Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key in api_keys %}
+                        <tr>
+                            <td>{{ key.name or '—' }}</td>
+                            <td><code>{{ key.key_prefix }}...</code></td>
+                            <td>
+                                {% if key.is_active %}
+                                    <span class="badge badge-susceptible">Active</span>
+                                {% else %}
+                                    <span class="badge badge-resistant">Revoked</span>
+                                {% endif %}
+                            </td>
+                            <td class="text-muted">{{ key.created_at }}</td>
+                            <td class="text-muted">{{ key.last_used_at or 'Never' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card mt-4">
+            <h2 class="card-title">API Documentation</h2>
+            <div class="api-docs">
+                <h3>Authentication</h3>
+                <p>Include your API key in the <code>Authorization</code> header:</p>
+                <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+
+                <h3>Predict</h3>
+                <pre><code>POST /api/v1/predict
+Content-Type: multipart/form-data
+
+file: &lt;genome.fna&gt;
+sample_id: optional-id</code></pre>
+
+                <h3>History</h3>
+                <pre><code>GET /api/v1/history?limit=100</code></pre>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
