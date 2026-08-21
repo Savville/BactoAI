@@ -9,8 +9,6 @@ import gzip
 import os
 from pathlib import Path
 
-from Bio import SeqIO
-
 from flask import current_app
 
 
@@ -105,6 +103,7 @@ def validate_fasta_content(file_path):
 
     # Try to parse with Biopython for thorough validation
     try:
+        from Bio import SeqIO
         _open = gzip.open if file_path.endswith(".gz") else open
         with _open(file_path, "rt") as fh:
             record_count = 0
