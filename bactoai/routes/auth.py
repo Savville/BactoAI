@@ -4,6 +4,7 @@ BactoAI Authentication Routes
 Handles user registration, login, logout, and API key management.
 """
 
+import os
 from functools import wraps
 
 from flask import (
@@ -55,10 +56,23 @@ def role_required(*roles):
 # Auth Routes
 # =====================================================================
 
+def _ensure_admin_exists():
+    """Create default admin if no users exist (for ephemeral deployments)."""
+    try:
+        from bactoai.database import get_user_by_username, create_user
+        admin_user = os.environ.get("BACTOAI_ADMIN_USER", "bactoai")
+        admin_pass = os.environ.get("BACTOAI_ADMIN_PASS", "admin123")
+        if get_user_by_username(admin_user) is None:
+            create_user(admin_user, admin_pass, "BactoAI Admin", role="admin")
+    except Exception:
+        pass
+
+
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
     """Handle user login."""
     if request.method == "POST":
+        _ensure_admin_exists()
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
 

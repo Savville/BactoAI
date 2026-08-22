@@ -5,6 +5,7 @@ Handles all database operations: connection management, initialization,
 and data access for users, submissions, feedback, and audit logs.
 """
 
+import os
 import sqlite3
 import secrets
 import hashlib
