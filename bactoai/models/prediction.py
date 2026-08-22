@@ -58,7 +58,7 @@ def load_prediction_assets(app):
     try:
         for antibiotic in app.config["ANTIBIOTIC_ORDER"]:
             vectorizer_path = os.path.join(TRANSFORMERS_DIR, f"vectorizer_{antibiotic}.joblib")
-            selector_path = os.path.join(TRANSFORMERS_DIR, "selector_{antibiotic}.joblib")
+            selector_path = os.path.join(TRANSFORMERS_DIR, f"selector_{antibiotic}.joblib")
 
             if not os.path.exists(vectorizer_path):
                 raise FileNotFoundError(f"Missing vectorizer: {vectorizer_path}")
