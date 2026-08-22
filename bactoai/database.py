@@ -37,6 +37,8 @@ DB_PATH = "data/bactoai.db"
 def init_db():
     """Initialize the database schema."""
     db_path = DB_PATH
+    # Ensure data directory exists (critical for Render deployments)
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
     db = sqlite3.connect(db_path)
     db.executescript("""
         CREATE TABLE IF NOT EXISTS users (
