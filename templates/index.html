@@ -25,11 +25,11 @@
             </div>
             <div class="header-right">
                 <nav class="nav-links">
-                    <a href="{{ url_for('index') }}" class="nav-link active">Predict</a>
-                    <a href="{{ url_for('history') }}" class="nav-link">History</a>
+                    <a href="{{ url_for('main.index') }}" class="nav-link active">Predict</a>
+                    <a href="{{ url_for('main.history') }}" class="nav-link">History</a>
                 </nav>
                 <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
-                <a href="{{ url_for('logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
             </div>
         </header>
 

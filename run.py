@@ -9,6 +9,10 @@ Usage:
     flask --app run.py run     # Run via Flask CLI
 """
 
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
+
 import os
 import sys
 from bactoai.app import create_app

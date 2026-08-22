@@ -17,12 +17,12 @@
     <main class="container">
         <header class="header">
             <div class="header-left">
-                <h1 class="logo"><a href="{{ url_for('index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
+                <h1 class="logo"><a href="{{ url_for('main.index') }}">Bacto<span class="gradient-text">AI</span></a></h1>
                 <p class="subtitle">Submission History</p>
             </div>
             <div class="header-right">
                 <span class="user-badge"><i class="ph ph-user"></i> {{ username }}</span>
-                <a href="{{ url_for('logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
+                <a href="{{ url_for('auth.logout') }}" class="btn-secondary btn-sm"><i class="ph ph-sign-out"></i> Logout</a>
             </div>
         </header>
 
@@ -80,7 +80,7 @@
                         <tr>
                             <td colspan="6" class="empty-row">
                                 <i class="ph ph-clipboard-text"></i>
-                                <p>No submissions yet. <a href="{{ url_for('index') }}">Analyze your first genome</a>.</p>
+                                <p>No submissions yet. <a href="{{ url_for('main.index') }}">Analyze your first genome</a>.</p>
                             </td>
                         </tr>
                         {% endfor %}
