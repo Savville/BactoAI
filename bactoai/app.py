@@ -27,17 +27,24 @@ limiter = Limiter(key_func=get_remote_address, default_limits=["200 per day", "5
 
 
 def _create_default_admin():
-    """Create a default admin user if no users exist."""
+    """Create default admin user from environment variables (runs every startup)."""
     try:
-        if get_user_by_username("bactoai") is None:
+        admin_user = os.environ.get("BACTOAI_ADMIN_USER", "bactoai")
+        admin_pass = os.environ.get("BACTOAI_ADMIN_PASS", "admin123")
+        admin_clinic = os.environ.get("BACTOAI_ADMIN_CLINIC", "BactoAI Admin")
+
+        # Always ensure admin exists (Render has ephemeral filesystem)
+        existing = get_user_by_username(admin_user)
+        if existing is None:
             create_user(
-                username="bactoai",
-                password="admin123",
-                clinic_name="BactoAI Admin",
+                username=admin_user,
+                password=admin_pass,
+                clinic_name=admin_clinic,
                 role="admin"
             )
-    except Exception:
-        pass  # Silently fail if DB not ready
+    except Exception as e:
+        import logging
+        logging.warning(f"Failed to create default admin: {e}")
 
 
 def create_app(config_class=Config):
