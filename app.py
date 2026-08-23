@@ -29,7 +29,7 @@ app = create_app(config_class=config_class)
 def create_user_cli():
     """Create a new user: flask create-user"""
     import click
-    from bactoai.database import create_user, get_db
+    from bactoai.database import create_user
 
     username = click.prompt("Username")
     password = click.prompt("Password", hide_input=True, confirmation_prompt=True)
@@ -41,14 +41,6 @@ def create_user_cli():
         click.echo(f"User '{username}' created successfully (id={user_id}, role={role}).")
     except ValueError as e:
         click.echo(f"Error: {e}")
-
-
-@app.cli.command("init-db")
-def init_db_cli():
-    """Initialize the database."""
-    from bactoai.database import init_db
-    init_db()
-    print("Database initialized.")
 
 
 # =====================================================================
