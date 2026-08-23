@@ -879,3 +879,99 @@ body {
 .mt-4 {
     margin-top: 2rem;
 }
+
+/* ===== Treatment Recommendation Card ===== */
+.treatment-card {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.treatment-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.25rem;
+}
+
+.treatment-title i {
+    color: var(--accent-1);
+}
+
+.treatment-subtext {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.treatment-group {
+    margin-bottom: 0.75rem;
+}
+
+.treatment-group h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0.4rem;
+}
+
+.treatment-group h4.susceptible { color: var(--susceptible); }
+.treatment-group h4.resistant   { color: var(--resistant); }
+.treatment-group h4.uncertain   { color: #f59e0b; }
+
+.treatment-drug {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
+    background: rgba(15, 23, 42, 0.4);
+    font-size: 0.9rem;
+}
+
+.treatment-drug .confidence-pill {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.treatment-recommendation {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.treatment-recommendation i {
+    color: var(--accent-1);
+    margin-right: 4px;
+}
+
+.treatment-disclaimer {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.treatment-disclaimer strong {
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0.25rem;
+}

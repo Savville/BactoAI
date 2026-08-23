@@ -264,13 +264,86 @@
             });
         }
 
+        // ===== Treatment Recommendation Summary Card =====
+        function buildTreatmentSummary(results) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'card treatment-card';
+            wrapper.style.marginBottom = '1.5rem';
+
+            const groups = [
+                { key: 'susceptible', label: 'SUSCEPTIBLE', icon: 'ph-check-circle', cls: 'susceptible' },
+                { key: 'resistant',   label: 'RESISTANT',   icon: 'ph-warning-circle', cls: 'resistant' },
+                { key: 'uncertain',   label: 'UNCERTAIN',   icon: 'ph-question',       cls: 'uncertain' },
+            ];
+
+            const items = {};
+            groups.forEach(g => {
+                items[g.key] = results.filter(r => r.status === g.key);
+            });
+            // Sort susceptible by lowest probability first (most confidently susceptible)
+            items.susceptible.sort((a, b) => a.probability - b.probability);
+
+            let html = `<div class="treatment-title"><i class="ph-fill ph-pills"></i> Treatment Recommendation</div>`;
+            html += `<div class="treatment-subtext">${results.length} antibiotics tested</div>`;
+
+            groups.forEach(g => {
+                const list = items[g.key];
+                if (list.length === 0 && g.key !== 'susceptible') return; // omit empty resistant/uncertain
+                html += `<div class="treatment-group">`;
+                html += `<h4 class="${g.cls}"><i class="ph-fill ${g.icon}"></i> ${g.label} (${list.length})</h4>`;
+                list.forEach(r => {
+                    const pct = (r.probability * 100).toFixed(1);
+                    html += `<div class="treatment-drug">
+                                <span>${r.antibiotic} <span style="color:var(--text-secondary)">${pct}%</span></span>
+                                <span class="confidence-pill">${r.confidence}</span>
+                             </div>`;
+                });
+                html += `</div>`;
+            });
+
+            html += renderRecommendationText(items, results.length);
+            html += renderDisclaimer();
+
+            wrapper.innerHTML = html;
+            return wrapper;
+        }
+
+        function renderRecommendationText(items, total) {
+            const sus = items.susceptible.map(r => r.antibiotic);
+            let body;
+            if (sus.length) {
+                const list = sus.length > 1
+                    ? sus.slice(0, -1).join(', ') + ' & ' + sus[sus.length - 1]
+                    : sus[0];
+                body = `Predicted <strong>susceptible to ${sus.length} of ${total}</strong> antibiotics (${list}). ` +
+                       `These may be viable treatment options — confirm with laboratory AST.`;
+            } else if (items.uncertain.length) {
+                const u = items.uncertain.map(r => r.antibiotic).join(', ');
+                body = `No antibiotic predicted susceptible; <strong>uncertain for ${u}</strong>. Laboratory confirmation strongly recommended.`;
+            } else {
+                body = `Predicted <strong>resistant to all ${total}</strong> antibiotics tested. Consider alternative therapies guided by laboratory AST.`;
+            }
+            return `<div class="treatment-recommendation"><i class="ph ph-lightbulb"></i> ${body}</div>`;
+        }
+
+        function renderDisclaimer() {
+            return `<div class="treatment-disclaimer">
+                <strong><i class="ph ph-warning"></i> Not medical advice.</strong>
+                Predictions are from a machine learning model for research/informational use only. Treatment decisions must be made by a qualified professional based on laboratory confirmation, clinical context, and patient-specific factors. Consult local antibiograms and guidelines (CLSI, EUCAST).
+            </div>`;
+        }
+
         function displayResults(data) {
             uploadCard.classList.add('hidden');
             loadingState.classList.add('hidden');
             resultsCard.classList.remove('hidden');
-            
+
             filenameDisplay.innerHTML = `<i class="ph-fill ph-file-code"></i> ${data.filename}`;
             resultsContainer.innerHTML = '';
+
+            // Render treatment summary card first
+            const summaryCard = buildTreatmentSummary(data.results);
+            resultsContainer.appendChild(summaryCard);
 
             data.results.forEach(res => {
                 const isResistant = res.probability >= 0.5;
