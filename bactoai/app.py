@@ -14,7 +14,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
 from bactoai.config import Config
-from bactoai.database import init_db, DB_PATH, get_user_by_username, create_user
+from bactoai.database import get_user_by_username, create_user
 from bactoai.models.prediction import load_prediction_assets
 from bactoai.routes.auth import auth_bp
 from bactoai.routes.main import main_bp
@@ -69,9 +69,8 @@ def create_app(config_class=Config):
     app.register_blueprint(api_bp, url_prefix="/api/v1")
     app.register_blueprint(admin_bp, url_prefix="/admin")
 
-    # Ensure database exists and create default admin
+    # Ensure default admin exists (Supabase persists data across deploys)
     with app.app_context():
-        init_db()
         _create_default_admin()
 
     # Load prediction assets (skip in testing)

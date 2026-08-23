@@ -10,8 +10,8 @@ from flask import (
 )
 
 from bactoai.database import (
-    get_db, get_admin_stats, get_all_submissions,
-    get_feedback_stats, log_action,
+    get_admin_stats, get_all_submissions,
+    get_feedback_stats, log_action, get_supabase,
 )
 from bactoai.routes.auth import login_required, role_required
 
@@ -42,11 +42,14 @@ def dashboard():
 @role_required("admin")
 def users():
     """Admin user management page."""
-    db = get_db()
-    all_users = db.execute(
-        "SELECT id, username, clinic_name, role, created_at, is_active "
-        "FROM users ORDER BY created_at DESC"
-    ).fetchall()
+    sb = get_supabase()
+    result = (
+        sb.table("users")
+        .select("id, username, clinic_name, role, created_at, is_active")
+        .order("created_at", desc=True)
+        .execute()
+    )
+    all_users = result.data or []
 
     return render_template(
         "admin/users.html",
@@ -65,9 +68,8 @@ def update_user_role(user_id):
         flash("Invalid role.", "error")
         return redirect(url_for("admin.users"))
 
-    db = get_db()
-    db.execute("UPDATE users SET role = ? WHERE id = ?", (new_role, user_id))
-    db.commit()
+    sb = get_supabase()
+    sb.table("users").update({"role": new_role}).eq("id", user_id).execute()
 
     log_action(
         session["user_id"], "update_role",
@@ -82,11 +84,12 @@ def update_user_role(user_id):
 @role_required("admin")
 def toggle_user(user_id):
     """Activate/deactivate a user account."""
-    db = get_db()
-    db.execute(
-        "UPDATE users SET is_active = NOT is_active WHERE id = ?", (user_id,)
-    )
-    db.commit()
+    sb = get_supabase()
+    # First get current is_active value
+    result = sb.table("users").select("is_active").eq("id", user_id).execute()
+    if result.data:
+        current = result.data[0]["is_active"]
+        sb.table("users").update({"is_active": not current}).eq("id", user_id).execute()
 
     log_action(session["user_id"], "toggle_user", f"User {user_id} toggled")
     flash("User status updated.", "success")

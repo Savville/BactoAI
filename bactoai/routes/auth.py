@@ -13,7 +13,7 @@ from flask import (
 )
 
 from bactoai.database import (
-    get_db, get_user_by_username, get_user_by_id,
+    get_user_by_username, get_user_by_id,
     create_user, verify_password, log_action,
     create_api_key, get_user_api_keys,
 )

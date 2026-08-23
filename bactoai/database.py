@@ -1,127 +1,49 @@
 """
-BactoAI Database Module
-========================
-Handles all database operations: connection management, initialization,
-and data access for users, submissions, feedback, and audit logs.
+BactoAI Database Module (Supabase)
+====================================
+Handles all database operations using Supabase (PostgreSQL).
+All data persists across Render deploys — no more SQLite wiping.
+
+Tables required in Supabase (run the SQL in migrations/supabase_setup.sql):
+- users
+- api_keys
+- submissions
+- feedback
+- audit_log
 """
 
 import os
-import sqlite3
 import secrets
 import hashlib
-from datetime import datetime
+from datetime import datetime, timedelta
 
-from flask import g, current_app
-
-
-def get_db():
-    """Get a database connection for the current request."""
-    if "db" not in g:
-        db_path = current_app.config.get("DB_PATH", "data/bactoai.db")
-        g.db = sqlite3.connect(db_path)
-        g.db.row_factory = sqlite3.Row
-        g.db.execute("PRAGMA journal_mode=WAL")
-        g.db.execute("PRAGMA foreign_keys=ON")
-    return g.db
-
-
-def close_db(exception=None):
-    """Close the database connection at the end of a request."""
-    db = g.pop("db", None)
-    if db is not None:
-        db.close()
-
-
-DB_PATH = "data/bactoai.db"
-
-
-def init_db():
-    """Initialize the database schema."""
-    db_path = DB_PATH
-    # Ensure data directory exists (critical for Render deployments)
-    os.makedirs(os.path.dirname(db_path), exist_ok=True)
-    db = sqlite3.connect(db_path)
-    db.executescript("""
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT UNIQUE NOT NULL,
-            password_hash TEXT NOT NULL,
-            clinic_name TEXT,
-            role TEXT DEFAULT 'viewer' CHECK(role IN ('admin', 'lab_tech', 'viewer')),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            is_active INTEGER DEFAULT 1
-        );
-
-        CREATE TABLE IF NOT EXISTS api_keys (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER NOT NULL,
-            key_hash TEXT UNIQUE NOT NULL,
-            key_prefix TEXT NOT NULL,
-            name TEXT,
-            is_active INTEGER DEFAULT 1,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            last_used_at TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(id)
-        );
-
-        CREATE TABLE IF NOT EXISTS submissions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER NOT NULL,
-            sample_id TEXT NOT NULL,
-            filename TEXT,
-            genome_size INTEGER,
-            meropenem_label TEXT,
-            meropenem_prob REAL,
-            meropenem_confidence TEXT,
-            ciprofloxacin_label TEXT,
-            ciprofloxacin_prob REAL,
-            ciprofloxacin_confidence TEXT,
-            cefotaxime_label TEXT,
-            cefotaxime_prob REAL,
-            cefotaxime_confidence TEXT,
-            submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            notes TEXT,
-            FOREIGN KEY (user_id) REFERENCES users(id)
-        );
-
-        CREATE TABLE IF NOT EXISTS feedback (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            submission_id INTEGER NOT NULL,
-            user_id INTEGER NOT NULL,
-            antibiotic TEXT NOT NULL,
-            predicted_label TEXT NOT NULL,
-            actual_label TEXT NOT NULL,
-            actual_value TEXT,
-            notes TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (submission_id) REFERENCES submissions(id),
-            FOREIGN KEY (user_id) REFERENCES users(id)
-        );
-
-        CREATE TABLE IF NOT EXISTS audit_log (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER,
-            action TEXT NOT NULL,
-            details TEXT,
-            ip_address TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(id)
-        );
-
-        CREATE INDEX IF NOT EXISTS idx_submissions_user ON submissions(user_id);
-        CREATE INDEX IF NOT EXISTS idx_submissions_date ON submissions(submitted_at);
-        CREATE INDEX IF NOT EXISTS idx_submissions_sample ON submissions(sample_id);
-        CREATE INDEX IF NOT EXISTS idx_feedback_submission ON feedback(submission_id);
-        CREATE INDEX IF NOT EXISTS idx_feedback_user ON feedback(user_id);
-        CREATE INDEX IF NOT EXISTS idx_audit_user ON audit_log(user_id);
-        CREATE INDEX IF NOT EXISTS idx_api_keys_hash ON api_keys(key_hash);
-    """)
-    db.commit()
-    db.close()
+from supabase import create_client, Client
 
 
 # =====================================================================
-# Password Hashing
+# Supabase Client
+# =====================================================================
+
+_supabase_client: Client = None
+
+
+def get_supabase() -> Client:
+    """Get or create the Supabase client singleton."""
+    global _supabase_client
+    if _supabase_client is None:
+        url = os.environ.get("SUPABASE_URL")
+        key = os.environ.get("SUPABASE_KEY")
+        if not url or not key:
+            raise RuntimeError(
+                "SUPABASE_URL and SUPABASE_KEY environment variables must be set. "
+                "Add them to your .env file or Render environment variables."
+            )
+        _supabase_client = create_client(url, key)
+    return _supabase_client
+
+
+# =====================================================================
+# Password Hashing (unchanged — still local)
 # =====================================================================
 
 def hash_password(password):
@@ -143,30 +65,40 @@ def verify_password(stored, password):
 # =====================================================================
 
 def get_user_by_username(username):
-    """Get a user by username."""
-    db = get_db()
-    return db.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+    """Get a user by username. Returns dict or None."""
+    sb = get_supabase()
+    result = sb.table("users").select("*").eq("username", username).execute()
+    if result.data and len(result.data) > 0:
+        return result.data[0]
+    return None
 
 
 def get_user_by_id(user_id):
-    """Get a user by ID."""
-    db = get_db()
-    return db.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
+    """Get a user by ID. Returns dict or None."""
+    sb = get_supabase()
+    result = sb.table("users").select("*").eq("id", user_id).execute()
+    if result.data and len(result.data) > 0:
+        return result.data[0]
+    return None
 
 
 def create_user(username, password, clinic_name="", role="viewer"):
     """Create a new user. Returns the user ID or raises ValueError."""
-    db = get_db()
-    existing = db.execute("SELECT id FROM users WHERE username = ?", (username,)).fetchone()
+    sb = get_supabase()
+    existing = get_user_by_username(username)
     if existing:
         raise ValueError("Username already exists")
 
-    cursor = db.execute(
-        "INSERT INTO users (username, password_hash, clinic_name, role) VALUES (?, ?, ?, ?)",
-        (username, hash_password(password), clinic_name, role),
-    )
-    db.commit()
-    return cursor.lastrowid
+    result = sb.table("users").insert({
+        "username": username,
+        "password_hash": hash_password(password),
+        "clinic_name": clinic_name,
+        "role": role,
+    }).execute()
+
+    if result.data and len(result.data) > 0:
+        return result.data[0]["id"]
+    raise RuntimeError("Failed to create user")
 
 
 # =====================================================================
@@ -179,40 +111,43 @@ def create_api_key(user_id, name=""):
     key_prefix = raw_key[:8]
     key_hash = hashlib.sha256(raw_key.encode()).hexdigest()
 
-    db = get_db()
-    db.execute(
-        "INSERT INTO api_keys (user_id, key_hash, key_prefix, name) VALUES (?, ?, ?, ?)",
-        (user_id, key_hash, key_prefix, name),
-    )
-    db.commit()
+    sb = get_supabase()
+    sb.table("api_keys").insert({
+        "user_id": user_id,
+        "key_hash": key_hash,
+        "key_prefix": key_prefix,
+        "name": name,
+    }).execute()
     return raw_key
 
 
 def verify_api_key(raw_key):
-    """Verify an API key and return the associated user_id."""
+    """Verify an API key and return the associated user_id. Returns None if invalid."""
     key_hash = hashlib.sha256(raw_key.encode()).hexdigest()
-    db = get_db()
-    row = db.execute(
-        "SELECT * FROM api_keys WHERE key_hash = ? AND is_active = 1", (key_hash,)
-    ).fetchone()
-    if row:
-        db.execute(
-            "UPDATE api_keys SET last_used_at = ? WHERE id = ?",
-            (datetime.now().isoformat(), row["id"]),
-        )
-        db.commit()
+    sb = get_supabase()
+    result = sb.table("api_keys").select("*").eq("key_hash", key_hash).eq("is_active", True).execute()
+
+    if result.data and len(result.data) > 0:
+        row = result.data[0]
+        # Update last_used_at
+        sb.table("api_keys").update({
+            "last_used_at": datetime.now().isoformat()
+        }).eq("id", row["id"]).execute()
         return row["user_id"]
     return None
 
 
 def get_user_api_keys(user_id):
     """Get all API keys for a user (without hashes)."""
-    db = get_db()
-    return db.execute(
-        "SELECT id, key_prefix, name, is_active, created_at, last_used_at "
-        "FROM api_keys WHERE user_id = ? ORDER BY created_at DESC",
-        (user_id,),
-    ).fetchall()
+    sb = get_supabase()
+    result = (
+        sb.table("api_keys")
+        .select("id, key_prefix, name, is_active, created_at, last_used_at")
+        .eq("user_id", user_id)
+        .order("created_at", desc=True)
+        .execute()
+    )
+    return result.data or []
 
 
 # =====================================================================
@@ -220,61 +155,83 @@ def get_user_api_keys(user_id):
 # =====================================================================
 
 def save_submission(user_id, sample_id, filename, genome_size, results, notes=None):
-    """Save a prediction submission."""
-    db = get_db()
+    """Save a prediction submission. Returns the submission ID."""
+    sb = get_supabase()
     result_map = {r["antibiotic"].lower(): r for r in results}
-    db.execute(
-        """INSERT INTO submissions
-           (user_id, sample_id, filename, genome_size,
-            meropenem_label, meropenem_prob, meropenem_confidence,
-            ciprofloxacin_label, ciprofloxacin_prob, ciprofloxacin_confidence,
-            cefotaxime_label, cefotaxime_prob, cefotaxime_confidence,
-            notes)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-        (
-            user_id, sample_id, filename, genome_size,
-            result_map.get("meropenem", {}).get("label"),
-            result_map.get("meropenem", {}).get("probability"),
-            result_map.get("meropenem", {}).get("confidence"),
-            result_map.get("ciprofloxacin", {}).get("label"),
-            result_map.get("ciprofloxacin", {}).get("probability"),
-            result_map.get("ciprofloxacin", {}).get("confidence"),
-            result_map.get("cefotaxime", {}).get("label"),
-            result_map.get("cefotaxime", {}).get("probability"),
-            result_map.get("cefotaxime", {}).get("confidence"),
-            notes,
-        ),
-    )
-    db.commit()
-    return db.execute("SELECT last_insert_rowid()").fetchone()[0]
+
+    data = {
+        "user_id": user_id,
+        "sample_id": sample_id,
+        "filename": filename,
+        "genome_size": genome_size,
+        "meropenem_label": result_map.get("meropenem", {}).get("label"),
+        "meropenem_prob": result_map.get("meropenem", {}).get("probability"),
+        "meropenem_confidence": result_map.get("meropenem", {}).get("confidence"),
+        "ciprofloxacin_label": result_map.get("ciprofloxacin", {}).get("label"),
+        "ciprofloxacin_prob": result_map.get("ciprofloxacin", {}).get("probability"),
+        "ciprofloxacin_confidence": result_map.get("ciprofloxacin", {}).get("confidence"),
+        "cefotaxime_label": result_map.get("cefotaxime", {}).get("label"),
+        "cefotaxime_prob": result_map.get("cefotaxime", {}).get("probability"),
+        "cefotaxime_confidence": result_map.get("cefotaxime", {}).get("confidence"),
+        "notes": notes,
+    }
+
+    result = sb.table("submissions").insert(data).execute()
+    if result.data and len(result.data) > 0:
+        return result.data[0]["id"]
+    raise RuntimeError("Failed to save submission")
 
 
 def get_user_submissions(user_id, limit=100):
     """Get submission history for a user."""
-    db = get_db()
-    return db.execute(
-        """SELECT * FROM submissions WHERE user_id = ?
-           ORDER BY submitted_at DESC LIMIT ?""",
-        (user_id, limit),
-    ).fetchall()
+    sb = get_supabase()
+    result = (
+        sb.table("submissions")
+        .select("*")
+        .eq("user_id", user_id)
+        .order("submitted_at", desc=True)
+        .limit(limit)
+        .execute()
+    )
+    return result.data or []
 
 
 def get_submission_by_id(submission_id):
     """Get a single submission by ID."""
-    db = get_db()
-    return db.execute("SELECT * FROM submissions WHERE id = ?", (submission_id,)).fetchone()
+    sb = get_supabase()
+    result = sb.table("submissions").select("*").eq("id", submission_id).execute()
+    if result.data and len(result.data) > 0:
+        return result.data[0]
+    return None
 
 
 def get_all_submissions(limit=1000):
-    """Get all submissions (for admin)."""
-    db = get_db()
-    return db.execute(
-        """SELECT s.*, u.username, u.clinic_name
-           FROM submissions s
-           JOIN users u ON s.user_id = u.id
-           ORDER BY s.submitted_at DESC LIMIT ?""",
-        (limit,),
-    ).fetchall()
+    """Get all submissions with user info (for admin)."""
+    sb = get_supabase()
+    # Supabase Python client doesn't support JOIN directly via builder,
+    # so we fetch submissions and users separately and merge in Python
+    subs_result = (
+        sb.table("submissions")
+        .select("*")
+        .order("submitted_at", desc=True)
+        .limit(limit)
+        .execute()
+    )
+    subs = subs_result.data or []
+    if not subs:
+        return []
+
+    user_ids = list(set(s["user_id"] for s in subs))
+    users_result = sb.table("users").select("id, username, clinic_name").in_("id", user_ids).execute()
+    users_map = {u["id"]: u for u in (users_result.data or [])}
+
+    # Merge user info into submissions
+    for sub in subs:
+        user = users_map.get(sub["user_id"], {})
+        sub["username"] = user.get("username")
+        sub["clinic_name"] = user.get("clinic_name")
+
+    return subs
 
 
 # =====================================================================
@@ -283,35 +240,48 @@ def get_all_submissions(limit=1000):
 
 def save_feedback(submission_id, user_id, antibiotic, predicted_label, actual_label, actual_value=None, notes=None):
     """Save lab-confirmed feedback for a prediction."""
-    db = get_db()
-    db.execute(
-        """INSERT INTO feedback
-           (submission_id, user_id, antibiotic, predicted_label, actual_label, actual_value, notes)
-           VALUES (?, ?, ?, ?, ?, ?, ?)""",
-        (submission_id, user_id, antibiotic, predicted_label, actual_label, actual_value, notes),
-    )
-    db.commit()
+    sb = get_supabase()
+    sb.table("feedback").insert({
+        "submission_id": submission_id,
+        "user_id": user_id,
+        "antibiotic": antibiotic,
+        "predicted_label": predicted_label,
+        "actual_label": actual_label,
+        "actual_value": actual_value,
+        "notes": notes,
+    }).execute()
 
 
 def get_submission_feedback(submission_id):
     """Get all feedback for a submission."""
-    db = get_db()
-    return db.execute(
-        "SELECT * FROM feedback WHERE submission_id = ? ORDER BY created_at DESC",
-        (submission_id,),
-    ).fetchall()
+    sb = get_supabase()
+    result = (
+        sb.table("feedback")
+        .select("*")
+        .eq("submission_id", submission_id)
+        .order("created_at", desc=True)
+        .execute()
+    )
+    return result.data or []
 
 
 def get_feedback_stats():
     """Get aggregate feedback statistics per antibiotic."""
-    db = get_db()
-    return db.execute(
-        """SELECT antibiotic,
-                  COUNT(*) as total,
-                  SUM(CASE WHEN predicted_label = actual_label THEN 1 ELSE 0 END) as correct
-           FROM feedback
-           GROUP BY antibiotic"""
-    ).fetchall()
+    sb = get_supabase()
+    result = sb.table("feedback").select("antibiotic, predicted_label, actual_label").execute()
+    rows = result.data or []
+
+    # Aggregate in Python
+    stats = {}
+    for row in rows:
+        ab = row["antibiotic"]
+        if ab not in stats:
+            stats[ab] = {"antibiotic": ab, "total": 0, "correct": 0}
+        stats[ab]["total"] += 1
+        if row["predicted_label"] == row["actual_label"]:
+            stats[ab]["correct"] += 1
+
+    return list(stats.values())
 
 
 # =====================================================================
@@ -320,12 +290,13 @@ def get_feedback_stats():
 
 def log_action(user_id, action, details=None, ip_address=None):
     """Log an action to the audit log."""
-    db = get_db()
-    db.execute(
-        "INSERT INTO audit_log (user_id, action, details, ip_address) VALUES (?, ?, ?, ?)",
-        (user_id, action, details, ip_address),
-    )
-    db.commit()
+    sb = get_supabase()
+    sb.table("audit_log").insert({
+        "user_id": user_id,
+        "action": action,
+        "details": details,
+        "ip_address": ip_address,
+    }).execute()
 
 
 # =====================================================================
@@ -334,19 +305,57 @@ def log_action(user_id, action, details=None, ip_address=None):
 
 def get_admin_stats():
     """Get system-wide statistics for the admin dashboard."""
-    db = get_db()
+    sb = get_supabase()
     stats = {}
-    stats["total_users"] = db.execute("SELECT COUNT(*) FROM users").fetchone()[0]
-    stats["total_submissions"] = db.execute("SELECT COUNT(*) FROM submissions").fetchone()[0]
-    stats["total_feedback"] = db.execute("SELECT COUNT(*) FROM feedback").fetchone()[0]
-    stats["recent_submissions"] = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE submitted_at >= datetime('now', '-7 days')"
-    ).fetchone()[0]
-    stats["users_by_role"] = db.execute(
-        "SELECT role, COUNT(*) as count FROM users GROUP BY role"
-    ).fetchall()
-    stats["submissions_per_day"] = db.execute(
-        "SELECT DATE(submitted_at) as day, COUNT(*) as count "
-        "FROM submissions GROUP BY day ORDER BY day DESC LIMIT 30"
-    ).fetchall()
+
+    # Total users
+    result = sb.table("users").select("id", count="exact").execute()
+    stats["total_users"] = result.count or 0
+
+    # Total submissions
+    result = sb.table("submissions").select("id", count="exact").execute()
+    stats["total_submissions"] = result.count or 0
+
+    # Total feedback
+    result = sb.table("feedback").select("id", count="exact").execute()
+    stats["total_feedback"] = result.count or 0
+
+    # Recent submissions (last 7 days)
+    seven_days_ago = (datetime.now() - timedelta(days=7)).isoformat()
+    result = (
+        sb.table("submissions")
+        .select("id", count="exact")
+        .gte("submitted_at", seven_days_ago)
+        .execute()
+    )
+    stats["recent_submissions"] = result.count or 0
+
+    # Users by role
+    result = sb.table("users").select("role").execute()
+    role_counts = {}
+    for row in (result.data or []):
+        role = row["role"]
+        role_counts[role] = role_counts.get(role, 0) + 1
+    stats["users_by_role"] = [
+        {"role": k, "count": v} for k, v in role_counts.items()
+    ]
+
+    # Submissions per day (last 30 days)
+    thirty_days_ago = (datetime.now() - timedelta(days=30)).isoformat()
+    result = (
+        sb.table("submissions")
+        .select("submitted_at")
+        .gte("submitted_at", thirty_days_ago)
+        .execute()
+    )
+    day_counts = {}
+    for row in (result.data or []):
+        day = row["submitted_at"][:10]  # Extract YYYY-MM-DD
+        day_counts[day] = day_counts.get(day, 0) + 1
+    stats["submissions_per_day"] = sorted(
+        [{"day": k, "count": v} for k, v in day_counts.items()],
+        key=lambda x: x["day"],
+        reverse=True
+    )
+
     return stats

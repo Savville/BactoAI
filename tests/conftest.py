@@ -2,11 +2,11 @@
 BactoAI Test Configuration
 ============================
 Shared fixtures for the test suite.
+Uses Supabase for database operations.
 """
 
 import os
 import sys
-import tempfile
 import pytest
 
 # Ensure the project root is on the path
@@ -14,22 +14,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from bactoai.app import create_app
 from bactoai.config import TestingConfig
-from bactoai.database import get_db, init_db
+from bactoai.database import get_supabase
 
 
 @pytest.fixture
 def app():
     """Create a test application instance."""
-    with tempfile.TemporaryDirectory() as tmpdir:
-        # Create a test-specific config
-        class TestConfig(TestingConfig):
-            DB_PATH = os.path.join(tmpdir, "test.db")
-
-        app = create_app(config_class=TestConfig)
-
-        with app.app_context():
-            init_db()
-            yield app
+    app = create_app(config_class=TestingConfig)
+    yield app
 
 
 @pytest.fixture
@@ -71,12 +63,9 @@ def admin_client(client):
         "clinic_name": "Admin Hospital",
     })
 
-    # Set as admin directly in DB
-    from flask import current_app
-    with current_app.app_context():
-        db = get_db()
-        db.execute("UPDATE users SET role = 'admin' WHERE username = 'adminuser'")
-        db.commit()
+    # Set as admin directly via Supabase
+    sb = get_supabase()
+    sb.table("users").update({"role": "admin"}).eq("username", "adminuser").execute()
 
     # Login
     client.post("/login", data={

@@ -14,9 +14,9 @@ from flask import (
 )
 
 from bactoai.database import (
-    get_db, save_submission, get_user_submissions,
+    save_submission, get_user_submissions,
     get_submission_by_id, save_feedback, get_submission_feedback,
-    log_action,
+    log_action, get_supabase,
 )
 from bactoai.models.prediction import (
     get_prediction_assets, predict_genome, predict_single_antibiotic,
@@ -70,13 +70,16 @@ def history_json():
 @login_required
 def submission_detail(submission_id):
     """View a single submission with feedback form."""
-    submission = get_user_submissions(session["user_id"])
-    # Find the specific submission
-    db = get_db()
-    sub = db.execute(
-        "SELECT * FROM submissions WHERE id = ? AND user_id = ?",
-        (submission_id, session["user_id"]),
-    ).fetchone()
+    # Find the specific submission belonging to this user
+    sb = get_supabase()
+    result = (
+        sb.table("submissions")
+        .select("*")
+        .eq("id", submission_id)
+        .eq("user_id", session["user_id"])
+        .execute()
+    )
+    sub = result.data[0] if result.data else None
 
     if not sub:
         flash("Submission not found.", "error")
@@ -392,8 +395,8 @@ def health():
     """Health check endpoint."""
     db_ok = True
     try:
-        db = get_db()
-        db.execute("SELECT 1")
+        sb = get_supabase()
+        sb.table("users").select("id").limit(1).execute()
     except Exception:
         db_ok = False
 

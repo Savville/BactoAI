@@ -7,6 +7,10 @@ Central configuration for all environments.
 import os
 import secrets
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # =====================================================================
 # ML Pipeline Constants (defined here to avoid importing heavy deps)
@@ -33,8 +37,9 @@ class Config:
     # Flask
     SECRET_KEY = os.environ.get("BACTOAI_SECRET", secrets.token_hex(32))
 
-    # Database
-    DB_PATH = os.path.join(DATA_DIR, "bactoai.db")
+    # Database (Supabase PostgreSQL)
+    SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+    SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
 
     # ML Pipeline
     ANTIBIOTIC_ORDER = ["meropenem", "ciprofloxacin", "cefotaxime"]
@@ -73,7 +78,6 @@ class ProductionConfig(Config):
 class TestingConfig(Config):
     """Testing configuration."""
     TESTING = True
-    DB_PATH = ":memory:"
     WTF_CSRF_ENABLED = False
     SESSION_COOKIE_SECURE = False
     SKIP_MODEL_LOADING = True
