@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>BactoAI - Genomic Resistance Predictor</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,6 +94,15 @@
     </main>
 
     <script>
+        // Get CSRF token from meta tag or cookie
+        function getCsrfToken() {
+            const meta = document.querySelector('meta[name="csrf-token"]');
+            if (meta) return meta.content;
+            // Fallback: parse from cookie
+            const match = document.cookie.match(/csrf_token=([^;]+)/);
+            return match ? match[1] : '';
+        }
+
         const dropZone = document.getElementById('drop-zone');
         const fileInput = document.getElementById('file-input');
         const uploadCard = document.getElementById('upload-card');
@@ -142,6 +152,26 @@
             document.getElementById('upload-fields').classList.add('hidden');
             loadingState.classList.remove('hidden');
 
+            // Helper: parse response as JSON, handle HTML errors gracefully
+            async function parseResponse(response) {
+                const contentType = response.headers.get('content-type') || '';
+                if (contentType.includes('application/json')) {
+                    return await response.json();
+                }
+                // Server returned HTML (error page, login redirect, etc.)
+                const text = await response.text();
+                if (response.url.includes('/login') || text.includes('<form')) {
+                    throw new Error('Session expired. Please log in again.');
+                }
+                throw new Error(`Server error (${response.status}). Check file format.`);
+            }
+
+            const csrfToken = getCsrfToken();
+            const fetchOptions = {
+                method: 'POST',
+                headers: csrfToken ? { 'X-CSRFToken': csrfToken } : {},
+            };
+
             let promise;
             if (files.length === 1) {
                 // Single file upload
@@ -149,7 +179,8 @@
                 formData.append('file', files[0]);
                 formData.append('sample_id', document.getElementById('sample_id').value);
                 formData.append('notes', document.getElementById('notes').value);
-                promise = fetch('/predict', { method: 'POST', body: formData }).then(r => r.json());
+                fetchOptions.body = formData;
+                promise = fetch('/predict', fetchOptions).then(parseResponse);
             } else {
                 // Bulk upload
                 const formData = new FormData();
@@ -158,7 +189,8 @@
                 }
                 formData.append('notes', document.getElementById('notes').value);
                 loadingState.querySelector('p').textContent = `Analyzing ${files.length} genomes...`;
-                promise = fetch('/predict/bulk', { method: 'POST', body: formData }).then(r => r.json());
+                fetchOptions.body = formData;
+                promise = fetch('/predict/bulk', fetchOptions).then(parseResponse);
             }
 
             promise
@@ -306,7 +338,7 @@
             fetch('/validate')
                 .then(response => {
                     if (!response.ok) throw new Error('Validation request failed');
-                    return response.json();
+                    return response.json();  // validate is GET, no CSRF needed
                 })
                 .then(data => {
                     validationSummary.classList.remove('hidden');
