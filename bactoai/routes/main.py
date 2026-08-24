@@ -119,6 +119,11 @@ def predict():
     try:
         # Save and validate the uploaded file
         temp_path = save_uploaded_file(uploaded_file)
+        current_app.logger.info(
+            f"Upload received: filename={uploaded_file.filename}, "
+            f"content_length={request.content_length}, "
+            f"saved_size={os.path.getsize(temp_path)}"
+        )
         validate_genome_file(temp_path, uploaded_file.filename)
 
         # Run predictions

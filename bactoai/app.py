@@ -7,8 +7,9 @@ blueprints, and middleware registered.
 
 import os
 import secrets
+import traceback
 
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_wtf.csrf import CSRFProtect
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -24,6 +25,12 @@ from bactoai.routes.admin import admin_bp
 
 csrf = CSRFProtect()
 limiter = Limiter(key_func=get_remote_address, default_limits=["200 per day", "50 per hour"])
+
+
+@limiter.request_filter
+def _exempt_static_from_rate_limit():
+    """Static asset requests (CSS/JS/fonts) shouldn't count against the abuse-prevention quota."""
+    return request.endpoint == "static"
 
 
 def _create_default_admin():
@@ -76,5 +83,36 @@ def create_app(config_class=Config):
     # Load prediction assets (skip in testing)
     if not app.config.get("SKIP_MODEL_LOADING"):
         load_prediction_assets(app)
+
+    # ------------------------------------------------------------------
+    # Global error handlers — return JSON for fetch/AJAX/API requests so
+    # the frontend always gets a readable error instead of an HTML 500 page.
+    # ------------------------------------------------------------------
+    def _wants_json(req):
+        if req.accept_mimetypes.best == "application/json":
+            return True
+        if req.headers.get("X-Requested-With", "").lower() == "xmlhttprequest":
+            return True
+        if req.is_json:
+            return True
+        return False
+
+    @app.errorhandler(500)
+    def _handle_500(error):
+        app.logger.error(f"Unhandled server error: {error}\n{traceback.format_exc()}")
+        if _wants_json(request):
+            return jsonify({
+                "error": "An unexpected server error occurred. Please try again. "
+                         "If the problem persists, contact support."
+            }), 500
+        return error
+
+    @app.errorhandler(503)
+    def _handle_503(error):
+        if _wants_json(request):
+            return jsonify({
+                "error": "Service temporarily unavailable. Please try again shortly."
+            }), 503
+        return error
 
     return app

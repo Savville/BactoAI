@@ -153,7 +153,7 @@ docker push ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/bactoai:latest
 1. Connect GitHub repository on render.com
 2. Create new Web Service:
    - Build Command: `pip install -r requirements.txt`
-   - Start Command: `gunicorn app:app`
+   - Start Command: `gunicorn --bind 0.0.0.0:$PORT app:app`
    - Environment: `BACTOAI_SECRET=your-secret-key`
 3. Add persistent disk for database (Settings > Disks)
 4. Deploy

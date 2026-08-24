@@ -176,6 +176,22 @@ body {
     to { transform: rotate(360deg); }
 }
 
+.spinner-sm {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.validation-progress {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .upload-progress p {
     font-family: 'Outfit', sans-serif;
     font-size: 1.5rem;

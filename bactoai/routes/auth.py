@@ -9,7 +9,7 @@ from functools import wraps
 
 from flask import (
     Blueprint, render_template, request, session,
-    redirect, url_for, flash, current_app,
+    redirect, url_for, flash, current_app, jsonify,
 )
 
 from bactoai.database import (
@@ -17,6 +17,19 @@ from bactoai.database import (
     create_user, verify_password, log_action,
     create_api_key, get_user_api_keys,
 )
+
+
+def _wants_json(req):
+    """True if the client prefers a JSON response over HTML."""
+    # Explicit JSON preference via the Accept header
+    if req.accept_mimetypes.best == "application/json":
+        return True
+    # Common AJAX/fetch signals
+    if req.headers.get("X-Requested-With", "").lower() == "xmlhttprequest":
+        return True
+    if req.is_json:
+        return True
+    return False
 
 
 auth_bp = Blueprint("auth", __name__)
@@ -43,7 +56,18 @@ def role_required(*roles):
         def decorated_function(*args, **kwargs):
             if "user_id" not in session:
                 return redirect(url_for("auth.login"))
-            user = get_user_by_id(session["user_id"])
+            try:
+                user = get_user_by_id(session["user_id"])
+            except Exception as exc:
+                current_app.logger.error(f"Database error checking role: {exc}", exc_info=True)
+                # API/AJAX endpoints expect JSON; page loads expect a redirect
+                if _wants_json(request):
+                    return jsonify({
+                        "error": "A database error occurred while verifying your permissions. "
+                                 "Please try again or log in again."
+                    }), 503
+                flash("A temporary database error occurred. Please try again or log in again.", "error")
+                return redirect(url_for("auth.login"))
             if not user or user["role"] not in roles:
                 flash("You do not have permission to access this page.", "error")
                 return redirect(url_for("main.index"))

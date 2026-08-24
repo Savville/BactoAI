@@ -63,19 +63,6 @@
             </div>
         </div>
 
-        <div class="card validation-card" id="validation-card">
-            <div class="results-header">
-                <h2>Validation</h2>
-                <p>Use genomes in <strong>data/test_genomes</strong> for validation and <strong>data/train_genomes</strong> for training.</p>
-            </div>
-
-            <button class="btn-primary" type="button" onclick="runValidation()">
-                <i class="ph ph-chart-line-up"></i> Run Validation
-            </button>
-
-            <div class="validation-summary hidden" id="validation-summary"></div>
-            <div class="results-grid validation-results hidden" id="validation-results"></div>
-        </div>
 
         <div class="card results-card hidden" id="results-card">
             <div class="results-header">
@@ -110,8 +97,6 @@
         const resultsCard = document.getElementById('results-card');
         const resultsContainer = document.getElementById('results-container');
         const filenameDisplay = document.getElementById('filename-display');
-        const validationSummary = document.getElementById('validation-summary');
-        const validationResults = document.getElementById('validation-results');
 
         // Prevent default drag behaviors
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -152,18 +137,25 @@
             document.getElementById('upload-fields').classList.add('hidden');
             loadingState.classList.remove('hidden');
 
-            // Helper: parse response as JSON, handle HTML errors gracefully
+            // Helper: parse response as JSON, handle HTML errors gracefully.
+            // The server returns JSON (with an "error" field) for fetch requests
+            // even on 4xx/5xx, so surface that message to the user.
             async function parseResponse(response) {
                 const contentType = response.headers.get('content-type') || '';
                 if (contentType.includes('application/json')) {
-                    return await response.json();
+                    const data = await response.json();
+                    // If the JSON carries an error message, surface it directly
+                    if (data && data.error) {
+                        throw new Error(data.error);
+                    }
+                    return data;
                 }
                 // Server returned HTML (error page, login redirect, etc.)
                 const text = await response.text();
                 if (response.url.includes('/login') || text.includes('<form')) {
                     throw new Error('Session expired. Please log in again.');
                 }
-                throw new Error(`Server error (${response.status}). Check file format.`);
+                throw new Error(`Server error (${response.status}). Please try again or check the file format.`);
             }
 
             const csrfToken = getCsrfToken();
@@ -403,55 +395,6 @@
             document.getElementById('notes').value = "";
         }
 
-        function runValidation() {
-            validationSummary.classList.add('hidden');
-            validationResults.classList.add('hidden');
-            validationSummary.innerHTML = '<p>Running validation...</p>';
-
-            fetch('/validate')
-                .then(response => {
-                    if (!response.ok) throw new Error('Validation request failed');
-                    return response.json();  // validate is GET, no CSRF needed
-                })
-                .then(data => {
-                    validationSummary.classList.remove('hidden');
-                    validationResults.classList.remove('hidden');
-                    validationResults.innerHTML = '';
-
-                    const antibioticCards = data.antibiotics.map(item => {
-                        const accuracy = item.accuracy === null ? 'n/a' : `${(item.accuracy * 100).toFixed(1)}%`;
-                        const rocAuc = item.roc_auc === null ? 'n/a' : item.roc_auc.toFixed(3);
-                        return `
-                            <div class="result-row">
-                                <div class="result-info">
-                                    <span class="drug-name">${item.antibiotic}</span>
-                                    <div class="status-badge status-uncertain">Validation</div>
-                                </div>
-                                <div class="bayesian-metrics">
-                                    <div><strong>Accuracy:</strong> ${accuracy}</div>
-                                    <div><strong>ROC-AUC:</strong> ${rocAuc}</div>
-                                    <div><strong>Test samples:</strong> ${item.test_samples}</div>
-                                    <div><strong>Missing genomes:</strong> ${item.missing_genomes}</div>
-                                    ${item.message ? `<div class="recommendation-alert alert-uncertain">${item.message}</div>` : ''}
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
-
-                    validationSummary.innerHTML = `
-                        <p><strong>Validation split:</strong> ${(data.test_size * 100).toFixed(0)}% held out</p>
-                        <p><strong>Random state:</strong> ${data.random_state}</p>
-                        <p><strong>Training folder:</strong> ${data.train_genomes_dir}</p>
-                        <p><strong>Test folder:</strong> ${data.test_genomes_dir}</p>
-                    `;
-
-                    validationResults.innerHTML = antibioticCards;
-                })
-                .catch(error => {
-                    validationSummary.classList.remove('hidden');
-                    validationSummary.innerHTML = `<p>Validation failed: ${error.message}</p>`;
-                });
-        }
     </script>
 </body>
 </html>
