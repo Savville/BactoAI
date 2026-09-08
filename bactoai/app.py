@@ -80,9 +80,12 @@ def create_app(config_class=Config):
     with app.app_context():
         _create_default_admin()
 
-    # Load prediction assets (skip in testing)
-    if not app.config.get("SKIP_MODEL_LOADING"):
-        load_prediction_assets(app)
+    # NOTE: Prediction assets are loaded in the gunicorn post_fork hook
+    # (see gunicorn.conf.py) so that gunicorn can bind to the port first.
+    # This prevents Render from flagging "No open ports detected" during the
+    # slow cold-start while large ML models are loading.
+    # In testing, SKIP_MODEL_LOADING is set so we never load models.
+    # In development (run.py), load_prediction_assets() is called manually.
 
     # ------------------------------------------------------------------
     # Global error handlers — return JSON for fetch/AJAX/API requests so
