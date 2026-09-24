@@ -17,8 +17,7 @@ COPY . .
 # Create data directory
 RUN mkdir -p data
 
-# Initialize database
-RUN python -c "from app import init_db; init_db()"
+
 
 # Expose port
 EXPOSE 8080
