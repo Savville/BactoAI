@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for caching
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements-ml.txt .
+RUN pip install --no-cache-dir -r requirements-ml.txt
 
 # Copy application code
 COPY . .
@@ -17,8 +17,7 @@ COPY . .
 # Create data directory
 RUN mkdir -p data
 
-# Initialize database
-RUN python -c "from app import init_db; init_db()"
+
 
 # Expose port
 EXPOSE 8080
