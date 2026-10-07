@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /auth
+Disallow: /admin
+Disallow: /theme-tokens
+
+Sitemap: https://bactoai.co.ke/sitemap.xml

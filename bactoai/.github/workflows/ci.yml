@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  static-checks:
+    name: Lint, typecheck, anchors & build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Fix Lovable sandbox registry URLs
+        run: sed -i 's#https://europe-west[0-9]*-npm\.pkg\.dev/lovable-core-prod/sandbox-npm-cache/#https://registry.npmjs.org/#g' bun.lock
+      - run: bun install
+
+      - name: Lockfile registry audit (no private sandbox URLs)
+        run: bun run audit:lockfile
+      - name: Lint
+        run: bun run lint
+      - name: Anchor audit (internal href="#..." deep links)
+        run: bun run audit:anchors
+      - name: Build
+        run: bun run build
+
+  e2e:
+    name: SEO URLs & visual regression
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Fix Lovable sandbox registry URLs
+        run: sed -i 's#https://europe-west[0-9]*-npm\.pkg\.dev/lovable-core-prod/sandbox-npm-cache/#https://registry.npmjs.org/#g' bun.lock
+      - run: bun install
+
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+      - name: Run Playwright tests
+        run: bun run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 7
+      - name: Upload Playwright traces & screenshots (on failure)
+        uses: actions/upload-artifact@v4
+        if: ${{ failure() }}
+        with:
+          name: playwright-traces
+          path: |
+            test-results
+            tests/__screenshots__
+          retention-days: 7
+
+  update-snapshots:
+    name: Update visual snapshots (manual only)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Fix Lovable sandbox registry URLs
+        run: sed -i 's#https://europe-west[0-9]*-npm\.pkg\.dev/lovable-core-prod/sandbox-npm-cache/#https://registry.npmjs.org/#g' bun.lock
+      - run: bun install
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+      - name: Update snapshots
+        run: bun run test:visual:update
+      - uses: actions/upload-artifact@v4
+        with:
+          name: updated-screenshots
+          path: tests/__screenshots__/
+         

@@ -1,0 +1,37 @@
+import { createFileRoute } from "@tanstack/react-router";
+import type {} from "@tanstack/react-start";
+import { SITE_URL, publicRoutes } from "@/lib/site-routes";
+
+export const Route = createFileRoute("/sitemap.xml")({
+  server: {
+    handlers: {
+      GET: async () => {
+        const urls = publicRoutes().map((entry) =>
+          [
+            `  <url>`,
+            `    <loc>${SITE_URL}${entry.path}</loc>`,
+            entry.changefreq ? `    <changefreq>${entry.changefreq}</changefreq>` : null,
+            entry.priority ? `    <priority>${entry.priority}</priority>` : null,
+            `  </url>`,
+          ]
+            .filter(Boolean)
+            .join("\n"),
+        );
+
+        const xml = [
+          `<?xml version="1.0" encoding="UTF-8"?>`,
+          `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+          ...urls,
+          `</urlset>`,
+        ].join("\n");
+
+        return new Response(xml, {
+          headers: {
+            "Content-Type": "application/xml",
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
+      },
+    },
+  },
+});

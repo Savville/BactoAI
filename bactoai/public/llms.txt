@@ -1,0 +1,21 @@
+# BactoAI
+
+> BactoAI is a genomic AI engine that predicts antimicrobial resistance from bacterial whole-genome sequences in minutes, supporting faster precision treatment decisions.
+
+## Pages
+
+- [Home](https://bactoai.lovable.app/): Overview, live demo, and validation.
+- [Technology](https://bactoai.lovable.app/technology): How the prediction engine works, features, and FAQ.
+- [Research](https://bactoai.lovable.app/research): Research, impact, and partner laboratories.
+- [About](https://bactoai.lovable.app/about): Team, media coverage, partners, and roadmap.
+- [Pricing](https://bactoai.lovable.app/pricing): Research and clinical plans.
+- [Press](https://bactoai.lovable.app/press): Media coverage and press kit.
+- [Resources](https://bactoai.lovable.app/resources): Guides and articles.
+- [Blog](https://bactoai.lovable.app/blog): News and insights.
+- [Contact](https://bactoai.lovable.app/contact): Request a demo or pilot.
+
+## Optional
+
+- [Careers](https://bactoai.lovable.app/careers): Open roles.
+- [Privacy](https://bactoai.lovable.app/privacy): Privacy policy.
+- [Terms](https://bactoai.lovable.app/terms): Terms of use.

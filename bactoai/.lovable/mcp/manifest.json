@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.3",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://ojnecaomcicsayeweoab.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "bactoai-website-builder",
+      "version": "0.1.0",
+      "title": "BactoAI Website Builder"
+    },
+    "tools": [
+      {
+        "name": "list_contact_submissions",
+        "title": "List contact submissions",
+        "description": "List BactoAI website submissions (demo requests, partner inquiries, newsletter signups). Requires an admin account; non-admins see no rows.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "form_type": {
+              "description": "Filter by submission type.",
+              "type": "string",
+              "enum": [
+                "demo",
+                "partner",
+                "newsletter",
+                "contact"
+              ]
+            },
+            "limit": {
+              "description": "Max rows to return (default 25, max 100).",
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submission_stats",
+        "title": "Submission stats",
+        "description": "Summarize BactoAI website submissions by form type, with the most recent submission date. Requires an admin account.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_articles",
+        "title": "List articles",
+        "description": "List BactoAI blog and resource articles (title, excerpt, category, date, reading time), optionally filtered by category.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Filter articles by category.",
+              "type": "string",
+              "enum": [
+                "Research",
+                "Clinical",
+                "Public Health",
+                "Product"
+              ]
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
