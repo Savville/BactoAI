@@ -84,3 +84,5 @@ htmlcov/
 bactoai/__pycache__/
 bactoai/**/__pycache__/
 tests/__pycache__/
+
+db_pass.txt

@@ -16,3 +16,4 @@ test_dataset/
 test_genomes/
 credentials.json
 .env
+db_pass.txt
