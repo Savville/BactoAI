@@ -92,20 +92,24 @@ def api_predict():
         genome_size = os.path.getsize(temp_path)
         results = predict_genome(temp_path)
 
-        submission_id = save_submission(
-            user_id=request.api_user_id,
-            sample_id=sample_id or uploaded_file.filename,
-            filename=uploaded_file.filename,
-            genome_size=genome_size,
-            results=results,
-            notes=notes,
-        )
-
-        log_action(
-            request.api_user_id, "api_predict",
-            f"Sample: {sample_id}, File: {uploaded_file.filename}",
-            ip_address=request.remote_addr,
-        )
+        # Save to database — non-blocking; prediction result is still returned
+        submission_id = None
+        try:
+            submission_id = save_submission(
+                user_id=request.api_user_id,
+                sample_id=sample_id or uploaded_file.filename,
+                filename=uploaded_file.filename,
+                genome_size=genome_size,
+                results=results,
+                notes=notes,
+            )
+            log_action(
+                request.api_user_id, "api_predict",
+                f"Sample: {sample_id}, File: {uploaded_file.filename}",
+                ip_address=request.remote_addr,
+            )
+        except Exception as db_exc:
+            current_app.logger.warning(f"API predict: DB save failed (prediction still valid): {db_exc}")
 
         return jsonify({
             "submission_id": submission_id,

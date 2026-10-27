@@ -124,16 +124,20 @@ def create_api_key(user_id, name=""):
 def verify_api_key(raw_key):
     """Verify an API key and return the associated user_id. Returns None if invalid."""
     key_hash = hashlib.sha256(raw_key.encode()).hexdigest()
-    sb = get_supabase()
-    result = sb.table("api_keys").select("*").eq("key_hash", key_hash).eq("is_active", True).execute()
+    try:
+        sb = get_supabase()
+        result = sb.table("api_keys").select("*").eq("key_hash", key_hash).eq("is_active", True).execute()
 
-    if result.data and len(result.data) > 0:
-        row = result.data[0]
-        # Update last_used_at
-        sb.table("api_keys").update({
-            "last_used_at": datetime.now().isoformat()
-        }).eq("id", row["id"]).execute()
-        return row["user_id"]
+        if result.data and len(result.data) > 0:
+            row = result.data[0]
+            # Update last_used_at
+            sb.table("api_keys").update({
+                "last_used_at": datetime.now().isoformat()
+            }).eq("id", row["id"]).execute()
+            return row["user_id"]
+    except Exception as exc:
+        import logging
+        logging.warning(f"verify_api_key: Supabase error (treated as invalid key): {exc}")
     return None
 
 
