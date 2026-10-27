@@ -68,35 +68,62 @@ return jsonify({...results...})  # ← Always returns prediction results
 
 ---
 
-## Remaining Fix: Database Tables
+## Remaining Fix: Database Tables (DO THIS NOW)
 
-The Flask backend needs its Supabase project to have these tables. You must run the SQL on **one** of the two projects:
+The code fix is deployed. The 500 → 401 change is live. Now you need to create the missing tables and update the Flask backend's Supabase connection.
 
-### Option A: Fix the Flask backend's current project (recommended if it has data)
-
-1. Go to **https://supabase.com/dashboard/project/ofuxwgapzjgcrsuiqpyu**
-2. Open **SQL Editor**
-3. Paste and run the full migration: `migrations/supabase_setup.sql`
-4. Verify with: `SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';`
-
-### Option B: Switch Flask backend to the working project
+### Step 1: Get the Service Role Key
 
 1. Go to **https://supabase.com/dashboard/project/ojnecaomcicsayeweoab**
-2. Open **SQL Editor**
-3. Paste and run: `migrations/supabase_setup.sql`
-4. Generate a **service_role key**: Dashboard → Settings → API → copy the `service_role` key
-5. Update root `.env`:
-   ```
-   SUPABASE_URL=https://ojnecaomcicsayeweoab.supabase.co
-   SUPABASE_KEY=<paste service_role key here>
-   ```
-6. Redeploy Render
+2. **Settings → API**
+3. Copy the **service_role** key (not the anon/public key)
 
-### Option C: Keep both projects separate (current architecture)
+### Step 2: Create Tables
 
-The React app and Flask backend can use different Supabase projects. In this case:
-- Run `migrations/supabase_setup.sql` on `ofuxwgapzjgcrsuiqpyu`
-- Ensure the service_role key in root `.env` is valid and not revoked
+1. Go to **SQL Editor** in the same project
+2. Paste and run: `migrations/create_flask_backend_tables.sql` (in this repo)
+3. Verify:
+   ```sql
+   SELECT table_name FROM information_schema.tables
+   WHERE table_schema = 'public' ORDER BY table_name;
+   ```
+   You should see: `api_keys`, `audit_log`, `feedback`, `submissions`, `users`
+
+### Step 3: Update Flask Backend Environment Variables
+
+On **Render dashboard → bactoai-kt0q → Environment**:
+```
+SUPABASE_URL=https://ojnecaomcicsayeweoab.supabase.co
+SUPABASE_KEY=<paste service_role key from step 1>
+```
+
+Also update root `.env` (for local dev):
+```
+SUPABASE_URL=https://ojnecaomcicsayeweoab.supabase.co
+SUPABASE_KEY=<same service_role key>
+```
+
+### Step 4: Redeploy Render
+
+Trigger a manual deploy on Render (Settings → Manual Deploy).
+
+### Step 5: Create an API Key
+
+After redeploy, visit **https://bactoai.co.ke/auth** (or your login page), create an account, then go to `/api-keys` to generate a new API key. Use that key for the LiveAnalyzer.
+
+### Expected Result After Fix
+
+```bash
+# Health should show database_ok: true
+curl https://bactoai-kt0q.onrender.com/health
+# → {"database_ok":true,"models_loaded":true,"status":"ok"}
+
+# Predict should return JSON results
+curl -X POST https://bactoai-kt0q.onrender.com/api/v1/predict \
+  -H "Authorization: Bearer <your_new_key>" \
+  -F "file=@data/test_genomes/GCA_052266145.1.fna"
+# → {"submission_id":1,"filename":"...","genome_size":6554928,"results":[...]}
+```
 
 ---
 
