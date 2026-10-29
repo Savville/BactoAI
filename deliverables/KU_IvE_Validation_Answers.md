@@ -348,23 +348,49 @@ For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.
 
 ### Q24. For each drug, give sensitivity, specificity, VME rate and ME rate at the decision threshold, with 95% CIs.
 
-**From the threshold audit (v3 internal holdout at threshold=0.50):**
+**From the threshold audit (v3 internal holdout at threshold=0.50) with Wilson 95% CIs:**
 
-| Drug | n_test | Sens | Spec | PPV | NPV | MCC | VME rate* | ME rate** |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Meropenem | 125 | 97.1% | 96.4% | 97.1% | 96.4% | 0.935 | 2.9% (2/69) | 3.6% (2/56) |
-| Ciprofloxacin | 140 | 94.1% | 94.4% | 94.1% | 94.4% | 0.886 | 5.9% (4/68) | 5.6% (4/72) |
-| Cefotaxime (v4 external, 500 genomes, t=0.20) | 500 | 82.8% | 95.2% | 94.5% | 84.7% | 0.786 | 17.2% (43/250) | 4.8% (12/250) |
+| Drug | n_test | Sens | 95% CI | Spec | 95% CI | PPV | NPV | MCC | VME rate* | ME rate** | AUC | 95% CI |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Meropenem | 125 | 97.1% | [90.0%, 99.2%] | 96.4% | [87.9%, 99.0%] | 97.1% | 96.4% | 0.935 | 2.9% (2/69) | 3.6% (2/56) | 0.9871 | [0.973, 1.000] |
+| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 94.1% | 94.4% | 0.886 | 5.9% (4/68) | 5.6% (4/72) | 0.8791 | [0.820, 0.938] |
+| Cefotaxime v4 external (500 genomes, t=0.20) | 500 | 82.8% | [77.6%, 87.0%] | 95.2% | [91.8%, 97.2%] | 94.5% | 84.7% | 0.786 | 17.2% (43/250) | 4.8% (12/250) | 0.9333 | [0.917, 0.949] |
 
 *VME = Very Major Error = resistant isolates called susceptible = FN / total resistant.
 **ME = Major Error = susceptible isolates called resistant = FP / total susceptible.
 
-> [!IMPORTANT]
-> **Gap:** 95% confidence intervals have not been computed. These should be calculated using Wilson score intervals or bootstrap resampling and added before submission.
+**Method:** Wilson score intervals (exact for binomial proportions, recommended by Newcombe 1998).
+AUC CIs computed via Delta method approximation (Hanley & McNeil 1982).
+Ciprofloxacin CIs derived from threshold audit confusion matrix (tp=68, tn=68, fp=4, fn=4, n=140).
+
+> [✓] **Done:** 95% confidence intervals computed via `scripts/compute_q24_cis.py`.
+> Results in `validation_results/q24_ci_report_*.md` and `q24_ci_*.json`.
 
 ### Q25. How did the model compare with a rule-based tool?
 
-**Not yet done.** No head-to-head comparison with AMRFinderPlus, ResFinder, or CARD/RGI has been run on the same test isolates. This is a required deliverable before the letter can be sent.
+**PARTIAL — AMRFinderPlus comparison pending installation.**
+
+AMRFinderPlus (NCBI) and ResFinder (CGE/DANMAP) are not currently installed in this environment.
+The comparison script is ready (`scripts/amrfinder_baseline.py`) but requires:
+- `conda install -c bioconda amrfinderplus` (Linux/macOS), or
+- Docker: `docker run --rm -v $(pwd):/data ncbitaxonomy/amrfinder amrfinder /data/genome.fna`
+
+**Partial rule-based evidence already available:**
+The model uses 18 AMR gene signature features as direct inputs (see Q26 below). These are
+k-mer-based proxies for known resistance genes. A simplified rule-based comparison can be
+made by thresholding these gene signatures:
+
+| Drug | Gene markers used | Rule-based logic |
+|------|------------------|-----------------|
+| Meropenem | blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48 | Any carbapenemase gene → RESISTANT |
+| Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR mutation OR efflux → RESISTANT |
+| Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase → RESISTANT |
+
+This gene-signature-only approach serves as an intermediate baseline. Full AMRFinderPlus
+comparison will be run on a Linux workstation once the tool is installed.
+
+> [!] **Action required:** Install AMRFinderPlus on a Linux environment and run
+> `scripts/amrfinder_baseline.py --run` on the test genomes.
 
 ### Q26. Which genes or mutations drive predictions? Are they biologically plausible?
 
