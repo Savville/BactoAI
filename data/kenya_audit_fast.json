@@ -1,0 +1,76 @@
+{
+  "kenya_total": 8462,
+  "kenya_ab": {
+    "ciprofloxacin": {
+      "ab": "ciprofloxacin",
+      "n_genomes": 13,
+      "n_records": 13,
+      "n_res": 8,
+      "n_sus": 5
+    },
+    "meropenem": {
+      "ab": "meropenem",
+      "n_genomes": 9,
+      "n_records": 9,
+      "n_res": 6,
+      "n_sus": 3
+    },
+    "cefotaxime": {
+      "ab": "cefotaxime",
+      "n_genomes": 7,
+      "n_records": 7,
+      "n_res": 6,
+      "n_sus": 1
+    }
+  },
+  "ea_total": 17173,
+  "af_total": 33483,
+  "top_countries": {
+    "South Africa": 9401,
+    "Kenya": 6539,
+    "Tanzania": 3019,
+    "Nigeria": 2415,
+    "South Africa: Johannesburg": 1487,
+    "Uganda": 1329,
+    "Ghana": 1235,
+    "Tunisia": 1129,
+    "Ethiopia": 981,
+    "Kenya: Nairobi": 821,
+    "Egypt": 761,
+    "South Africa: Gauteng": 687,
+    "Ghana: Accra": 512,
+    "Ethiopia: Harar": 388,
+    "South Africa:Pietermaritzburg": 378
+  },
+  "kenya_species": {
+    "E.coli and Shigella": 4246,
+    "Klebsiella pneumoniae": 1359,
+    "Streptococcus agalactiae": 1146,
+    "Salmonella enterica": 561,
+    "Streptococcus pyogenes": 331,
+    "Vibrio cholerae": 264,
+    "Campylobacter jejuni": 107,
+    "Streptococcus pneumoniae": 105,
+    "Staphylococcus aureus": 101,
+    "Pseudomonas aeruginosa": 76,
+    "Neisseria gonorrhoeae": 44,
+    "Acinetobacter baumannii": 43,
+    "Staphylococcus pseudintermedius": 26,
+    "Enterobacter hormaechei": 12,
+    "Providencia alcalifaciens": 6,
+    "Enterobacter asburiae": 5,
+    "Enterobacter cloacae": 5,
+    "Mycobacterium tuberculosis": 4,
+    "Bacillus cereus group": 4,
+    "Citrobacter freundii": 3,
+    "Enterobacter kobei": 3,
+    "Klebsiella oxytoca": 2,
+    "Serratia marcescens": 2,
+    "Clostridioides difficile": 2,
+    "Citrobacter portucalensis": 1,
+    "Enterobacter roggenkampii": 1,
+    "Aeromonas veronii": 1,
+    "Enterobacter mori": 1,
+    "Clostridium perfringens": 1
+  }
+}
