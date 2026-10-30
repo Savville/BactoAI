@@ -1,4 +1,4 @@
-# BactoAI — Technical & Business Roadmap
+# BactoAI, Technical & Business Roadmap
 
 **Date:** 2026-10-04
 **Goal:** Transform BactoAI from prototype to revenue-generating business
@@ -67,11 +67,11 @@
 
 | Organization                                                  | Purpose                                                                     | Status                      | Value                                              |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------- |
-| **ASM (American Society for Microbiology)**             | Technical endorsement, conference visibility, credibility in clinical micro | In progress — MOU drafting | High — global microbiology authority              |
-| **Kenya Ministry of Health**                            | National guideline integration, pilot sites in public hospitals             | Early outreach              | High — government adoption = massive scale        |
-| **Africa CDC**                                          | Continental AMR surveillance program, funding alignment                     | Researching                 | High — continental reach, grant pipeline          |
-| **WHO Global AMR Observatory**                          | Data contribution, methodological alignment                                 | Long-term                   | High — WHO backing validates the product          |
-| **Local teaching hospitals** (KEMRI, Moi Referral, KNH) | Clinical validation, training programs, real-world testing                  | Outreach phase              | High — peer-reviewed evidence + free case studies |
+| **ASM (American Society for Microbiology)**             | Technical endorsement, conference visibility, credibility in clinical micro | In progress, MOU drafting | High, global microbiology authority              |
+| **Kenya Ministry of Health**                            | National guideline integration, pilot sites in public hospitals             | Early outreach              | High, government adoption = massive scale        |
+| **Africa CDC**                                          | Continental AMR surveillance program, funding alignment                     | Researching                 | High, continental reach, grant pipeline          |
+| **WHO Global AMR Observatory**                          | Data contribution, methodological alignment                                 | Long-term                   | High, WHO backing validates the product          |
+| **Local teaching hospitals** (KEMRI, Moi Referral, KNH) | Clinical validation, training programs, real-world testing                  | Outreach phase              | High, peer-reviewed evidence + free case studies |
 
 ---
 
@@ -123,11 +123,11 @@
 
 ### Target Markets (Priority Order)
 
-1. **Private clinics in East Africa** — First target (Kenya pitch deck ready)
-2. **Reference laboratories** — Already do AST, need faster results
-3. **Research institutions** — Need batch analysis, publishing data
-4. **Veterinary clinics** — Similar resistance patterns, less regulation
-5. **Pharmaceutical companies** — Drug development, clinical trials
+1. **Private clinics in East Africa**, First target (Kenya pitch deck ready)
+2. **Reference laboratories**, Already do AST, need faster results
+3. **Research institutions**, Need batch analysis, publishing data
+4. **Veterinary clinics**, Similar resistance patterns, less regulation
+5. **Pharmaceutical companies**, Drug development, clinical trials
 
 ---
 
@@ -169,11 +169,11 @@
 
 ### This Week
 
-- [ ] **Fix prediction 500 error** — Run `migrations/supabase_setup.sql` on the Flask backend's Supabase project (see `PREDICTION_PIPELINE_FIX.md`)
+- [ ] **Fix prediction 500 error**, Run `migrations/supabase_setup.sql` on the Flask backend's Supabase project (see `PREDICTION_PIPELINE_FIX.md`)
 - [ ] Verify `/health` returns `database_ok: true`
 - [ ] Create pricing page and billing setup (Stripe)
 - [ ] Draft pilot agreement for first 5 clinics
-- [ ] Advance ASM MOU negotiations — legal review of draft terms
+- [ ] Advance ASM MOU negotiations, legal review of draft terms
 
 ### This Month
 
