@@ -1,4 +1,4 @@
-# BactoAI — Two-Page Technical Summary for NPHL
+# BactoAI, Two-Page Technical Summary for NPHL
 
 **Prepared:** 30 October 2026  
 **Version:** v4.1  
@@ -8,7 +8,7 @@
 
 ## 1. Intended Use
 
-BactoAI is a **clinical decision support tool** that predicts antibiotic resistance from bacterial genome sequences. It outputs a resistance call (Susceptible or Resistant) for three antibiotics — meropenem, ciprofloxacin, and cefotaxime — for five Gram-negative pathogen species. The tool is intended to **complement** (not replace) conventional phenotypic AST, providing results within minutes of genome assembly.
+BactoAI is a **clinical decision support tool** that predicts antibiotic resistance from bacterial genome sequences. It outputs a resistance call (Susceptible or Resistant) for three antibiotics, meropenem, ciprofloxacin, and cefotaxime, for five Gram-negative pathogen species. The tool is intended to **complement** (not replace) conventional phenotypic AST, providing results within minutes of genome assembly.
 
 **Target users:** Clinical microbiology laboratories, reference centres, and public health labs performing antimicrobial resistance surveillance.
 
@@ -39,16 +39,16 @@ BactoAI is a **clinical decision support tool** that predicts antibiotic resista
 
 **Ensemble of 3 classifiers, deep stacked 5 times:**
 
-1. **XGBoost** — 300 estimators, max depth 6, learning rate 0.05
-2. **Random Forest** — 200 estimators, max depth 10, balanced class weights
-3. **LightGBM** — 300 estimators, max depth 6, learning rate 0.05
+1. **XGBoost**, 300 estimators, max depth 6, learning rate 0.05
+2. **Random Forest**, 200 estimators, max depth 10, balanced class weights
+3. **LightGBM**, 300 estimators, max depth 6, learning rate 0.05
 
 Each wrapped in Platt sigmoid calibration (5-fold CV). Five random seeds: 42, 123, 456, 789, 1024. Prediction = mean probability across all 15 models.
 
-### Features
+### has
 
-- **K-mer frequencies (k=5):** CountVectorizer tokenizes all 5-character substrings; SelectKBest(chi-squared) selects top 50,000 features. For the v4 cefotaxime model, 1,321 unique 5-mers passed the significance threshold.
-- **AMR gene signatures (18 binary features):** Presence/absence proxies for known resistance genes:
+- **K-mer frequencies (k=5):** CountVectorizer tokenizes all 5-character substrings; SelectKBest(chi-squared) selects top 50,000 has. For the v4 cefotaxime model, 1,321 unique 5-mers passed the significance threshold.
+- **AMR gene signatures (18 binary has):** Presence/absence proxies for known resistance genes:
   - Carbapenemases: blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48
   - ESBLs: blaCTX-M, blaTEM, blaSHV, blaPER, blaACC
   - Fluoroquinolone targets: gyrA mutations, parC mutations
@@ -107,7 +107,7 @@ Computed using Wilson score intervals (exact for binomial proportions) for sensi
 
 5. **No formal genome QC:** No contamination, completeness, or species-confirmation checks are applied to input genomes.
 
-6. **K-mer proxy for gene detection:** The 18 AMR gene signature features use short k-mer matches as proxies, not full-length gene detection. This is a simplification relative to tools like AMRFinderPlus or ResFinder.
+6. **K-mer proxy for gene detection:** The 18 AMR gene signature has use short k-mer matches as proxies, not full-length gene detection. This is a simplification relative to tools like AMRFinderPlus or ResFinder.
 
 7. **Drug maturity gap:** Meropenem and ciprofloxacin are at model version 3 (600 genomes each); cefotaxime is at version 4 (4,019 genomes).
 

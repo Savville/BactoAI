@@ -1,4 +1,4 @@
-# BactoAI — Revised Letter to NPHL/KNPHI
+# BactoAI, Revised Letter to NPHL/KNPHI
 
 **Annex A to:** BactoAI: Validating a Genomic AMR Prediction Model  
 **Date:** [dd Month 2026]  
@@ -12,7 +12,7 @@ I am writing on behalf of the BactoAI team to request your support in validating
 
 ## What we have built
 
-BactoAI predicts resistance to three antibiotics — meropenem, ciprofloxacin, and cefotaxime — from an assembled genome in under ten minutes. Conventional culture-based phenotypic AST takes an additional approximately 16-20 hours after isolation. The model was trained on more than 5,200 clinical isolates from NCBI Pathogen Detection and BV-BRC, covering five Gram-negative species: Escherichia coli, Klebsiella pneumoniae, Acinetobacter baumannii, Pseudomonas aeruginosa, and Salmonella enterica. The data comes predominantly from USA, UK, and European submissions, with 52 African isolates (3.1%), including 2 from Kenya. AST labels were derived from broth microdilution (MIC) per CLSI M100 for NCBI data, and disk diffusion interpreted with EUCAST clinical breakpoints for BV-BRC data.
+BactoAI predicts resistance to three antibiotics, meropenem, ciprofloxacin, and cefotaxime, from an assembled genome in under ten minutes. Conventional culture-based phenotypic AST takes an additional approximately 16-20 hours after isolation. The model was trained on more than 5,200 clinical isolates from NCBI Pathogen Detection and BV-BRC, covering five Gram-negative species: Escherichia coli, Klebsiella pneumoniae, Acinetobacter baumannii, Pseudomonas aeruginosa, and Salmonella enterica. The data comes predominantly from USA, UK, and European submissions, with 52 African isolates (3.1%), including 2 from Kenya. AST labels were derived from broth microdilution (MIC) per CLSI M100 for NCBI data, and disk diffusion interpreted with EUCAST clinical breakpoints for BV-BRC data.
 
 ## What the model can do
 
