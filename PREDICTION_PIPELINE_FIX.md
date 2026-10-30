@@ -1,4 +1,4 @@
-# BactoAI — Prediction Pipeline Fix Report
+# BactoAI, Prediction Pipeline Fix Report
 
 **Date:** 2026-10-27  
 **Symptom:** LiveAnalyzer shows "The prediction engine hit an error while analyzing this genome." (500 HTML)
@@ -31,7 +31,7 @@ The Flask backend's Supabase project either has no tables or uses a revoked/inva
 
 ## Fixes Applied (Code)
 
-### 1. `bactoai/database.py` — `verify_api_key()` is now tolerant
+### 1. `bactoai/database.py`, `verify_api_key()` is now tolerant
 
 ```python
 def verify_api_key(raw_key):
@@ -51,7 +51,7 @@ def verify_api_key(raw_key):
 
 **Effect:** When Supabase is down, the API returns `401 Unauthorized` (clean JSON) instead of `500 HTML`.
 
-### 2. `bactoai/routes/api.py` — DB save is non-blocking
+### 2. `bactoai/routes/api.py`, DB save is non-blocking
 
 ```python
 submission_id = None

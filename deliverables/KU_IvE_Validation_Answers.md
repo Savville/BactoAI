@@ -13,7 +13,7 @@
 | A. Product and claims (Q1-Q4) | 4 | 0 | 0 |
 | B. Training data (Q5-Q9) | 5 | 0 | 0 |
 | C. Phenotype labels and QC (Q10-Q13) | 3 | 1 | 0 |
-| D. Features and model (Q14-Q17) | 4 | 0 | 0 |
+| D. has and model (Q14-Q17) | 4 | 0 | 0 |
 | E. ROC-AUC figures (Q18-Q26) | 6 | 2 | 1 |
 | F. External validation plan (Q27-Q31) | 3 | 1 | 1 |
 | G. Governance and data protection (Q32-Q36) | 2 | 1 | 2 |
@@ -126,8 +126,8 @@ The NCBI metadata files contain a `target_acc` (PDT accession) and `taxgroup_nam
 | Metric | Count |
 |--------|------:|
 | Kenya genomes with ANY AST | **8,462** |
-| — Strict "Kenya" | 6,539 |
-| — "Kenya: Nairobi" | 821 |
+|, Strict "Kenya" | 6,539 |
+|, "Kenya: Nairobi" | 821 |
 | East Africa (Keny+Uga+Tan+Eth+Rwa) | **17,173** |
 | All Africa (13 countries) | **33,483** |
 
@@ -173,7 +173,7 @@ South Africa (9,401), Kenya (6,539), Tanzania (3,019), Nigeria (2,415), Uganda (
 **Other sources checked:**
 - PathogenWatch: API reachable but no Kenyan/East African outbreak data for target species
 - PubMLST: Endpoints returned 404 (API may have changed)
-- KEMRI: No public genomic API — requires formal partnership/MOU
+- KEMRI: No public genomic API, requires formal partnership/MOU
 
 > [!NOTE]
 > The 8,462 Kenyan genomes represent a substantial enrichment opportunity. A realistic target for retraining would be 500–1,000 new Kenyan isolates per antibiotic after deduplication with the existing training set.
@@ -243,15 +243,15 @@ The cefotaxime v4 model is trained on mixed-modality data. Meropenem and ciprofl
 
 ---
 
-## D. Features and Model
+## D. has and Model
 
-### Q14. What input features does the model use? How are they generated?
+### Q14. What input has does the model use? How are they generated?
 
 The model uses two feature types:
 
 1. **K-mer frequencies (k=5):** Each genome is decomposed into all 5-character substrings. The `CountVectorizer` tokenizes these, then `SelectKBest(chi2)` selects the top 50,000 most informative k-mers. For the v4 cefotaxime model, 1,321 unique 5-mers passed the chi-squared test.
 
-2. **AMR gene signature features (18 binary features):** Presence/absence of known resistance gene k-mer markers. These cover:
+2. **AMR gene signature has (18 binary has):** Presence/absence of known resistance gene k-mer markers. These cover:
    - Carbapenemases: *blaKPC*, *blaNDM*, *blaVIM*, *blaIMP*, *blaOXA-48*
    - Penicillinases: *blaTEM*, *blaSHV*
    - Cephalosporinases: *blaCTX-M*, *blaPER*, *blaACC*
@@ -266,7 +266,7 @@ Combined feature matrix: k-mer counts + gene signatures concatenated via `scipy.
 
 A **soft-voting ensemble** of three classifiers:
 1. **XGBoost** (300 estimators, max depth 6, learning rate 0.05) -- gradient-boosted trees perform well on tabular/sparse feature matrices.
-2. **Random Forest** (200 estimators, max depth 10, balanced class weights) -- provides diversity and is robust to overfitting.
+2. **Random Forest** (200 estimators, max depth 10, balanced class weights) -- provides diversity and is strong to overfitting.
 3. **LightGBM** (300 estimators, max depth 6, learning rate 0.05) -- fast gradient boosting with leaf-wise growth.
 
 Each ensemble is wrapped in `CalibratedClassifierCV(method="sigmoid", cv=5)` for Platt scaling to produce calibrated probability outputs.
@@ -330,7 +330,7 @@ The internal test holdout is evaluated at the end of training for each of the 5 
 - Overall ensemble AUC reporting
 - Calibration score computation for conformal prediction
 
-The test set was not used to select hyperparameters or features.
+The test set was not used to select hyperparameters or has.
 
 ### Q23. Please confirm the ciprofloxacin and cefotaxime results separately. Are both exactly 0.872?
 
@@ -368,7 +368,7 @@ Ciprofloxacin CIs derived from threshold audit confusion matrix (tp=68, tn=68, f
 
 ### Q25. How did the model compare with a rule-based tool?
 
-**PARTIAL — AMRFinderPlus comparison pending installation.**
+**PARTIAL, AMRFinderPlus comparison pending installation.**
 
 AMRFinderPlus (NCBI) and ResFinder (CGE/DANMAP) are not currently installed in this environment.
 The comparison script is ready (`scripts/amrfinder_baseline.py`) but requires:
@@ -376,7 +376,7 @@ The comparison script is ready (`scripts/amrfinder_baseline.py`) but requires:
 - Docker: `docker run --rm -v $(pwd):/data ncbitaxonomy/amrfinder amrfinder /data/genome.fna`
 
 **Partial rule-based evidence already available:**
-The model uses 18 AMR gene signature features as direct inputs (see Q26 below). These are
+The model uses 18 AMR gene signature has as direct inputs (see Q26 below). These are
 k-mer-based proxies for known resistance genes. A simplified rule-based comparison can be
 made by thresholding these gene signatures:
 
@@ -386,7 +386,7 @@ made by thresholding these gene signatures:
 | Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR mutation OR efflux → RESISTANT |
 | Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase → RESISTANT |
 
-This gene-signature-only approach serves as an intermediate baseline. Full AMRFinderPlus
+This gene-signature-only approach is an intermediate baseline. Full AMRFinderPlus
 comparison will be run on a Linux workstation once the tool is installed.
 
 > [!] **Action required:** Install AMRFinderPlus on a Linux environment and run
@@ -394,9 +394,9 @@ comparison will be run on a Linux workstation once the tool is installed.
 
 ### Q26. Which genes or mutations drive predictions? Are they biologically plausible?
 
-The 18 AMR gene signature features are biologically curated and directly relevant:
+The 18 AMR gene signature has are biologically curated and directly relevant:
 
-| Drug | Key driving features | Biological basis |
+| Drug | Key driving has | Biological basis |
 |:---|:---|:---|
 | Meropenem | *blaKPC*, *blaNDM*, *blaVIM*, *blaIMP*, *blaOXA-48* | Known carbapenemase genes |
 | Ciprofloxacin | *gyrA* mutations, *parC* mutations, *acrAB* efflux | QRDR mutations and efflux-mediated fluoroquinolone resistance |
@@ -422,7 +422,7 @@ Overlap checks will compare BioSample and SRA accessions against our master isol
 
 ### Q28. How many Kenyan or East African isolates with AST data are available in public databases?
 
-**Not yet quantified** — see Q7 above for exact BigQuery results. As of October 2026:
+**Not yet quantified**, see Q7 above for exact BigQuery results. As of October 2026:
 
 - Kenyan genomes with AST in NCBI BigQuery: **8,462**
 - East African genomes (5 countries): **17,173**
