@@ -1,0 +1,2 @@
+antibiotic,num_models,accuracy,roc_auc,n_test_resistant,n_test_susceptible,use_smote,seeds_used,per_model_aucs,trained_at
+cefotaxime,5,0.859,0.7792769802531792,167,833,True,"[42, 123, 456, 789, 1024]","[0.7807506236027345, 0.7808656396690412, 0.7776164357958752, 0.7784287367641667, 0.7784215482600226]",2026-09-14T00:34:06.375027
