@@ -20,5 +20,9 @@
     0.9402116402116403,
     0.943121693121693
   ],
-  "trained_at": "2026-07-23T06:05:26.751507"
+  "trained_at": "2026-07-23T06:05:26.751507",
+  "n_train_resistant": 300,
+  "n_train_susceptible": 300,
+  "n_train_total": 600,
+  "data_sources": "NCBI Pathogen Detection"
 }
