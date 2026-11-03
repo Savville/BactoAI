@@ -1,0 +1,34 @@
+{
+  "run_at": "2026-09-14T00:50:53.165092",
+  "antibiotic": "cefotaxime",
+  "genome_dir": "C:\\Users\\User\\Documents\\RESEARCH\\Bacto_AI\\data\\bvbrc_genomes",
+  "intermediate_policy": "resistant",
+  "real_world_ratio": false,
+  "n_evaluated": 200,
+  "n_resistant": 100,
+  "n_susceptible": 100,
+  "accuracy": 0.84,
+  "roc_auc": 0.8931,
+  "sensitivity": 0.7,
+  "specificity": 0.98,
+  "ppv": 0.972222,
+  "npv": 0.765625,
+  "f1": 0.813953,
+  "mcc": 0.708333,
+  "calibration_error": 0.151501,
+  "confusion_matrix": {
+    "tp": 70,
+    "tn": 98,
+    "fp": 2,
+    "fn": 30
+  },
+  "training_reference": {
+    "accuracy": 0.7862068965517242,
+    "roc_auc": 0.8722877807384849
+  },
+  "uncertainty": {
+    "high_confidence_pct": 1.0,
+    "medium_confidence_pct": 0.0,
+    "low_confidence_pct": 0.0
+  }
+}

@@ -1,0 +1,501 @@
+genome_id,genome_name,raw_phenotype,true_label,zone_value,mean_prob,std_prob,pred_label,correct
+562.99834,Escherichia coli f6298f0e-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9732,0.0004,1,1
+562.56902,Escherichia coli strain RL297,Resistant,1,,0.9833,0.0006,1,1
+562.140676,Escherichia coli ERR3808922,zone-derived-R (6mm),1,6.0,0.9842,0.0004,1,1
+562.98451,Escherichia coli 9fe46848-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0047,0.0002,0,1
+562.100614,Escherichia coli 902c1e10-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.871,0.0017,1,1
+562.100015,Escherichia coli 8a579262-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0696,0.017,0,1
+562.56771,Escherichia coli strain 1043-14,Resistant,1,,0.9839,0.0004,1,1
+562.100957,Escherichia coli 6efecb60-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0578,0.0119,0,1
+562.58743,Escherichia coli strain 103,Resistant,1,,0.8377,0.0188,1,1
+562.99879,Escherichia coli eaaa85a2-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (33mm),0,33.0,0.0083,0.0002,0,1
+562.99948,Escherichia coli 630641da-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8015,0.0058,1,1
+562.98839,Escherichia coli 82cd48f2-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (38mm),0,38.0,0.0153,0.0005,0,1
+562.100523,Escherichia coli bfea2d26-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0041,0.0001,0,1
+562.56790,Escherichia coli strain 44-16,Resistant,1,,0.9601,0.0013,1,1
+562.100869,Escherichia coli d6a8c298-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0649,0.0044,0,1
+562.58760,Escherichia coli strain 120,Susceptible,0,,0.1515,0.0143,0,1
+562.99470,Escherichia coli a2c15d64-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0089,0.0009,0,1
+562.98547,Escherichia coli a4c1bb50-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0037,0.0001,0,1
+562.100551,Escherichia coli d09bedc6-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0066,0.0003,0,1
+562.98636,Escherichia coli 66dfdabe-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.008,0.0003,0,1
+562.100351,Escherichia coli 250df684-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0089,0.0008,0,1
+562.98792,Escherichia coli 32ed09fc-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0252,0.0034,0,1
+562.56869,Escherichia coli strain 765-14,Resistant,1,,0.7034,0.0133,1,1
+562.100932,Escherichia coli 4729b9ec-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0414,0.0035,0,1
+562.98996,Escherichia coli 2ec77e70-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0041,0.0001,0,1
+562.99642,Escherichia coli 913ff49c-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.7806,0.0097,1,1
+562.99003,Escherichia coli 6f95798e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0168,0.0015,0,1
+562.99675,Escherichia coli df00debc-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0207,0.0025,0,1
+562.98933,Escherichia coli b740b564-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (39mm),0,39.0,0.014,0.0007,0,1
+562.98922,Escherichia coli abb7229c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0089,0.0005,0,1
+562.100547,Escherichia coli e4e09796-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (14mm),1,14.0,0.6209,0.0065,1,1
+562.100119,Escherichia coli f6894264-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0085,0.0006,0,0
+562.99958,Escherichia coli 641511d2-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0911,0.0121,0,0
+562.98875,Escherichia coli 1273efec-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.0531,0.0073,0,1
+562.100300,Escherichia coli cab2b048-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.1274,0.0121,0,0
+562.99499,Escherichia coli 6fb02ba8-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9218,0.0051,1,1
+562.98689,Escherichia coli b27fa1d0-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.1401,0.0196,0,1
+562.98560,Escherichia coli af97d41a-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.1946,0.0015,0,1
+562.99834,Escherichia coli f6298f0e-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.9732,0.0004,1,1
+562.100935,Escherichia coli 2a5eec42-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8612,0.0036,1,1
+562.99751,Escherichia coli 8d74f5d4-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8768,0.0051,1,1
+562.98443,Escherichia coli 9ee8b3a4-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.0041,0.0,0,1
+562.99743,Escherichia coli 8874eda0-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8521,0.0045,1,1
+562.73366,Escherichia coli strain BB1427,Resistant,1,,0.9154,0.0043,1,1
+562.100683,Escherichia coli 95ea5678-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8302,0.0057,1,1
+562.56839,Escherichia coli strain 500-16,Resistant,1,,0.9839,0.0003,1,1
+562.100200,Escherichia coli dbcc0e7e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0064,0.0003,0,1
+562.98933,Escherichia coli b740b564-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.014,0.0007,0,1
+562.56874,Escherichia coli strain 86-16,Resistant,1,,0.97,0.0007,1,1
+562.99707,Escherichia coli 5f2f9886-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8482,0.0046,1,1
+562.99693,Escherichia coli 5921994e-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8731,0.0069,1,1
+562.99108,Escherichia coli e1ac7abe-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.006,0.0002,0,1
+562.99328,Escherichia coli 92a02a5a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0097,0.0015,0,1
+562.99707,Escherichia coli 5f2f9886-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8482,0.0046,1,1
+562.99254,Escherichia coli c7e7a61c-7bb8-11e9-a8d3-68b59976a384,Intermediate,1,,0.9645,0.0017,1,1
+562.56831,Escherichia coli strain 492-16,Resistant,1,,0.9704,0.0006,1,1
+562.99744,Escherichia coli 8a0815d4-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0347,0.0095,0,1
+562.99073,Escherichia coli 3dfc51ea-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0059,0.0002,0,1
+562.99542,Escherichia coli 408a21f8-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0043,0.0,0,1
+562.99091,Escherichia coli 1a2f7a8a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0171,0.0015,0,1
+562.100218,Escherichia coli e3127ace-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9018,0.0018,1,1
+562.100044,Escherichia coli 20fce848-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7876,0.0079,1,1
+562.99623,Escherichia coli 8ccd2722-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.012,0.001,0,1
+562.56849,Escherichia coli strain 506-16,Resistant,1,,0.0579,0.0088,0,0
+562.99435,Escherichia coli 4c044fc2-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0099,0.0007,0,0
+562.140663,Escherichia coli ERR3808911,zone-derived-R (6mm),1,6.0,0.961,0.002,1,1
+562.99862,Escherichia coli efbf4564-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9177,0.0035,1,1
+562.100769,Escherichia coli f5dad0bc-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0165,0.0012,0,1
+562.100854,Escherichia coli d3c9b5d2-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0058,0.0003,0,1
+562.56810,Escherichia coli strain 474-16,Resistant,1,,0.9845,0.0003,1,1
+562.100127,Escherichia coli ed013f94-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0127,0.001,0,1
+562.56833,Escherichia coli strain 494-16,Resistant,1,,0.9059,0.0049,1,1
+562.98838,Escherichia coli 84ce2a22-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0331,0.007,0,1
+562.56841,Escherichia coli strain 50-16,Resistant,1,,0.9845,0.0003,1,1
+562.100547,Escherichia coli e4e09796-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.6209,0.0065,1,1
+562.98071,Escherichia coli 2fa1ee2a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (37mm),0,37.0,0.0123,0.0007,0,1
+562.100504,Escherichia coli b9ecad9a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.6345,0.0069,1,1
+562.99409,Escherichia coli daa7a2ce-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0067,0.0003,0,1
+562.56783,Escherichia coli strain 372-13,Resistant,1,,0.9767,0.0006,1,1
+562.100011,Escherichia coli 930d7700-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0445,0.0039,0,1
+562.99766,Escherichia coli 8785d7ec-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0326,0.0034,0,1
+562.56877,Escherichia coli strain 9-16,Resistant,1,,0.4015,0.0398,1,1
+562.100758,Escherichia coli 927ded38-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0044,0.0001,0,1
+562.56854,Escherichia coli strain 52-16,Resistant,1,,0.9834,0.0004,1,1
+562.99945,Escherichia coli 6321cd10-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (11mm),1,11.0,0.0121,0.0006,0,0
+562.99633,Escherichia coli 8ea9896e-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.5539,0.0119,1,1
+562.99558,Escherichia coli e3de954c-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8089,0.0066,1,1
+562.98931,Escherichia coli 88de05fa-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9436,0.0026,1,1
+562.56903,Escherichia coli strain RL306,Resistant,1,,0.9717,0.0004,1,1
+562.99559,Escherichia coli e178732c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0452,0.0052,0,1
+562.100829,Escherichia coli f4353180-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0685,0.0104,0,1
+562.140646,Escherichia coli ERR3808893,zone-derived-R (6mm),1,6.0,0.0052,0.0002,0,0
+562.100510,Escherichia coli bd969cee-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8802,0.0062,1,1
+562.99315,Escherichia coli 7bd25cd0-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0507,0.006,0,1
+562.98781,Escherichia coli bb2b07b0-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0134,0.0016,0,1
+562.99960,Escherichia coli 64d25f12-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0107,0.0006,0,1
+562.99094,Escherichia coli 18a42a62-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.005,0.0001,0,1
+562.98701,Escherichia coli 19fb66fa-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0863,0.0177,0,1
+562.56840,Escherichia coli strain 501-16,Resistant,1,,0.0879,0.0052,0,0
+562.100335,Escherichia coli 22a65760-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8674,0.0089,1,1
+562.100565,Escherichia coli bc4910d8-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9517,0.0009,1,1
+562.56878,Escherichia coli strain RL103,Resistant,1,,0.2301,0.0131,1,1
+562.98896,Escherichia coli a5ea9a10-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0702,0.0048,0,1
+562.98365,Escherichia coli 18d98ebe-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (37mm),0,37.0,0.0182,0.0007,0,1
+562.99272,Escherichia coli 86d69ba6-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.0035,0.0,0,0
+562.98306,Escherichia coli 501db102-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0155,0.0029,0,1
+562.56884,Escherichia coli strain RL106,Resistant,1,,0.9309,0.0025,1,1
+562.100504,Escherichia coli b9ecad9a-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.6345,0.0069,1,1
+562.99014,Escherichia coli 6e6a0390-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (40mm),0,40.0,0.0108,0.001,0,1
+562.140624,Escherichia coli ERR3808874,zone-derived-R (16mm),1,16.0,0.9723,0.0012,1,1
+562.56767,Escherichia coli strain 1036-14,Resistant,1,,0.8685,0.0032,1,1
+562.56915,Escherichia coli strain RL95,Resistant,1,,0.9846,0.0002,1,1
+562.100727,Escherichia coli a4429dd4-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0072,0.0006,0,1
+562.145078,Escherichia coli PT_EC0031,Susceptible,0,,0.0801,0.0167,0,1
+562.100947,Escherichia coli 75dffeea-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0511,0.0053,0,1
+562.99171,Escherichia coli cd88a0c0-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (7mm),1,7.0,0.8015,0.0106,1,1
+562.99184,Escherichia coli ddc5ccc4-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0061,0.0002,0,1
+562.56911,Escherichia coli strain RL401,Resistant,1,,0.8515,0.0091,1,1
+562.100760,Escherichia coli 7d47f282-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0236,0.0028,0,1
+562.100751,Escherichia coli 91dff98e-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.6053,0.0131,1,1
+562.56778,Escherichia coli strain 216-16,Resistant,1,,0.8265,0.0055,1,1
+562.56901,Escherichia coli strain RL304,Resistant,1,,0.9826,0.0003,1,1
+562.99819,Escherichia coli 7f62382a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.0042,0.0001,0,1
+562.98141,Escherichia coli 06917f82-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0791,0.0107,0,1
+562.99553,Escherichia coli 7e6c8a1a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0079,0.0002,0,1
+562.100449,Escherichia coli 03e3549a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8737,0.0023,1,1
+562.100181,Escherichia coli afbda1d0-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.0097,0.0007,0,1
+562.99730,Escherichia coli c623de6c-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.0054,0.0002,0,1
+562.99913,Escherichia coli d524b3fa-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8585,0.0094,1,1
+562.99479,Escherichia coli 7084fb58-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.1574,0.0169,0,1
+562.56802,Escherichia coli strain 470-16,Resistant,1,,0.6427,0.0055,1,1
+562.56804,Escherichia coli strain 467-16,Resistant,1,,0.8106,0.0122,1,1
+562.56906,Escherichia coli strain RL308,Resistant,1,,0.9458,0.001,1,1
+562.100205,Escherichia coli dff78e7e-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8822,0.003,1,1
+562.98485,Escherichia coli b05a4996-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0053,0.0001,0,1
+562.98838,Escherichia coli 84ce2a22-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0331,0.007,0,1
+562.100061,Escherichia coli 23d01ea0-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (11mm),1,11.0,0.857,0.0063,1,1
+562.99378,Escherichia coli a56c2c06-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0093,0.0001,0,1
+562.56765,Escherichia coli strain 1034-14,Resistant,1,,0.9758,0.0005,1,1
+562.56816,Escherichia coli strain 477-16,Resistant,1,,0.9846,0.0003,1,1
+562.100059,Escherichia coli 2365f25a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0523,0.0028,0,0
+562.100044,Escherichia coli 20fce848-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (16mm),1,16.0,0.7876,0.0079,1,1
+562.56805,Escherichia coli strain 468-16,Resistant,1,,0.7921,0.0127,1,1
+562.99126,Escherichia coli a85329d8-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9641,0.0021,1,1
+562.98959,Escherichia coli ba8b0012-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.2549,0.0057,1,0
+562.140617,Escherichia coli ERR2935426,zone-derived-R (6mm),1,6.0,0.9807,0.0006,1,1
+562.98206,Escherichia coli bcc23c0c-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0116,0.0012,0,1
+562.98858,Escherichia coli b62e20f4-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0059,0.0003,0,1
+562.56838,Escherichia coli strain 498-16,Resistant,1,,0.7579,0.0206,1,1
+562.100485,Escherichia coli ea9545d4-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0192,0.0023,0,1
+562.100060,Escherichia coli 22f3ff56-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.0073,0.0006,0,1
+562.100118,Escherichia coli ec44ca44-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.4217,0.0137,1,0
+562.100621,Escherichia coli c76610f2-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0065,0.0002,0,1
+562.100862,Escherichia coli be64d000-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0196,0.001,0,1
+562.99026,Escherichia coli 86271938-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0357,0.0044,0,1
+562.56852,Escherichia coli strain 5-16,Resistant,1,,0.9754,0.0006,1,1
+562.100331,Escherichia coli 0bd7f926-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0117,0.0008,0,0
+562.99451,Escherichia coli 51083cc2-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9185,0.0017,1,1
+562.98473,Escherichia coli 649cd9dc-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0052,0.0001,0,1
+562.56899,Escherichia coli strain RL288,Resistant,1,,0.961,0.002,1,1
+562.140679,Escherichia coli ERR3808928,zone-derived-R (6mm),1,6.0,0.9727,0.0007,1,1
+562.145073,Escherichia coli PT_EC0003,Susceptible,0,,0.0129,0.0014,0,1
+562.56823,Escherichia coli strain 485-16,Resistant,1,,0.9283,0.0022,1,1
+562.73376,Escherichia coli strain BB1430,Resistant,1,,0.7768,0.0094,1,1
+562.56905,Escherichia coli strain RL315,Resistant,1,,0.9843,0.0002,1,1
+562.56815,Escherichia coli strain 479-16,Resistant,1,,0.9836,0.0002,1,1
+562.56897,Escherichia coli strain RL282,Resistant,1,,0.9645,0.0015,1,1
+562.56791,Escherichia coli strain 43-16,Resistant,1,,0.9624,0.0015,1,1
+562.99321,Escherichia coli e52c33b4-7bb8-11e9-a8d3-68b59976a384,Intermediate,1,,0.0064,0.0003,0,0
+562.100356,Escherichia coli 0f89ca5e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0247,0.0027,0,1
+562.99429,Escherichia coli 48a67990-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0273,0.0005,0,1
+562.56882,Escherichia coli strain RL104,Resistant,1,,0.6096,0.0251,1,1
+562.97988,Escherichia coli d64a8d8c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (40mm),0,40.0,0.0111,0.0006,0,1
+562.144998,Escherichia coli PT_EC0150,Susceptible,0,,0.0101,0.0007,0,1
+562.98362,Escherichia coli da1ee8f4-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.2173,0.0261,1,1
+562.98479,Escherichia coli 65e67708-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.1581,0.0137,0,1
+562.99724,Escherichia coli 72356da2-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8388,0.0086,1,1
+562.100678,Escherichia coli a0b417ba-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8909,0.0026,1,1
+562.56830,Escherichia coli strain 490-16,Resistant,1,,0.9842,0.0002,1,1
+562.98840,Escherichia coli a400eeec-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0046,0.0002,0,1
+562.56864,Escherichia coli strain 721-15,Resistant,1,,0.9809,0.0006,1,1
+562.100192,Escherichia coli aee9593e-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0942,0.015,0,0
+562.56781,Escherichia coli strain 36-16,Resistant,1,,0.9622,0.0021,1,1
+562.99224,Escherichia coli a37a9054-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.103,0.008,0,1
+562.99948,Escherichia coli 630641da-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8015,0.0058,1,1
+562.73390,Escherichia coli strain BB1461,Resistant,1,,0.973,0.0005,1,1
+562.99727,Escherichia coli 731711e4-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8979,0.0049,1,1
+562.100213,Escherichia coli cb8de866-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0171,0.0015,0,1
+562.100287,Escherichia coli c454675a-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.7481,0.0062,1,1
+562.99597,Escherichia coli a5a2842c-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (8mm),1,8.0,0.0148,0.0007,0,0
+562.100841,Escherichia coli b6c19f54-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0113,0.0011,0,1
+562.98044,Escherichia coli 53a37744-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0075,0.0002,0,1
+562.99478,Escherichia coli 8c80ab96-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0315,0.0049,0,1
+562.99018,Escherichia coli a2586ce6-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.019,0.0008,0,1
+562.99764,Escherichia coli 870a0810-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0071,0.0003,0,1
+562.99672,Escherichia coli de2f6ac6-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (33mm),0,33.0,0.0745,0.0086,0,1
+562.99230,Escherichia coli 791f5786-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.0089,0.0003,0,1
+562.100663,Escherichia coli 943a6584-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0413,0.0119,0,1
+562.99050,Escherichia coli c635428e-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0471,0.0056,0,1
+562.98029,Escherichia coli e4094a5c-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.015,0.0007,0,1
+562.100335,Escherichia coli 22a65760-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (15mm),1,15.0,0.8674,0.0089,1,1
+562.99188,Escherichia coli d1434e2c-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0064,0.0006,0,1
+562.99435,Escherichia coli 4c044fc2-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0099,0.0007,0,0
+562.100427,Escherichia coli 018731c6-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8521,0.0021,1,1
+562.99925,Escherichia coli 3a6c747e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.2258,0.0122,1,0
+562.56857,Escherichia coli strain 701-15,Resistant,1,,0.9845,0.0003,1,1
+562.98019,Escherichia coli 9cbce164-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.0079,0.0003,0,1
+562.140664,Escherichia coli ERR3808912,zone-derived-R (8mm),1,8.0,0.9572,0.001,1,1
+562.140638,Escherichia coli ERR3808886,zone-derived-R (6mm),1,6.0,0.9733,0.0004,1,1
+562.97985,Escherichia coli d3d9dcec-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0037,0.0,0,1
+562.56918,Escherichia coli strain RL446,Resistant,1,,0.9513,0.0018,1,1
+562.100294,Escherichia coli c7a52afc-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0082,0.0004,0,1
+562.99964,Escherichia coli 7a42ece0-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0161,0.0014,0,1
+562.98951,Escherichia coli e2bb419c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0439,0.0057,0,1
+562.99800,Escherichia coli 3fefbbfe-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9417,0.0023,1,1
+562.99977,Escherichia coli c384fdd0-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0097,0.0004,0,1
+562.99946,Escherichia coli 6265c566-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8519,0.0049,1,1
+562.100605,Escherichia coli c4a1a916-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8763,0.0098,1,1
+562.100740,Escherichia coli a55bd80c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0117,0.0005,0,1
+562.100155,Escherichia coli fbb27026-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0116,0.0012,0,1
+562.99037,Escherichia coli 83d8166e-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0816,0.0179,0,0
+562.100784,Escherichia coli f7a8e320-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.781,0.0144,1,1
+562.99985,Escherichia coli c674f6d0-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.6524,0.0126,1,1
+562.100232,Escherichia coli c4c735ce-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0242,0.0015,0,1
+562.98604,Escherichia coli 9f10b17e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0076,0.0005,0,1
+562.100475,Escherichia coli 070a64f6-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8474,0.0063,1,1
+562.99945,Escherichia coli 6321cd10-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0121,0.0006,0,0
+562.100264,Escherichia coli 74f1367a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0041,0.0001,0,1
+562.99631,Escherichia coli ae7f0d04-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.7746,0.0071,1,1
+562.98978,Escherichia coli c072dd16-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.1839,0.0071,0,0
+562.98465,Escherichia coli a0a5112e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0052,0.0002,0,1
+562.99810,Escherichia coli 1efbce42-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0134,0.0008,0,1
+562.100192,Escherichia coli aee9593e-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0942,0.015,0,0
+562.58763,Escherichia coli strain 202,Resistant,1,,0.3063,0.0154,1,1
+562.98022,Escherichia coli 885d5b4e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0157,0.0013,0,1
+562.140629,Escherichia coli ERR3808877,zone-derived-R (6mm),1,6.0,0.9087,0.0046,1,1
+562.100472,Escherichia coli fbe6b016-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.8248,0.0202,1,0
+562.56774,Escherichia coli strain 1045-14,Resistant,1,,0.9391,0.002,1,1
+562.99328,Escherichia coli 92a02a5a-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.0097,0.0015,0,0
+562.100109,Escherichia coli ffbf3262-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (10mm),1,10.0,0.8068,0.0024,1,1
+562.98803,Escherichia coli 9f9193de-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0946,0.006,0,1
+562.98148,Escherichia coli 89431062-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.1452,0.0263,0,1
+562.98042,Escherichia coli c0c7b106-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0279,0.0046,0,1
+562.99632,Escherichia coli 8e8e4866-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.6571,0.0084,1,1
+562.56821,Escherichia coli strain 483-16,Resistant,1,,0.1363,0.018,0,0
+562.99857,Escherichia coli e9862bd6-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0054,0.0001,0,1
+562.98418,Escherichia coli 488c9a66-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (37mm),0,37.0,0.122,0.011,0,1
+562.97978,Escherichia coli d30a4798-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0056,0.0002,0,1
+562.98500,Escherichia coli b3d88696-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0078,0.0007,0,1
+562.140658,Escherichia coli ERR3808908,zone-derived-R (6mm),1,6.0,0.0051,0.0001,0,0
+562.99159,Escherichia coli df74617a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.005,0.0001,0,1
+562.99920,Escherichia coli 585745f4-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0139,0.0004,0,1
+562.100204,Escherichia coli d6262e5a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0415,0.0043,0,1
+562.56910,Escherichia coli strain RL320,Resistant,1,,0.017,0.0023,0,0
+562.73359,Escherichia coli strain BB1424,Susceptible,0,,0.0118,0.0016,0,1
+562.100861,Escherichia coli be79f7fa-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9226,0.002,1,1
+562.99974,Escherichia coli c33745e0-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0125,0.001,0,1
+562.98017,Escherichia coli 852e5b94-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (40mm),0,40.0,0.2779,0.0119,1,0
+562.56860,Escherichia coli strain 689-15,Resistant,1,,0.9368,0.0024,1,1
+562.98861,Escherichia coli e01ebf40-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8988,0.0029,1,1
+562.56827,Escherichia coli strain 488-16,Resistant,1,,0.9668,0.0006,1,1
+562.98302,Escherichia coli 3472bca4-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8608,0.0045,1,1
+562.100001,Escherichia coli ca7bc2ea-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.4335,0.0117,1,1
+562.99229,Escherichia coli a41ad4e2-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0332,0.0029,0,1
+562.100320,Escherichia coli 0aed470a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.006,0.0002,0,1
+562.100430,Escherichia coli f32b1d86-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0231,0.0007,0,1
+562.99755,Escherichia coli 8d953362-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.007,0.0007,0,1
+562.56811,Escherichia coli strain 475-16,Resistant,1,,0.9821,0.0004,1,1
+562.56888,Escherichia coli strain RL137,Resistant,1,,0.8093,0.0029,1,1
+562.100358,Escherichia coli 25fe5200-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7929,0.0107,1,1
+562.100183,Escherichia coli b42e845a-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0124,0.0004,0,0
+562.56855,Escherichia coli strain 531-12,Resistant,1,,0.982,0.0009,1,1
+562.98725,Escherichia coli 83cf6f5e-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0072,0.0002,0,1
+562.98634,Escherichia coli 9bc97e88-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.007,0.0003,0,1
+562.56894,Escherichia coli strain RL276,Resistant,1,,0.9041,0.0054,1,1
+562.98634,Escherichia coli 9bc97e88-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.007,0.0003,0,1
+562.99961,Escherichia coli 64edea0c-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0107,0.0014,0,1
+562.100785,Escherichia coli f7c27cd6-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0048,0.0001,0,1
+562.98310,Escherichia coli 2e70de76-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0261,0.0018,0,1
+562.98978,Escherichia coli c072dd16-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (17mm),1,17.0,0.1839,0.0071,0,0
+562.100742,Escherichia coli 9b247db2-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8771,0.0087,1,1
+562.56891,Escherichia coli strain RL273,Resistant,1,,0.9666,0.0007,1,1
+562.98437,Escherichia coli 69428e5a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (38mm),0,38.0,0.0137,0.0008,0,1
+562.98647,Escherichia coli 82b18298-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.0277,0.0021,0,1
+562.99503,Escherichia coli 8ba6c7d2-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (42mm),0,42.0,0.0446,0.0058,0,1
+562.100849,Escherichia coli baf5927e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.125,0.0105,0,1
+562.100025,Escherichia coli 8f74c4ae-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0204,0.0029,0,1
+562.100216,Escherichia coli d8042150-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0102,0.0005,0,1
+562.99466,Escherichia coli 7666d686-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.9672,0.0007,1,1
+562.99739,Escherichia coli aaa1c5c8-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.5217,0.0144,1,0
+562.100201,Escherichia coli df3fd752-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0455,0.0105,0,1
+562.56921,Escherichia coli strain RL99,Resistant,1,,0.9812,0.0004,1,1
+562.100389,Escherichia coli 90b1bf20-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.004,0.0,0,1
+562.98843,Escherichia coli bdf304ee-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0049,0.0002,0,1
+562.99343,Escherichia coli e7a782d8-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0105,0.0015,0,1
+562.98383,Escherichia coli 19ae3998-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0694,0.0091,0,1
+562.99721,Escherichia coli a4b8a3d4-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0826,0.0061,0,0
+562.56865,Escherichia coli strain 739-12,Resistant,1,,0.9843,0.0004,1,1
+562.56866,Escherichia coli strain 740-12,Resistant,1,,0.9525,0.0015,1,1
+562.99037,Escherichia coli 83d8166e-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.0816,0.0179,0,0
+562.98830,Escherichia coli 72df6c58-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0177,0.0019,0,1
+562.42760,Escherichia coli strain Cattle,Intermediate,1,8.0,0.9715,0.001,1,1
+562.98268,Escherichia coli 895bba0e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0226,0.0026,0,1
+562.73381,Escherichia coli strain BB1442,Intermediate,1,,0.9558,0.0012,1,1
+562.98054,Escherichia coli 49e390fe-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0278,0.0022,0,1
+562.100863,Escherichia coli d687e1cc-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0148,0.0008,0,0
+562.73370,Escherichia coli strain BB1439,Resistant,1,,0.9824,0.0003,1,1
+562.100742,Escherichia coli 9b247db2-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8771,0.0087,1,1
+562.19151,Escherichia coli strain 104,Resistant,1,,0.8371,0.0079,1,1
+562.99754,Escherichia coli ecabd68a-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8793,0.003,1,1
+562.56879,Escherichia coli strain RL101,Resistant,1,,0.7813,0.0078,1,1
+562.100018,Escherichia coli e9c25c5a-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9064,0.0017,1,1
+562.144972,Escherichia coli PT_EC0167,Susceptible,0,,0.9795,0.0006,1,0
+562.98936,Escherichia coli a83901b6-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.0129,0.0009,0,1
+562.100918,Escherichia coli 289d96ec-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0146,0.002,0,1
+562.56900,Escherichia coli strain RL303,Resistant,1,,0.7398,0.0088,1,1
+562.100125,Escherichia coli f756dddc-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0096,0.0004,0,1
+562.98785,Escherichia coli 2eb26530-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.2533,0.0093,1,0
+562.100416,Escherichia coli f5bfee0a-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0144,0.0019,0,1
+562.100060,Escherichia coli 22f3ff56-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0073,0.0006,0,1
+562.100678,Escherichia coli a0b417ba-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8909,0.0026,1,1
+562.56863,Escherichia coli strain 7-16,Resistant,1,,0.9841,0.0003,1,1
+562.99120,Escherichia coli e8277a88-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.0054,0.0001,0,1
+562.100385,Escherichia coli 9096f2a8-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.948,0.0025,1,1
+562.56780,Escherichia coli strain 35-16,Resistant,1,,0.9845,0.0002,1,1
+562.100402,Escherichia coli 983fb58a-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.2085,0.006,1,0
+562.56908,Escherichia coli strain RL316,Resistant,1,,0.8824,0.0063,1,1
+562.99366,Escherichia coli ad8be3f4-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0293,0.0049,0,1
+562.99271,Escherichia coli c6dccdc4-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8448,0.0068,1,1
+562.140666,Escherichia coli ERR3808913,zone-derived-R (6mm),1,6.0,0.79,0.004,1,1
+562.98209,Escherichia coli bd50b57c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.0135,0.0028,0,1
+562.99231,Escherichia coli a2721b00-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0476,0.0043,0,1
+562.99383,Escherichia coli a718c226-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (15mm),1,15.0,0.0445,0.0062,0,0
+562.100951,Escherichia coli 769c6206-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0039,0.0001,0,1
+562.100347,Escherichia coli 41deb096-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (13mm),1,13.0,0.8022,0.0065,1,1
+562.98734,Escherichia coli afcab182-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0299,0.0018,0,1
+562.100851,Escherichia coli ba3b83f2-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0042,0.0001,0,1
+562.56862,Escherichia coli strain 6-16,Resistant,1,,0.968,0.001,1,1
+562.99383,Escherichia coli a718c226-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0445,0.0062,0,0
+562.100935,Escherichia coli 2a5eec42-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8612,0.0036,1,1
+562.100405,Escherichia coli 9172d692-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8668,0.0053,1,1
+562.100703,Escherichia coli a2594be4-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.7296,0.0169,1,1
+562.99754,Escherichia coli ecabd68a-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8793,0.003,1,1
+562.99278,Escherichia coli c600ceaa-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0431,0.0071,0,1
+562.99439,Escherichia coli 4c1e7758-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.202,0.0032,1,0
+562.100680,Escherichia coli 954b8ca0-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9218,0.0015,1,1
+562.100009,Escherichia coli 88af15d4-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (10mm),1,10.0,0.6418,0.0106,1,1
+562.99890,Escherichia coli b2f021a2-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0038,0.0001,0,1
+562.100893,Escherichia coli bc5c4590-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0196,0.001,0,1
+562.100613,Escherichia coli 9c800df2-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8236,0.0042,1,1
+562.99897,Escherichia coli b5ce2f68-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0167,0.002,0,1
+562.98870,Escherichia coli bc3a6700-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0124,0.0005,0,1
+562.98417,Escherichia coli 99aee782-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0139,0.0005,0,1
+562.28131,Escherichia coli strain CRE1540,Resistant,1,6.0,0.9739,0.0012,1,1
+562.56883,Escherichia coli strain RL105,Resistant,1,,0.9672,0.0016,1,1
+562.98979,Escherichia coli c14b3490-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.0721,0.0095,0,1
+562.97950,Escherichia coli 834a0874-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.0181,0.0009,0,1
+562.56919,Escherichia coli strain RL97,Resistant,1,,0.9714,0.0008,1,1
+562.99642,Escherichia coli 913ff49c-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7806,0.0097,1,1
+562.98483,Escherichia coli d6ee7f28-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9577,0.0008,1,1
+562.56844,Escherichia coli strain 504-16,Resistant,1,,0.9837,0.0002,1,1
+562.98350,Escherichia coli b10cb108-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0042,0.0001,0,1
+562.99989,Escherichia coli c73b5f82-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0045,0.0001,0,1
+562.98922,Escherichia coli abb7229c-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0089,0.0005,0,1
+562.98966,Escherichia coli bc2e4ece-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0046,0.0002,0,1
+562.98521,Escherichia coli 159f9964-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0079,0.0004,0,1
+562.99600,Escherichia coli b3b9b17a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0049,0.0001,0,1
+562.100058,Escherichia coli 22da8b5c-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.029,0.0063,0,1
+562.100736,Escherichia coli 9a4aedf4-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.004,0.0001,0,1
+562.99271,Escherichia coli c6dccdc4-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (8mm),1,8.0,0.8448,0.0068,1,1
+562.100475,Escherichia coli 070a64f6-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8474,0.0063,1,1
+562.100684,Escherichia coli a119605c-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0267,0.0022,0,1
+562.99692,Escherichia coli 4de53748-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.1634,0.0124,0,0
+562.98892,Escherichia coli 143fe38a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9222,0.0034,1,1
+562.99083,Escherichia coli 82bf5778-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.1567,0.019,0,1
+562.99653,Escherichia coli e09119d6-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0127,0.0009,0,1
+562.100618,Escherichia coli c5b03b8e-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.0051,0.0003,0,1
+562.99527,Escherichia coli cb9b5466-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.021,0.0044,0,1
+562.99644,Escherichia coli 8f65ad92-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0046,0.0001,0,1
+562.56895,Escherichia coli strain RL226,Resistant,1,,0.7211,0.0352,1,1
+562.98914,Escherichia coli 9ad51c68-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0439,0.006,0,1
+562.98165,Escherichia coli bfb59fc6-7bb8-11e9-a8d3-68b59976a384,Intermediate,1,,0.875,0.006,1,1
+562.98775,Escherichia coli 36e0505a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0719,0.0043,0,1
+562.99336,Escherichia coli e685a1be-7bb8-11e9-a8d3-68b59976a384,Intermediate,1,,0.0133,0.0006,0,0
+562.99631,Escherichia coli ae7f0d04-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7746,0.0071,1,1
+562.56912,Escherichia coli strain RL89,Resistant,1,,0.5783,0.013,1,1
+562.100751,Escherichia coli 91dff98e-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.6053,0.0131,1,1
+562.99697,Escherichia coli 4ec28ecc-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0123,0.0017,0,1
+562.100613,Escherichia coli 9c800df2-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8236,0.0042,1,1
+562.100570,Escherichia coli bcebc936-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.4981,0.0266,1,0
+562.99180,Escherichia coli da61e0ae-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (33mm),0,33.0,0.0449,0.0044,0,1
+562.100376,Escherichia coli 1f175e46-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.021,0.0021,0,1
+562.99804,Escherichia coli 241e3f9a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0047,0.0001,0,1
+562.99048,Escherichia coli c515fd3a-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.2052,0.0118,0,0
+562.99999,Escherichia coli c19ac928-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0093,0.0008,0,1
+562.98213,Escherichia coli 92d05aa0-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0149,0.001,0,1
+562.100426,Escherichia coli 0100d496-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0043,0.0001,0,1
+562.98724,Escherichia coli 82f3c206-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0043,0.0001,0,1
+562.99839,Escherichia coli ec305f96-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.0129,0.0013,0,0
+562.56792,Escherichia coli strain 463-16,Resistant,1,,0.9846,0.0002,1,1
+562.99620,Escherichia coli 8c0a559e-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0045,0.0001,0,1
+562.56828,Escherichia coli strain 487-16,Resistant,1,,0.9771,0.0004,1,1
+562.98005,Escherichia coli 9f158d58-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0292,0.0017,0,1
+562.98661,Escherichia coli bdd88ff6-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (36mm),0,36.0,0.004,0.0001,0,1
+562.100404,Escherichia coli 7c427754-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.016,0.001,0,1
+562.100692,Escherichia coli a1c28f92-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.1775,0.0048,0,1
+562.98286,Escherichia coli c1cf84e8-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (38mm),0,38.0,0.0206,0.0031,0,1
+562.99501,Escherichia coli a394ba6a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8144,0.0023,1,1
+562.100445,Escherichia coli 035906a0-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0047,0.0002,0,1
+562.100806,Escherichia coli fa04b932-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0039,0.0001,0,1
+562.99610,Escherichia coli 94b3f498-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.0714,0.0089,0,1
+562.100559,Escherichia coli ddab4a3e-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0117,0.0015,0,1
+562.56871,Escherichia coli strain 763-14,Resistant,1,,0.9597,0.0011,1,1
+562.56881,Escherichia coli strain RL107,Resistant,1,,0.0569,0.0062,0,0
+562.56784,Escherichia coli strain 37-16,Resistant,1,,0.9764,0.0012,1,1
+562.99249,Escherichia coli 7ad5b0c0-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0473,0.0023,0,1
+562.100908,Escherichia coli 2bff137e-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0039,0.0001,0,1
+562.56885,Escherichia coli strain RL111,Resistant,1,,0.9821,0.0005,1,1
+562.99381,Escherichia coli a6dd25cc-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.8814,0.0033,1,1
+562.98469,Escherichia coli 9b73bc0a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0037,0.0001,0,1
+562.100541,Escherichia coli ccc9333e-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0217,0.001,0,1
+562.99472,Escherichia coli a482cd18-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.8921,0.0045,1,1
+562.99597,Escherichia coli a5a2842c-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.0148,0.0007,0,0
+562.56890,Escherichia coli strain RL272,Resistant,1,,0.0448,0.0021,0,0
+562.100293,Escherichia coli c6c77338-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0142,0.0009,0,1
+562.58768,Escherichia coli strain 205,Resistant,1,,0.4607,0.0049,1,1
+562.100468,Escherichia coli 060c1306-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8488,0.0069,1,1
+562.100415,Escherichia coli 932743f6-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0053,0.0003,0,1
+562.98782,Escherichia coli bc97685a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0063,0.0003,0,1
+562.73379,Escherichia coli strain BB1435,Resistant,1,,0.941,0.0015,1,1
+562.98743,Escherichia coli 87f6cece-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.9623,0.001,1,1
+562.99534,Escherichia coli cc60ba26-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (31mm),0,31.0,0.0277,0.0025,0,1
+562.100405,Escherichia coli 9172d692-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.8668,0.0053,1,1
+562.100838,Escherichia coli ff6c6b72-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0076,0.0003,0,0
+562.100820,Escherichia coli f1d23924-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0082,0.001,0,1
+562.56913,Escherichia coli strain RL94,Resistant,1,,0.9753,0.0005,1,1
+562.99653,Escherichia coli e09119d6-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (32mm),0,32.0,0.0127,0.0009,0,1
+562.99436,Escherichia coli 3912ab7a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0051,0.0001,0,1
+562.56909,Escherichia coli strain RL318,Resistant,1,,0.9627,0.0015,1,1
+562.97942,Escherichia coli 7d8d0648-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0044,0.0,0,1
+562.100549,Escherichia coli da24877c-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.8776,0.0033,1,1
+562.99721,Escherichia coli a4b8a3d4-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0826,0.0061,0,0
+562.99469,Escherichia coli 6d8891ee-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7516,0.0082,1,1
+562.100072,Escherichia coli 1b33ca76-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0081,0.0003,0,1
+562.98743,Escherichia coli 87f6cece-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9623,0.001,1,1
+562.99539,Escherichia coli 40a39d5e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0105,0.0003,0,1
+562.99555,Escherichia coli 3c7f53e4-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0059,0.0002,0,1
+562.56834,Escherichia coli strain 497-16,Resistant,1,,0.9838,0.0003,1,1
+562.100114,Escherichia coli ebb1eb16-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8072,0.0085,1,1
+562.56851,Escherichia coli strain 51-16,Resistant,1,,0.9467,0.0028,1,1
+562.99800,Escherichia coli 3fefbbfe-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9417,0.0023,1,1
+562.98570,Escherichia coli 52bdef9e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.2868,0.0104,1,0
+562.73372,Escherichia coli strain BB1441,Resistant,1,,0.8234,0.0048,1,1
+562.100891,Escherichia coli d1b23a08-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.1397,0.0176,0,1
+562.100846,Escherichia coli b9406986-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.126,0.0095,0,1
+562.100113,Escherichia coli ebc7d1ba-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0087,0.001,0,1
+562.100788,Escherichia coli fcee3b82-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0325,0.0054,0,1
+562.99818,Escherichia coli 7e87264a-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (29mm),0,29.0,0.0056,0.0001,0,1
+562.100614,Escherichia coli 902c1e10-7bb8-11e9-a8d3-68b59976a384,Resistant,1,,0.871,0.0017,1,1
+562.100468,Escherichia coli 060c1306-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.8488,0.0069,1,1
+562.99127,Escherichia coli a929d352-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.7701,0.0073,1,1
+562.98326,Escherichia coli 70f08a3a-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0716,0.0104,0,1
+562.100632,Escherichia coli 255de90a-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.6625,0.0119,1,1
+562.98049,Escherichia coli 4fe7cd80-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.005,0.0002,0,1
+562.98620,Escherichia coli 67bffdec-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0066,0.0003,0,1
+562.98339,Escherichia coli 84611dc4-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (34mm),0,34.0,0.0043,0.0001,0,1
+562.99559,Escherichia coli e178732c-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0452,0.0052,0,1
+562.100588,Escherichia coli 5a78905e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0047,0.0001,0,1
+562.73360,Escherichia coli strain BB1421,Resistant,1,,0.8734,0.0075,1,1
+562.100673,Escherichia coli a02cad0c-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0037,0.0001,0,1
+562.100886,Escherichia coli d0d37d4a-7bb9-11e9-a8d3-68b59976a384,Resistant,1,,0.9767,0.0007,1,1
+562.99405,Escherichia coli c3abda1e-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (30mm),0,30.0,0.0045,0.0002,0,1
+562.56772,Escherichia coli strain 117-16,Resistant,1,,0.9738,0.0015,1,1
+562.99558,Escherichia coli e3de954c-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (10mm),1,10.0,0.8089,0.0066,1,1
+562.99774,Escherichia coli cf3ba5b2-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0164,0.001,0,1
+562.73378,Escherichia coli strain BB1431,Resistant,1,,0.4262,0.0257,1,1
+562.73368,Escherichia coli strain BB1425,Resistant,1,,0.0106,0.0006,0,0
+562.99733,Escherichia coli ab4138c4-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.713,0.0226,1,1
+562.99968,Escherichia coli 682be9c6-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.8457,0.01,1,1
+562.99122,Escherichia coli e2dccf7e-7bb8-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.4721,0.0206,1,1
+562.99518,Escherichia coli d1a263c2-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (27mm),0,27.0,0.0096,0.0002,0,1
+562.100139,Escherichia coli ef586f10-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (26mm),0,26.0,0.0059,0.0002,0,1
+562.98327,Escherichia coli 754212a2-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0146,0.0009,0,1
+562.58767,Escherichia coli strain 204,Resistant,1,,0.958,0.0014,1,1
+562.99861,Escherichia coli f996fd98-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0083,0.0006,0,1
+562.56796,Escherichia coli strain 42-16,Resistant,1,,0.9304,0.0021,1,1
+562.98435,Escherichia coli 9dc00ee6-7bb9-11e9-a8d3-68b59976a384,zone-derived-S (35mm),0,35.0,0.0667,0.0041,0,1
+562.100420,Escherichia coli 002b98bc-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0083,0.0006,0,1
+562.99585,Escherichia coli e7d1e50a-7bb8-11e9-a8d3-68b59976a384,zone-derived-S (28mm),0,28.0,0.0057,0.0002,0,1
+562.56763,Escherichia coli strain 1039-14,Resistant,1,,0.0122,0.0011,0,0
+562.58752,Escherichia coli strain 107,Resistant,1,,0.7465,0.0156,1,1
+562.100596,Escherichia coli 5cb2090e-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0069,0.0003,0,1
+562.100733,Escherichia coli 99dd60fe-7bb8-11e9-a8d3-68b59976a384,Susceptible,0,,0.0102,0.0009,0,1
+562.56858,Escherichia coli strain 53-16,Resistant,1,,0.9363,0.0059,1,1
+562.100497,Escherichia coli b7bb6eda-7bb9-11e9-a8d3-68b59976a384,zone-derived-R (6mm),1,6.0,0.0185,0.0009,0,0
+562.140651,Escherichia coli ERR3808901,zone-derived-R (6mm),1,6.0,0.8567,0.0061,1,1
+562.100208,Escherichia coli e1988526-7bb9-11e9-a8d3-68b59976a384,Intermediate,1,,0.0175,0.0015,0,0
+562.56782,Escherichia coli strain 304-13-1,Resistant,1,,0.9501,0.0028,1,1
+562.99595,Escherichia coli 92f2b5cc-7bb9-11e9-a8d3-68b59976a384,Susceptible,0,,0.0675,0.0093,0,1
+562.56922,Escherichia coli strain RS131,Resistant,1,,0.9616,0.0029,1,1

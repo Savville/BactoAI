@@ -1,0 +1,4 @@
+antibiotic,Accuracy,ROC-AUC,Test Resistant,Test Susceptible,SMOTE Used
+meropenem,0.8951612903225806,0.9415343915343914,70,54,False
+ciprofloxacin,0.8181818181818182,0.8790606653620352,70,73,False
+cefotaxime,0.7931034482758621,0.8720974495622382,71,74,False
