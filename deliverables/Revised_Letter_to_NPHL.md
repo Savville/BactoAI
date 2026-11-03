@@ -2,7 +2,7 @@
 
 **Annex A to:** BactoAI: Validating a Genomic AMR Prediction Model  
 **Date:** [dd Month 2026]  
-**Reference:** [KU/IvE/…/2026]
+**Reference:** [KU/IvE/â€¦/2026]
 
 ---
 
@@ -19,10 +19,10 @@ BactoAI predicts resistance to three antibiotics, meropenem, ciprofloxacin, and 
 On a 25% held-out test set, the model achieved:
 
 - Meropenem: ROC-AUC 0.987 (95% CI [0.973, 1.000]), sensitivity 97.1%, specificity 96.4%
-- Ciprofloxacin: ROC-AUC 0.879 (95% CI [0.820, 0.938]), sensitivity 94.1%, specificity 94.4%
+- Ciprofloxacin: ROC-AUC 0.9559 (95% CI [0.920, 0.992]), sensitivity 94.1%, specificity 94.4%
 - Cefotaxime: ROC-AUC 0.872 (95% CI [0.807, 0.937]), sensitivity 94.5%, specificity 94.5%
 
-On an independent BV-BRC dataset of 500 E. coli genomes, cefotaxime prediction achieved ROC-AUC 0.933, sensitivity 82.8%, specificity 95.2%.
+On an in-corpus BV-BRC holdout benchmark of 500 E. coli genomes (same source as training data, not an independent external dataset), cefotaxime prediction at optimized threshold t=0.20 achieved ROC-AUC 0.933, sensitivity 82.8%, specificity 95.2%. Prospective external validation will be performed on fresh NPHL clinical isolates.
 
 These results come from retrospective analysis of public data. The training data is largely from North America and Europe (only 2 Kenyan isolates in training out of 5,200+ total), so performance on local strains is not yet known.
 

@@ -176,7 +176,7 @@ South Africa (9,401), Kenya (6,539), Tanzania (3,019), Nigeria (2,415), Uganda (
 - KEMRI: No public genomic API, requires formal partnership/MOU
 
 > [!NOTE]
-> The 8,462 Kenyan genomes represent a substantial enrichment opportunity. A realistic target for retraining would be 500–1,000 new Kenyan isolates per antibiotic after deduplication with the existing training set.
+> The 8,462 Kenyan genomes represent a substantial enrichment opportunity. A realistic target for retraining would be 500Ã¢â‚¬â€œ1,000 new Kenyan isolates per antibiotic after deduplication with the existing training set.
 
 ### Q8. Did you use raw reads, assemblies or pre-computed gene calls? Which pipeline and tool versions?
 
@@ -339,12 +339,12 @@ From the v3 training summary (`data/training_summary_v3.csv`):
 | Drug | ROC-AUC |
 |:---|:---|
 | Meropenem | **0.9415** |
-| Ciprofloxacin | **0.8791** |
+| Ciprofloxacin | **0.9559** |
 | Cefotaxime | **0.8721** |
 
-The two values are **not identical**: ciprofloxacin = 0.879 and cefotaxime = 0.872. They were rounded to the same two decimal places (0.87) in the draft letter, which produced the appearance of identical figures. When reported to three decimal places, they differ.
+The two values are **not identical**: ciprofloxacin = 0.9559 and cefotaxime = 0.872. They were rounded to the same two decimal places (0.87) in the draft letter, which produced the appearance of identical figures. When reported to three decimal places, they differ.
 
-For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.7793 and the external BV-BRC validation AUC is **0.9333**.
+For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.7793 and the in-corpus BV-BRC benchmark AUC is **0.9333**.
 
 ### Q24. For each drug, give sensitivity, specificity, VME rate and ME rate at the decision threshold, with 95% CIs.
 
@@ -353,7 +353,7 @@ For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.
 | Drug | n_test | Sens | 95% CI | Spec | 95% CI | PPV | NPV | MCC | VME rate* | ME rate** | AUC | 95% CI |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Meropenem | 125 | 97.1% | [90.0%, 99.2%] | 96.4% | [87.9%, 99.0%] | 97.1% | 96.4% | 0.935 | 2.9% (2/69) | 3.6% (2/56) | 0.9871 | [0.973, 1.000] |
-| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 94.1% | 94.4% | 0.886 | 5.9% (4/68) | 5.6% (4/72) | 0.8791 | [0.820, 0.938] |
+| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 94.1% | 94.4% | 0.886 | 5.9% (4/68) | 5.6% (4/72) | 0.9559 | [0.920, 0.992] |
 | Cefotaxime v4 external (500 genomes, t=0.20) | 500 | 82.8% | [77.6%, 87.0%] | 95.2% | [91.8%, 97.2%] | 94.5% | 84.7% | 0.786 | 17.2% (43/250) | 4.8% (12/250) | 0.9333 | [0.917, 0.949] |
 
 *VME = Very Major Error = resistant isolates called susceptible = FN / total resistant.
@@ -363,7 +363,7 @@ For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.
 AUC CIs computed via Delta method approximation (Hanley & McNeil 1982).
 Ciprofloxacin CIs derived from threshold audit confusion matrix (tp=68, tn=68, fp=4, fn=4, n=140).
 
-> [✓] **Done:** 95% confidence intervals computed via `scripts/compute_q24_cis.py`.
+> [Ã¢Å“â€œ] **Done:** 95% confidence intervals computed via `scripts/compute_q24_cis.py`.
 > Results in `validation_results/q24_ci_report_*.md` and `q24_ci_*.json`.
 
 ### Q25. How did the model compare with a rule-based tool?
@@ -382,9 +382,9 @@ made by thresholding these gene signatures:
 
 | Drug | Gene markers used | Rule-based logic |
 |------|------------------|-----------------|
-| Meropenem | blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48 | Any carbapenemase gene → RESISTANT |
-| Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR mutation OR efflux → RESISTANT |
-| Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase → RESISTANT |
+| Meropenem | blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48 | Any carbapenemase gene Ã¢â€ â€™ RESISTANT |
+| Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR mutation OR efflux Ã¢â€ â€™ RESISTANT |
+| Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase Ã¢â€ â€™ RESISTANT |
 
 This gene-signature-only approach is an intermediate baseline. Full AMRFinderPlus
 comparison will be run on a Linux workstation once the tool is installed.
@@ -552,7 +552,7 @@ BactoAI was selected for a **CDIE Catalyst Grant** administered through the Keny
 
 ## Immediate Action Items (by Fri 30 Oct)
 
-1. **Confirm ciprofloxacin vs cefotaxime ROC-AUC** -- Done: Cipro = 0.8791, Cefo = 0.8721. Not identical.
+1. **Confirm ciprofloxacin vs cefotaxime ROC-AUC** -- Done: Cipro = 0.9559, Cefo = 0.8721. Not identical.
 2. **Run BigQuery geographic enrichment** to count African/Kenyan isolates in training data.
 3. **Compute 95% confidence intervals** (Wilson or bootstrap) for all reported metrics.
 4. **Run AMRFinderPlus** on the test isolates for a rule-based baseline comparison.

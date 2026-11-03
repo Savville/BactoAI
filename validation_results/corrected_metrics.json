@@ -1,0 +1,83 @@
+{
+  "meropenem": {
+    "auc": 0.98706,
+    "n_test": 125,
+    "tp": 67,
+    "tn": 54,
+    "fp": 2,
+    "fn": 2,
+    "sensitivity": 0.971,
+    "specificity": 0.9643,
+    "accuracy": 0.968,
+    "ppv": 0.971,
+    "npv": 0.9643,
+    "vme_rate": 0.029,
+    "me_rate": 0.036,
+    "threshold": 0.5
+  },
+  "ciprofloxacin": {
+    "auc": 0.955882,
+    "n_test": 140,
+    "tp": 64,
+    "tn": 68,
+    "fp": 4,
+    "fn": 4,
+    "sensitivity": 0.9412,
+    "specificity": 0.9444,
+    "accuracy": 0.9429,
+    "ppv": 0.9412,
+    "npv": 0.9444,
+    "vme_rate": 0.0588,
+    "me_rate": 0.0556,
+    "threshold": 0.5
+  },
+  "cefotaxime_v3": {
+    "auc": 0.8721,
+    "n_test": 145,
+    "tp": null,
+    "tn": null,
+    "fp": null,
+    "fn": null,
+    "sensitivity": null,
+    "specificity": null,
+    "accuracy": 0.7931,
+    "n_test_resistant": 71,
+    "n_test_susceptible": 74,
+    "threshold": 0.5,
+    "note": "v3 NCBI-only model; confusion matrix not in threshold audit JSON"
+  },
+  "cefotaxime_v4": {
+    "auc": 0.7793,
+    "n_test": 1000,
+    "n_test_resistant": 167,
+    "n_test_susceptible": 833,
+    "accuracy": 0.859,
+    "threshold": 0.5,
+    "note": "v4 combined model; NOT deployed (production uses v3)"
+  },
+  "bvbrc_benchmark": {
+    "auc": 0.9333,
+    "n_evaluated": 500,
+    "tp": 207,
+    "tn": 238,
+    "fp": 12,
+    "fn": 43,
+    "sensitivity": 0.828,
+    "specificity": 0.952,
+    "accuracy": 0.89,
+    "ppv": 0.9452,
+    "npv": 0.847,
+    "vme_rate": 0.172,
+    "me_rate": 0.048,
+    "threshold": 0.2,
+    "note": "In-corpus benchmark on BV-BRC holdout. NOT independent external validation."
+  },
+  "generated_at": "2026-11-03",
+  "notes": {
+    "meropenem": "From threshold_audit_20260912_165224.json",
+    "ciprofloxacin": "From threshold_audit_20260912_162504.json",
+    "cefotaxime_v3": "From training_summary_v3.csv (AUC, accuracy only; CM unavailable)",
+    "cefotaxime_v4": "From training_summary_v4.csv (retrained on BV-BRC, NOT deployed)",
+    "bvbrc_benchmark": "FROM bvbrc_validation_summary_20260914_070116.json \u2014 in-corpus benchmark, not independent external validation"
+  }
+}

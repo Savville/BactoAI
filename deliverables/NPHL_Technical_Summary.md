@@ -71,12 +71,12 @@ Each wrapped in Platt sigmoid calibration (5-fold CV). Five random seeds: 42, 12
 | Drug | n | Sensitivity | 95% CI | Specificity | 95% CI | AUC | 95% CI | VME | ME |
 |------|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Meropenem | 125 | 97.1% | [90.0%, 99.2%] | 96.4% | [87.9%, 99.0%] | 0.987 | [0.973, 1.000] | 2.9% | 3.6% |
-| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 0.879 | [0.820, 0.938] | 5.9% | 5.6% |
+| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 0.9559 | [0.920, 0.992] | 5.9% | 5.6% |
 | Cefotaxime (v3) | 145 | 94.5% | [88.8%, 97.5%] | 94.5% | [88.8%, 97.5%] | 0.872 | [0.807, 0.937] | 5.5% | 5.5% |
 
 *VME = Very Major Error (resistant called susceptible); ME = Major Error (susceptible called resistant)*
 
-### External Validation (BV-BRC E. coli cefotaxime cohort)
+### In-Corpus Benchmark (BV-BRC E. coli cefotaxime holdout)
 
 | Metric | Value |
 |--------|------:|
@@ -123,9 +123,9 @@ Estimate the clinical performance of BactoAI for predicting meropenem, ciproflox
 
 ### Sample Size
 
-- Minimum **100 isolates per species-drug combination** (5 species × 3 drugs = 15 cells)
+- Minimum **100 isolates per species-drug combination** (5 species Ã— 3 drugs = 15 cells)
 - Preferred: **200 isolates per cell** for adequate power to detect VME > 1.5%
-- Total: approximately **1,500–3,000 isolates** depending on species distribution
+- Total: approximately **1,500â€“3,000 isolates** depending on species distribution
 
 ### Reference Method
 
@@ -142,8 +142,8 @@ Estimate the clinical performance of BactoAI for predicting meropenem, ciproflox
 ### Data Separation
 
 - On receipt, NPHL isolates will be randomly assigned to:
-  - **Locked validation partition (30–40%):** Excluded from all training, tuning, and feature selection
-  - **Retraining partition (60–70%):** Available for model improvement after validation is complete
+  - **Locked validation partition (30â€“40%):** Excluded from all training, tuning, and feature selection
+  - **Retraining partition (60â€“70%):** Available for model improvement after validation is complete
 - Partition assignments will be logged in writing and shared with NPHL before any retraining begins
 - The model version used for validation will be tagged (e.g., `v4.1-nphl-frozen`) and all artifacts hashed (SHA-256)
 
@@ -171,7 +171,7 @@ BactoAI is positioned as a clinical decision support tool, not a standalone diag
 - **Environment:** Python 3.12, virtual environment in `.venv/`
 - **Dependencies:** `requirements.txt` (Flask, Supabase), `requirements-ml.txt` (XGBoost, scikit-learn, LightGBM)
 - **Random seeds:** [42, 123, 456, 789, 1024]
-- **To reproduce:** Clone repo → install deps → `python bactoai_pipeline.py --train`
+- **To reproduce:** Clone repo â†’ install deps â†’ `python bactoai_pipeline.py --train`
 - **Model files:** `data/models_v4/` (15 `.joblib` files), `data/transformers_v4/` (6 `.joblib` files)
 - **Validation scripts:** `scripts/compute_q24_cis.py`, `scripts/kenya_audit_fast.py`, `scripts/amrfinder_baseline.py`
 
