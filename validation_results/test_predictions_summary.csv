@@ -1,5 +1,0 @@
-drug,model_version,n_test,auc,sensitivity,specificity,ppv,npv,accuracy,tp,tn,fp,fn,vme_rate,me_rate,threshold,notes
-meropenem,v4_ensemble,125,0.98706,0.971,0.9643,0.971,0.9643,0.968,67,54,2,2,0.029,0.036,0.5,
-ciprofloxacin,v4_ensemble,140,0.955882,0.9412,0.9444,0.9412,0.9444,0.9429,64,68,4,4,0.0588,0.0556,0.5,
-cefotaxime,v3_ncbi_only,145,0.8721,,,N/A,N/A,0.7931,N/A,N/A,N/A,N/A,N/A,N/A,0.5,v3 NCBI-only model; confusion matrix not in threshold audit JSON
-cefotaxime,bvbrc_in_corpus_benchmark,500,0.9333,0.828,0.952,0.9452,0.847,0.89,207,238,12,43,0.172,0.048,0.2,In-corpus benchmark on BV-BRC holdout. NOT independent external validation.
