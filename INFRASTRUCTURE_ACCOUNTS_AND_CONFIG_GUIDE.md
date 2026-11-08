@@ -1,9 +1,9 @@
 # BactoAI Infrastructure, Accounts, and Environment Reference
 
 Date: October 27, 2026  
-Status: Repository reference only; live account ownership and settings have not been independently re-verified.
+Status: Updated 2026-11-08 with owner-provided account details; live environment values remain masked/unverified.
 
-This document maps all active accounts, databases, GitHub remotes, hosting services, and environment variables across the BactoAI ecosystem.
+This document records known accounts, configured project references, and deployment settings. Treat values masked in dashboard screenshots and any unconfirmed project ownership as unresolved.
 
 ---
 
@@ -15,7 +15,7 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
 
 * **Project ID:** `ofuxwgapzjgcrsuiqpyu`
 * **Project Name in Dashboard:** `bactoai`
-* **Account Owner:** Described in prior notes as the personal / ML engineering account; dashboard email not recorded here
+* **Account Owner:** `ochiwilliamotieno@gmail.com` (owner-provided)
 * **Host URL:** `https://ofuxwgapzjgcrsuiqpyu.supabase.co`
 * **Project region:** `eu-west-2` (owner-provided dashboard screenshot, 2026-11-08)
 * **Purpose:** Stores backend prediction history, validation feedback, and server authentication.
@@ -27,13 +27,14 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
   * `public.audit_log` (event timestamps and request IPs)
 * **Auto-Pause Note:** Free-tier Supabase projects pause after 7 days of inactivity. If the Render health check ever reports `database_ok: false` or DNS fails, log into this account and click **Resume project**. Restoration takes about 2 minutes.
 
-### Website Database (Public Web App)
+### Intended Website Database (Public Web App)
 
 * **Project ID:** `ojnecaomcicsayeweoab`
-* **Account Owner:** Described in prior notes as the web collaborator / Lovable account; dashboard email not recorded here
+* **Account Owner:** Intended to be `bactoai@gmail.com` (owner is still identifying the exact project/account)
 * **Host URL:** `https://ojnecaomcicsayeweoab.supabase.co`
 * **Project region:** Not yet confirmed
-* **Purpose:** Powers the public React application.
+* **Account Owner:** `bactoai@gmail.com` is the intended account; the owner is still identifying the exact project/account.
+* **Purpose:** The local frontend configuration references this project. Confirm in the Supabase dashboard that this is the intended/current project before relying on it.
 * **Tables:**
   * `auth.users` (Supabase Auth identities for site visitors and pilot testers)
   * `public.genome_analyses` (browser-facing analysis summaries and saved reports)
@@ -59,21 +60,10 @@ Both remotes point to the same codebase and are synchronized on the `main` branc
 
 | Deployment URL | Owner Account | Current Status | Purpose |
 |---|---|---|---|
-| `https://bactoai-kt0q.onrender.com` | Official BactoAI Account | **Active / Production Healthy** | Official ML prediction API and Gunicorn service |
-| `https://bactoai.onrender.com` | Personal Account | Deprecated | Old test deployment (do not send traffic here) |
+| Render service `srv-daob3gv40ujc73ejs44g` | `bactoai@gmail.com` (owner-provided) | Public hostname and current health not confirmed from the supplied settings screenshot | ML prediction API / Gunicorn service |
+| `https://bactoai.onrender.com` | Previously described as a personal account | Status not re-confirmed | Confirm the service and hostname before use |
 
-### Verification Command
-
-You can confirm production health from any terminal:
-
-```bash
-curl https://bactoai-kt0q.onrender.com/health
-```
-
-Expected output:
-```json
-{"database_ok": true, "models_loaded": true, "startup_error": null, "status": "ok"}
-```
+The owner-provided Render screenshot shows the names of the configured environment variables, but their values are masked. It does not confirm which Supabase project URL is configured, whether the key is `anon` or `service_role`, the service's public hostname, or its current health.
 
 ---
 
@@ -81,16 +71,16 @@ Expected output:
 
 ### Root Backend Environment File: `.env`
 
-Located at the repository root. Used by local Flask scripts and matches the Render production environment variables.
+Located at the repository root. Used by local Flask scripts. The supplied Render screenshot masks values, so it does not establish that the local and Render values match.
 
 ```env
 SUPABASE_URL=https://ofuxwgapzjgcrsuiqpyu.supabase.co
-SUPABASE_KEY=<backend_service_role_secret_key>
+SUPABASE_KEY=<key value not shown; role unverified>
 ```
 
-Render production dashboard variables (`bactoai-kt0q`):
-* `SUPABASE_URL`: `https://ofuxwgapzjgcrsuiqpyu.supabase.co`
-* `SUPABASE_KEY`: `<backend_service_role_secret_key>`
+Render dashboard variables (service `srv-daob3gv40ujc73ejs44g`):
+* `SUPABASE_URL`: Present; masked in the supplied screenshot. Verify the project reference in the Render dashboard.
+* `SUPABASE_KEY`: Present; masked in the supplied screenshot. The owner suspects it may be an anon key, but the role is unconfirmed.
 * `BACTOAI_SECRET`: `<session_signing_secret>`
 * `BACTOAI_ADMIN_USER`: `bactoai`
 * `BACTOAI_ADMIN_PASS`: `<admin_password>`
@@ -101,7 +91,7 @@ Render production dashboard variables (`bactoai-kt0q`):
 Located in the `bactoai/` folder. Used by the React / TanStack Start application.
 
 ```env
-# Website Database (Collaborator Project)
+# Website Database (intended BactoAI account; exact project/account still being identified)
 SUPABASE_PROJECT_ID="ojnecaomcicsayeweoab"
 SUPABASE_PUBLISHABLE_KEY="<public_anon_key>"
 SUPABASE_URL="https://ojnecaomcicsayeweoab.supabase.co"
@@ -110,8 +100,8 @@ VITE_SUPABASE_PROJECT_ID="ojnecaomcicsayeweoab"
 VITE_SUPABASE_PUBLISHABLE_KEY="<public_anon_key>"
 VITE_SUPABASE_URL="https://ojnecaomcicsayeweoab.supabase.co"
 
-# Prediction Engine Connection (Official Render Deployment)
-MODEL_API_URL="https://bactoai-kt0q.onrender.com/api/v1"
+# Prediction Engine Connection (Render service hostname must be confirmed)
+MODEL_API_URL="<confirm the public URL for srv-daob3gv40ujc73ejs44g>"
 MODEL_API_KEY=<set in hosting secret settings>
 ```
 
@@ -128,7 +118,7 @@ MODEL_API_KEY=<set in hosting secret settings>
                                   v
 +-------------------------------------------------------------------+
 | 2. React / TanStack Web App (bactoai/)                            |
-|    - Authenticates users via Supabase Project: ojnecaomcicsayeweoab|
+|    - Local config references Supabase Project: ojnecaomcicsayeweoab|
 |    - Saves contact requests into public.contact_submissions       |
 |    - Receives uploaded FASTA/FASTQ file                           |
 +---------------------------------+---------------------------------+
@@ -137,7 +127,7 @@ MODEL_API_KEY=<set in hosting secret settings>
                                   | Authorization: Bearer <MODEL_API_KEY>
                                   v
 +-------------------------------------------------------------------+
-| 3. ML Prediction Backend (bactoai-kt0q.onrender.com)             |
+| 3. ML Prediction Backend (Render service hostname unconfirmed)    |
 |    - Validates API key in public.api_keys                         |
 |    - Processes genome with Biopython & k-mer feature extraction   |
 |    - Runs XGBoost models (Meropenem, Ciprofloxacin, Cefotaxime)   |
@@ -152,8 +142,8 @@ MODEL_API_KEY=<set in hosting secret settings>
 
 If predictions or health checks fail in the future, follow these steps:
 
-1. **Check Render Health:**
-   Run `curl https://bactoai-kt0q.onrender.com/health`.
+1. **Confirm Render service URL:**
+   In Render, open service `srv-daob3gv40ujc73ejs44g` and verify its name and public URL before testing health.
 2. **If `database_ok: false`:**
    Open the Supabase dashboard for project `ofuxwgapzjgcrsuiqpyu` ("bactoai"). If the project is paused, click **Resume project**.
 3. **If `models_loaded: false`:**
