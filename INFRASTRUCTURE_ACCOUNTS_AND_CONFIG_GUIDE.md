@@ -17,6 +17,7 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
 * **Project Name in Dashboard:** `bactoai`
 * **Account Owner:** Described in prior notes as the personal / ML engineering account; dashboard email not recorded here
 * **Host URL:** `https://ofuxwgapzjgcrsuiqpyu.supabase.co`
+* **Project region:** `eu-west-2` (owner-provided dashboard screenshot, 2026-11-08)
 * **Purpose:** Stores backend prediction history, validation feedback, and server authentication.
 * **Tables:**
   * `public.users` (legacy and admin credentials for the Flask dashboard)
@@ -31,6 +32,7 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
 * **Project ID:** `ojnecaomcicsayeweoab`
 * **Account Owner:** Described in prior notes as the web collaborator / Lovable account; dashboard email not recorded here
 * **Host URL:** `https://ojnecaomcicsayeweoab.supabase.co`
+* **Project region:** Not yet confirmed
 * **Purpose:** Powers the public React application.
 * **Tables:**
   * `auth.users` (Supabase Auth identities for site visitors and pilot testers)
