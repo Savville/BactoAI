@@ -21,11 +21,9 @@
     0.8713361248572515
   ],
   "trained_at": "2026-07-23T11:46:17.773967",
-  "n_train_resistant": 561,
-  "n_train_susceptible": 2017,
-  "n_train_total": 2578,
-  "data_sources": "NCBI Pathogen Detection + BV-BRC (PubMed: 29112974, 30092762, 32422315, 33846529, 36363724, 38219757)",
-  "n_bvbrc_resistant": 261,
-  "n_bvbrc_susceptible": 1717,
-  "n_bvbrc_total": 1978
+  "n_train_resistant": 214,
+  "n_train_susceptible": 219,
+  "n_train_total": 433,
+  "data_sources": "NCBI Pathogen Detection",
+  "notes": "Corrected 2026-11-07: the deployed model was trained on the 600-row NCBI metadata only (433 usable training isolates after dropping genomes without readable FASTA). The previous n_train_*/n_bvbrc_* values were copied from the non-deployed combined v4 run (data/training_summary_v4.csv) and did not describe this model."
 }

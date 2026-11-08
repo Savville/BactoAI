@@ -30,7 +30,6 @@
 │  │  SQLite Database   │◄──┘   │  Model Weights (files)     │   │
 │  │  - users           │       │  - models_v4/*.joblib      │   │
 │  │  - submissions     │       │  - transformers_v4/*.joblib │   │
-│  │  - audit_log       │       │  - models/*.json           │   │
 │  └────────────────────┘       └────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -267,10 +266,8 @@ SQLite works best for <100 concurrent users. For higher load:
 - Switch to PostgreSQL (change DB_PATH to connection string)
 - Or use Docker with volume mount for persistence
 
-### Model files too large for GitHub
-- Use Git LFS for .joblib files
-- Or download from Google Drive on first run
-- Or build Docker image with models included
+### Model assets
+The production loader reads `data/models_v4/` and `data/transformers_v4/`. The model files in branch history are ordinary Git objects, and the Dockerfile does not run a Git LFS pull step.
 
 ### Port already in use
 ```bash

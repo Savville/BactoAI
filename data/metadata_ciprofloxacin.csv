@@ -1,0 +1,601 @@
+target_acc,taxgroup_name,antibiotic,phenotype,asm_acc,resistant
+PDT000107115.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016537215.2,1
+PDT000209512.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002143625.1,1
+PDT001830784.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032331915.2,1
+PDT001830948.4,E.coli and Shigella,ciprofloxacin,resistant,GCA_031775475.2,1
+PDT001830848.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032331155.2,1
+PDT000077415.3,E.coli and Shigella,ciprofloxacin,resistant,GCA_012773715.1,1
+PDT000457706.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004116875.1,1
+PDT002693062.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049266275.1,1
+PDT001744116.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_031046535.2,1
+PDT002391458.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043863405.1,1
+PDT000197021.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_002055855.1,1
+PDT000292998.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_002968955.1,1
+PDT000532942.1,Salmonella enterica,ciprofloxacin,resistant,GCA_006537895.1,1
+PDT001975007.1,Salmonella enterica,ciprofloxacin,resistant,GCA_046014355.1,1
+PDT001179182.1,Salmonella enterica,ciprofloxacin,resistant,GCA_020859415.1,1
+PDT000114681.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016521185.2,1
+PDT000114621.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016521875.2,1
+PDT000114107.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016526445.2,1
+PDT000114215.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016525715.2,1
+PDT000115292.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016519645.2,1
+PDT000114740.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520125.2,1
+PDT000102015.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012741095.1,1
+PDT002136285.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_038080855.1,1
+PDT001830659.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032333635.2,1
+PDT001830764.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032332195.2,1
+PDT001903544.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032123155.2,1
+PDT000201875.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012479735.1,1
+PDT000543108.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004568035.1,1
+PDT000485972.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004569165.1,1
+PDT001341257.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023882165.1,1
+PDT001340473.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023866835.1,1
+PDT001467114.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025830135.1,1
+PDT001467121.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025830275.1,1
+PDT001467029.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025828425.1,1
+PDT002693071.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049208165.1,1
+PDT002391505.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043859275.1,1
+PDT000106921.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016537745.2,1
+PDT000107119.2,Acinetobacter baumannii,ciprofloxacin,intermediate,GCA_016537625.2,1
+PDT000113688.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016528235.2,1
+PDT000534418.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006492735.1,1
+PDT001016879.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_018221425.1,1
+PDT001830641.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032333855.2,1
+PDT000094016.3,E.coli and Shigella,ciprofloxacin,resistant,GCA_012774455.1,1
+PDT000543085.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004568225.1,1
+PDT000543139.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004566595.1,1
+PDT001340523.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023867835.1,1
+PDT001341118.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023879385.1,1
+PDT001340981.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023876645.1,1
+PDT001467287.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025833595.1,1
+PDT002674672.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_048585925.1,1
+PDT002391492.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043860015.1,1
+PDT000050775.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_000937495.2,1
+PDT001395359.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024718775.1,1
+PDT001395160.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024714735.1,1
+PDT000106915.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016537895.2,1
+PDT000114587.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016522865.2,1
+PDT000106901.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016538465.2,1
+PDT000113686.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016528365.2,1
+PDT000209499.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002143375.1,1
+PDT000209534.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002144695.1,1
+PDT000534471.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006493815.1,1
+PDT000102020.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012740975.1,1
+PDT000140750.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012642835.1,1
+PDT001903552.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032122895.2,1
+PDT001830643.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032333815.2,1
+PDT000124865.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012707325.1,1
+PDT001341429.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023885605.1,1
+PDT001467058.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025829025.1,1
+PDT002693030.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049208975.1,1
+PDT002188885.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_045490105.1,1
+PDT002391487.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043860235.1,1
+PDT002391510.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043858225.1,1
+PDT000016116.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000406445.1,1
+PDT000424948.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_003968055.1,1
+PDT001395235.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716225.1,1
+PDT000106878.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016538975.2,1
+PDT000106872.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016539065.2,1
+PDT000106856.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016539335.2,1
+PDT000106791.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016540845.2,1
+PDT000114600.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016522485.2,1
+PDT000114721.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520665.2,1
+PDT000107139.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016535605.2,1
+PDT000114620.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016522005.2,1
+PDT000217697.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002184285.1,1
+PDT002991571.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053657235.1,1
+PDT002991538.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053673175.1,1
+PDT001831069.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032328115.2,1
+PDT000543216.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004567075.1,1
+PDT001354752.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_024165365.1,1
+PDT001340584.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023869055.1,1
+PDT001463443.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025783995.2,1
+PDT001341374.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023884485.1,1
+PDT001463673.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025789635.2,1
+PDT001463551.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025786645.2,1
+PDT001467064.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025829135.1,1
+PDT002804537.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_050915235.1,1
+PDT001395394.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024719495.1,1
+PDT000629611.1,Salmonella enterica,ciprofloxacin,resistant,GCA_011377945.1,1
+PDT001179185.1,Salmonella enterica,ciprofloxacin,resistant,GCA_006341935.2,1
+PDT002553335.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_046376385.1,1
+PDT000114664.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016521535.2,1
+PDT000106769.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016541585.2,1
+PDT000114291.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016524015.2,1
+PDT000209059.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002137525.1,1
+PDT000209091.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002138165.1,1
+PDT000209502.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002143405.1,1
+PDT000209060.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002137555.1,1
+PDT000534513.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006494665.1,1
+PDT000534488.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006494155.1,1
+PDT000124856.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012707345.1,1
+PDT000724075.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_012858695.1,1
+PDT001340304.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023862225.1,1
+PDT001340283.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023861805.1,1
+PDT002776234.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_050502255.1,1
+PDT002776213.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_050502735.1,1
+PDT000424996.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_003969355.1,1
+PDT001395239.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716305.1,1
+PDT001395413.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024719875.1,1
+PDT001395350.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024718585.1,1
+PDT001677740.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_029568485.1,1
+PDT000524489.1,Salmonella enterica,ciprofloxacin,resistant,GCA_006469785.1,1
+PDT000107126.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016535825.2,1
+PDT002991448.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053674195.1,1
+PDT002991472.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053673795.1,1
+PDT001831014.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032328895.2,1
+PDT001830533.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032336225.2,1
+PDT001341375.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023884525.1,1
+PDT001467161.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025831065.1,1
+PDT001744152.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_031045875.2,1
+PDT001744194.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_031044975.2,1
+PDT000111520.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_022316285.1,1
+PDT001128544.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_019930465.1,1
+PDT001395173.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024714985.1,1
+PDT000106890.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016538705.2,1
+PDT000114715.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520775.2,1
+PDT000094959.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_001444225.1,1
+PDT000113235.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016529775.2,1
+PDT000115282.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016519875.2,1
+PDT000106797.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016540705.2,1
+PDT000114337.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016523245.2,1
+PDT000209026.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002136855.1,1
+PDT002991297.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053675955.1,1
+PDT000133656.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012677675.1,1
+PDT000101138.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012767515.1,1
+PDT001903542.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032123195.2,1
+PDT000158301.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_001874845.1,1
+PDT000543151.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004567115.1,1
+PDT001341052.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023878065.1,1
+PDT001341310.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023883215.1,1
+PDT001341179.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023880595.1,1
+PDT001341863.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023894425.1,1
+PDT001341281.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023882625.1,1
+PDT002711659.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_049383265.1,1
+PDT000015889.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000417125.1,1
+PDT001395242.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716375.1,1
+PDT001395210.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024715735.1,1
+PDT001395163.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024714795.1,1
+PDT001395221.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024715925.1,1
+PDT001963716.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_033142795.1,1
+PDT000114726.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520565.2,1
+PDT000217695.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002184265.1,1
+PDT000534491.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006494215.1,1
+PDT000534387.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006492125.1,1
+PDT002991851.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053665735.1,1
+PDT001830449.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032338235.2,1
+PDT001830919.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032330095.2,1
+PDT000226502.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012437555.1,1
+PDT001418805.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025200635.1,1
+PDT001341172.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023880465.1,1
+PDT001467295.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025833755.1,1
+PDT001466964.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025827125.1,1
+PDT002693081.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049207985.1,1
+PDT000022725.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000566725.1,1
+PDT000015887.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000417105.1,1
+PDT002991309.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_053675795.1,1
+PDT000094624.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_001441405.1,1
+PDT000114334.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016523275.2,1
+PDT000114229.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016525535.2,1
+PDT000114258.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016525005.2,1
+PDT000209084.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002138035.1,1
+PDT000209885.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002148725.1,1
+PDT000145745.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_001713685.2,1
+PDT000149566.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012587395.1,1
+PDT000223031.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012442225.1,1
+PDT001341803.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023891605.1,1
+PDT001341027.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023877545.1,1
+PDT001341449.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023886005.1,1
+PDT001463646.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025789095.2,1
+PDT001340766.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023872705.1,1
+PDT001467104.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025829945.1,1
+PDT001467085.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025829545.1,1
+PDT002391507.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043859305.1,1
+PDT002391457.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043863365.1,1
+PDT000130448.5,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_022315935.1,1
+PDT001428970.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_025367575.1,1
+PDT000022726.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000566745.1,1
+PDT000424974.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_003968615.1,1
+PDT001395424.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024720095.1,1
+PDT000158306.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_001874945.1,1
+PDT000113697.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016527955.2,1
+PDT000114676.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016521315.2,1
+PDT000107082.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016536375.2,1
+PDT000106873.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016539055.2,1
+PDT000209082.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002138005.1,1
+PDT000534472.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_006493835.1,1
+PDT001830983.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032329275.2,1
+PDT001830933.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032329955.2,1
+PDT000543090.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004567895.1,1
+PDT001341047.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023877945.1,1
+PDT001341399.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023885005.1,1
+PDT001463422.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025783575.2,1
+PDT001467261.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025833075.1,1
+PDT002391498.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043859735.1,1
+PDT000217003.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_002180315.1,1
+PDT000855225.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_014840405.1,1
+PDT001128452.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_019928505.1,1
+PDT001395266.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716855.1,1
+PDT000161153.2,Salmonella enterica,ciprofloxacin,resistant,GCA_006497995.1,1
+PDT000106763.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016541465.2,1
+PDT001277541.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_022758385.1,1
+PDT001340753.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023872415.1,1
+PDT001340692.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023871225.1,1
+PDT001341470.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023886425.1,1
+PDT001467098.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025829815.1,1
+PDT002692994.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049209845.1,1
+PDT002693013.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_049209275.1,1
+PDT002391419.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043905585.1,1
+PDT002035946.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_034515785.1,1
+PDT000198415.3,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_022300135.1,1
+PDT000563631.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_007955215.1,1
+PDT001395264.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716815.1,1
+PDT001395281.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024717155.1,1
+PDT002146173.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_038438365.1,1
+PDT000114742.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520045.2,1
+PDT000114737.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520225.2,1
+PDT000114730.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016520305.2,1
+PDT000209019.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_002136705.1,1
+PDT002991259.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053676535.1,1
+PDT001830874.3,E.coli and Shigella,ciprofloxacin,resistant,GCA_031776215.2,1
+PDT000198420.3,E.coli and Shigella,ciprofloxacin,resistant,GCA_012480035.1,1
+PDT002136311.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_038080355.1,1
+PDT001340903.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023875085.1,1
+PDT001341355.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023884125.1,1
+PDT001467000.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025827855.1,1
+PDT000016142.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_000409125.1,1
+PDT001395149.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024714515.1,1
+PDT001395274.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024717035.1,1
+PDT001823069.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_030504695.1,1
+PDT000094625.1,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_001441415.1,1
+PDT000113597.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016528635.2,1
+PDT000114297.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016524135.2,1
+PDT000114214.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016525835.2,1
+PDT000106930.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016537465.2,1
+PDT000114105.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016526535.2,1
+PDT001395057.2,Enterobacter cloacae,ciprofloxacin,resistant,GCA_024706725.1,1
+PDT002991277.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053676295.1,1
+PDT002991626.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_053672255.1,1
+PDT001830661.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032333555.2,1
+PDT001830814.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032331595.2,1
+PDT001903599.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032120475.2,1
+PDT000094021.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012777175.1,1
+PDT000543211.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004566415.1,1
+PDT000457701.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004116695.1,1
+PDT001340463.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023866635.1,1
+PDT002991611.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_053672495.1,1
+PDT002188848.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_045490325.1,1
+PDT001395270.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024716945.1,1
+PDT000113588.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016529715.2,1
+PDT000114100.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016526675.2,1
+PDT000106849.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016539755.2,1
+PDT000107101.2,Acinetobacter baumannii,ciprofloxacin,resistant,GCA_016536305.2,1
+PDT000048128.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_000819005.1,1
+PDT001831013.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032328935.2,1
+PDT001830541.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_032335875.2,1
+PDT002136296.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_038080715.1,1
+PDT000310773.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_003073875.1,1
+PDT000352556.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_003324505.1,1
+PDT001340771.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023872805.1,1
+PDT001341285.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023882725.1,1
+PDT001340566.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023868695.1,1
+PDT001341892.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023895015.1,1
+PDT001467108.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025830015.1,1
+PDT002776222.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_050502555.1,1
+PDT002674901.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_048586825.1,1
+PDT002391424.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_043905505.1,1
+PDT002991755.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_053668295.1,1
+PDT001744187.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_031045155.2,1
+PDT000173731.3,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_022300155.1,1
+PDT001986254.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_034515585.1,1
+PDT000218723.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_002192335.1,1
+PDT000148427.1,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_001720815.1,1
+PDT001128403.2,Klebsiella pneumoniae,ciprofloxacin,resistant,GCA_019927525.1,1
+PDT000311289.1,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_003073615.1,1
+PDT001395426.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024720135.1,1
+PDT001395203.2,Pseudomonas aeruginosa,ciprofloxacin,resistant,GCA_024715575.1,1
+PDT001974861.1,Salmonella enterica,ciprofloxacin,resistant,GCA_046018535.1,1
+PDT000124871.2,E.coli and Shigella,ciprofloxacin,resistant,GCA_012707225.1,1
+PDT000543120.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_004566955.1,1
+PDT001340947.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_023875965.1,1
+PDT001466993.1,E.coli and Shigella,ciprofloxacin,resistant,GCA_025827715.1,1
+PDT000114289.2,Acinetobacter baumannii,ciprofloxacin,susceptible,GCA_016524085.2,0
+PDT000209549.1,Acinetobacter baumannii,ciprofloxacin,susceptible,GCA_002144995.1,0
+PDT000534474.1,Acinetobacter baumannii,ciprofloxacin,susceptible,GCA_006493845.1,0
+PDT000144956.1,Acinetobacter baumannii,ciprofloxacin,susceptible,GCA_001706215.1,0
+PDT000209560.1,Acinetobacter baumannii,ciprofloxacin,susceptible,GCA_002145235.1,0
+PDT000141066.3,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012642525.1,0
+PDT000394838.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012075585.1,0
+PDT000566206.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012989745.1,0
+PDT000844463.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014747185.1,0
+PDT001166148.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_020690085.1,0
+PDT000565947.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012993905.1,0
+PDT000394798.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012076465.1,0
+PDT000395500.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003780065.1,0
+PDT000395326.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003783405.1,0
+PDT000644872.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012603795.1,0
+PDT000395026.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012072305.1,0
+PDT000631556.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012614085.1,0
+PDT000394909.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003920875.1,0
+PDT000844642.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014745475.1,0
+PDT000497341.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012375215.1,0
+PDT000566153.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012991085.1,0
+PDT000844522.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014746755.1,0
+PDT000724067.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012925825.1,0
+PDT000898710.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_015674365.1,0
+PDT001340710.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023871605.1,0
+PDT001341313.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023883285.1,0
+PDT001463608.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025788335.2,0
+PDT001341519.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023887405.1,0
+PDT001340060.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023857345.1,0
+PDT001463582.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025787495.2,0
+PDT001341086.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023878745.1,0
+PDT001463493.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025785485.2,0
+PDT001463522.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025786065.2,0
+PDT001340984.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023876705.1,0
+PDT001467062.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025829095.1,0
+PDT002441624.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044081915.1,0
+PDT002440608.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044084275.1,0
+PDT002430686.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044702705.1,0
+PDT002430665.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044703845.1,0
+PDT002441120.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044147935.1,0
+PDT002431073.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044694965.1,0
+PDT002991405.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_053650535.1,0
+PDT001276577.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_022967435.1,0
+PDT002145737.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_038438185.1,0
+PDT002145729.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_038438025.1,0
+PDT000100424.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001480915.1,0
+PDT000495554.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_005855905.1,0
+PDT000067319.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007549175.1,0
+PDT000101814.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007194335.1,0
+PDT000096933.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007758555.1,0
+PDT000138067.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008524745.1,0
+PDT000131218.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008414065.1,0
+PDT000121488.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008476445.1,0
+PDT000108236.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008407425.1,0
+PDT000121473.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008474325.1,0
+PDT000593948.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008759475.1,0
+PDT000136385.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008524105.1,0
+PDT000103395.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007759875.1,0
+PDT000085085.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007753055.1,0
+PDT000085072.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007752795.1,0
+PDT000085158.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006757465.1,0
+PDT000135300.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008426205.1,0
+PDT000135412.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_008523875.1,0
+PDT000003689.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_006811505.1,0
+PDT000391742.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_005549375.1,0
+PDT000728698.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_014574735.1,0
+PDT000391755.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_003905415.1,0
+PDT000269103.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_009583605.1,0
+PDT000269425.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_009585085.1,0
+PDT000518298.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006339035.1,0
+PDT000518314.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006338445.1,0
+PDT000141070.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008524705.1,0
+PDT000110810.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007195675.1,0
+PDT000600996.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008862285.1,0
+PDT000121382.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008409885.1,0
+PDT000518461.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006342525.1,0
+PDT000359451.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008455185.1,0
+PDT000728690.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_014577795.1,0
+PDT000601917.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008863925.1,0
+PDT000108301.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008470725.1,0
+PDT000108255.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007760515.1,0
+PDT000037908.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_006295135.1,0
+PDT000110819.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006296895.1,0
+PDT000269159.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_009584585.1,0
+PDT000602093.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008918365.1,0
+PDT000041977.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007743895.1,0
+PDT000054744.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006692625.1,0
+PDT000054738.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006813685.1,0
+PDT000565717.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_010911515.1,0
+PDT000119821.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007197535.1,0
+PDT000085900.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008404465.1,0
+PDT002991734.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_053655515.1,0
+PDT002991667.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_053671835.1,0
+PDT002992015.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_053663415.1,0
+PDT000045589.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_000797755.1,0
+PDT000125273.4,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012704405.1,0
+PDT000587230.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012403445.1,0
+PDT000583497.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012455105.1,0
+PDT000645096.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012600035.1,0
+PDT000521632.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012290225.1,0
+PDT000631534.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012614305.1,0
+PDT000395208.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003793255.1,0
+PDT000537190.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012299165.1,0
+PDT000669481.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012653365.1,0
+PDT000395392.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003774765.1,0
+PDT001224387.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_021495865.1,0
+PDT000395445.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003775245.1,0
+PDT000319009.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003145805.1,0
+PDT001340663.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023870645.1,0
+PDT001341216.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023881345.1,0
+PDT001341859.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023894325.1,0
+PDT001340698.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023871335.1,0
+PDT001341755.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023890495.1,0
+PDT001340790.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023874705.1,0
+PDT001443619.2,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025580925.2,0
+PDT001463472.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025784905.2,0
+PDT001467160.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025831055.1,0
+PDT002441864.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044135325.1,0
+PDT002431325.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044689925.1,0
+PDT002441811.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044137335.1,0
+PDT002431008.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044696265.1,0
+PDT002431410.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044688185.1,0
+PDT002431488.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044686685.1,0
+PDT002431418.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044688045.1,0
+PDT002674955.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_048590105.1,0
+PDT000497533.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_004924315.1,0
+PDT002991607.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_053672555.1,0
+PDT002992013.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_053670835.1,0
+PDT001256002.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_022428905.2,0
+PDT000121075.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007218155.1,0
+PDT000036856.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007746915.1,0
+PDT000359446.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008505345.1,0
+PDT000121332.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008518065.1,0
+PDT000111439.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007195155.1,0
+PDT000125842.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008412325.1,0
+PDT000121301.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008472755.1,0
+PDT000123212.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008519045.1,0
+PDT000128759.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008519645.1,0
+PDT000121335.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008516505.1,0
+PDT000391747.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_005898105.1,0
+PDT000024341.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007181855.1,0
+PDT000029622.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_006690505.1,0
+PDT000077469.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007750575.1,0
+PDT000086011.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008404485.1,0
+PDT000047537.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007816855.1,0
+PDT000518316.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006338355.1,0
+PDT000550593.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_007864455.1,0
+PDT000594063.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008761375.1,0
+PDT000565823.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_011635695.1,0
+PDT000385821.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_005447785.1,0
+PDT001983657.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_046010795.1,0
+PDT001974820.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_046019375.1,0
+PDT000593887.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008746595.1,0
+PDT000134877.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008522465.1,0
+PDT000599655.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008838205.1,0
+PDT000550542.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_007863545.1,0
+PDT000078117.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001245635.1,0
+PDT000078042.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001243515.1,0
+PDT000086086.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008514795.1,0
+PDT000550570.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_007863965.1,0
+PDT000121196.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008471565.1,0
+PDT000105795.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007760085.1,0
+PDT000565634.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_011178175.1,0
+PDT000518272.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006338115.1,0
+PDT000385791.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006074295.1,0
+PDT000106127.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007193055.1,0
+PDT000081951.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001272465.1,0
+PDT000100213.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001477855.1,0
+PDT000135198.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008425425.1,0
+PDT000134885.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008415025.1,0
+PDT000502740.2,E.coli and Shigella,ciprofloxacin,susceptible,GCA_018340675.1,0
+PDT002991276.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_053676255.1,0
+PDT000844608.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014737675.1,0
+PDT000394897.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012074925.1,0
+PDT000639548.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012609355.1,0
+PDT000395426.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003791905.1,0
+PDT001166143.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_020690185.1,0
+PDT000644862.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012604095.1,0
+PDT000497360.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012375075.1,0
+PDT000844458.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014747085.1,0
+PDT000844562.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014737755.1,0
+PDT000394953.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012073825.1,0
+PDT000395301.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003784145.1,0
+PDT000898584.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_015671525.1,0
+PDT001340687.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023871125.1,0
+PDT001340897.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023874965.1,0
+PDT001341379.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023884605.1,0
+PDT001340770.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023872755.1,0
+PDT001341076.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023878545.1,0
+PDT001463569.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025787015.2,0
+PDT001341405.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023885125.1,0
+PDT001467203.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025831915.1,0
+PDT002430942.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044697565.1,0
+PDT002431184.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044692705.1,0
+PDT002441812.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044080695.1,0
+PDT002431424.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044687895.1,0
+PDT000115267.2,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_022316155.1,0
+PDT002991226.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_053676935.1,0
+PDT002991245.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_053676755.1,0
+PDT000200515.3,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_022300035.1,0
+PDT000724072.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_022182645.1,0
+PDT002146224.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_038439415.1,0
+PDT002145722.1,Pseudomonas aeruginosa,ciprofloxacin,susceptible,GCA_038437875.1,0
+PDT001379560.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_024727705.1,0
+PDT000039013.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007747135.1,0
+PDT000067419.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006634125.1,0
+PDT000085916.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008514015.1,0
+PDT000037336.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007179765.1,0
+PDT000111309.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007203995.1,0
+PDT000041318.6,Salmonella enterica,ciprofloxacin,susceptible,GCA_007815655.1,0
+PDT000081940.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001272255.1,0
+PDT001128312.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_005766855.2,0
+PDT000138064.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008425745.1,0
+PDT000031384.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_006690625.1,0
+PDT000031481.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_006754025.1,0
+PDT000094915.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_007756135.1,0
+PDT000060747.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006633805.1,0
+PDT000086850.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006695565.1,0
+PDT000085993.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008405265.1,0
+PDT000269147.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_009524055.1,0
+PDT000565712.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_010878325.1,0
+PDT000100419.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001480805.1,0
+PDT000135256.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008478505.1,0
+PDT001974929.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_046016525.1,0
+PDT000050328.3,Salmonella enterica,ciprofloxacin,susceptible,GCA_006691865.1,0
+PDT000141059.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008427625.1,0
+PDT000077915.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_001240835.1,0
+PDT000040940.5,Salmonella enterica,ciprofloxacin,susceptible,GCA_007189695.1,0
+PDT000550624.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_007864905.1,0
+PDT000121195.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008517645.1,0
+PDT000518307.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_006338315.1,0
+PDT000112812.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007761125.1,0
+PDT000102362.4,Salmonella enterica,ciprofloxacin,susceptible,GCA_007759275.1,0
+PDT000269430.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_009585615.1,0
+PDT000600862.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_008861965.1,0
+PDT000134954.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008415445.1,0
+PDT000111316.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007194995.1,0
+PDT000108276.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_007194115.1,0
+PDT000085944.2,Salmonella enterica,ciprofloxacin,susceptible,GCA_008404655.1,0
+PDT000385792.1,Salmonella enterica,ciprofloxacin,susceptible,GCA_005415395.1,0
+PDT002991984.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_053659675.1,0
+PDT000045582.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_000797595.1,0
+PDT000045587.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_000797715.1,0
+PDT001830871.2,E.coli and Shigella,ciprofloxacin,susceptible,GCA_032330835.2,0
+PDT001418804.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025200615.1,0
+PDT000863802.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_014937085.1,0
+PDT000566076.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012991445.1,0
+PDT000639562.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012609135.1,0
+PDT000566709.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012987425.1,0
+PDT000639540.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012609475.1,0
+PDT000395311.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003773705.1,0
+PDT000395420.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003775325.1,0
+PDT000627606.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012615045.1,0
+PDT000566705.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012987545.1,0
+PDT000395004.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012072385.1,0
+PDT000395278.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003794935.1,0
+PDT000714230.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012855275.1,0
+PDT000394950.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012073865.1,0
+PDT000519204.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012292345.1,0
+PDT000497402.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_015330185.1,0
+PDT000550358.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012310095.1,0
+PDT000844466.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_018048925.1,0
+PDT000601909.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012450245.1,0
+PDT000394898.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_012074945.1,0
+PDT000319025.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_003146095.1,0
+PDT000898587.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_015671605.1,0
+PDT000898706.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_015674275.1,0
+PDT001463407.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025783275.2,0
+PDT001463531.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025786245.2,0
+PDT001341555.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023889905.1,0
+PDT001341794.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023891425.1,0
+PDT001463428.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_025783695.2,0
+PDT001340310.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023862345.1,0
+PDT001341097.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023878965.1,0
+PDT001354791.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_024166225.1,0
+PDT001341559.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023889985.1,0
+PDT001340755.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023872485.1,0
+PDT001341058.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023878185.1,0
+PDT001341160.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023880225.1,0
+PDT001340513.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023867625.1,0
+PDT001340128.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023858705.1,0
+PDT001340442.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023866215.1,0
+PDT001340761.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023872605.1,0
+PDT001341396.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023884925.1,0
+PDT001354783.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_024166065.1,0
+PDT001341923.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023895675.1,0
+PDT001340641.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_023870205.1,0
+PDT002431417.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044688055.1,0
+PDT002430988.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044696565.1,0
+PDT002440938.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044095425.1,0
+PDT002441962.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044132305.1,0
+PDT002430873.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044698985.1,0
+PDT002441985.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044089805.1,0
+PDT002431176.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044692905.1,0
+PDT002431030.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044695825.1,0
+PDT002431516.1,E.coli and Shigella,ciprofloxacin,susceptible,GCA_044686085.1,0
+PDT002991461.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_053673975.1,0
+PDT001419711.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_025200575.1,0
+PDT000870018.1,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_014946945.1,0
+PDT001128536.2,Klebsiella pneumoniae,ciprofloxacin,susceptible,GCA_019930305.1,0

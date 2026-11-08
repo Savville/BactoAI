@@ -1,59 +1,92 @@
 {
   "meropenem": {
-    "auc": 0.98706,
-    "n_test": 125,
-    "tp": 67,
-    "tn": 54,
-    "fp": 2,
-    "fn": 2,
-    "sensitivity": 0.971,
-    "specificity": 0.9643,
-    "accuracy": 0.968,
-    "ppv": 0.971,
-    "npv": 0.9643,
-    "vme_rate": 0.029,
-    "me_rate": 0.036,
-    "threshold": 0.5
+    "auc": 0.942063,
+    "n_test": 124,
+    "n_test_resistant": 70,
+    "n_test_susceptible": 54,
+    "tp": 64,
+    "tn": 47,
+    "fp": 7,
+    "fn": 6,
+    "sensitivity": 0.914286,
+    "specificity": 0.87037,
+    "accuracy": 0.895161,
+    "ppv": 0.901408,
+    "npv": 0.886792,
+    "vme_rate": 0.085714,
+    "me_rate": 0.12963,
+    "threshold": 0.5,
+    "source": "validation_results/test_predictions_meropenem_v4.csv",
+    "live": {
+      "tp": 64,
+      "tn": 47,
+      "fp": 7,
+      "fn": 6,
+      "flips_vs_fixed": 0,
+      "metrics_equal_fixed": true,
+      "note": "Adaptive-threshold rule produced zero label flips on the test split."
+    }
   },
   "ciprofloxacin": {
-    "auc": 0.955882,
-    "n_test": 140,
-    "tp": 64,
-    "tn": 68,
-    "fp": 4,
-    "fn": 4,
-    "sensitivity": 0.9412,
-    "specificity": 0.9444,
-    "accuracy": 0.9429,
-    "ppv": 0.9412,
-    "npv": 0.9444,
-    "vme_rate": 0.0588,
-    "me_rate": 0.0556,
-    "threshold": 0.5
+    "auc": 0.877299,
+    "n_test": 143,
+    "n_test_resistant": 70,
+    "n_test_susceptible": 73,
+    "tp": 56,
+    "tn": 61,
+    "fp": 12,
+    "fn": 14,
+    "sensitivity": 0.8,
+    "specificity": 0.835616,
+    "accuracy": 0.818182,
+    "ppv": 0.823529,
+    "npv": 0.813333,
+    "vme_rate": 0.2,
+    "me_rate": 0.164384,
+    "threshold": 0.5,
+    "source": "validation_results/test_predictions_ciprofloxacin_v4.csv",
+    "live": {
+      "tp": 56,
+      "tn": 61,
+      "fp": 12,
+      "fn": 14,
+      "flips_vs_fixed": 0,
+      "metrics_equal_fixed": true,
+      "note": "Adaptive-threshold rule produced zero label flips on the test split."
+    }
   },
-  "cefotaxime_v3": {
-    "auc": 0.8721,
+  "cefotaxime": {
+    "auc": 0.872288,
     "n_test": 145,
-    "tp": null,
-    "tn": null,
-    "fp": null,
-    "fn": null,
-    "sensitivity": null,
-    "specificity": null,
-    "accuracy": 0.7931,
     "n_test_resistant": 71,
     "n_test_susceptible": 74,
+    "tp": 59,
+    "tn": 55,
+    "fp": 19,
+    "fn": 12,
+    "sensitivity": 0.830986,
+    "specificity": 0.743243,
+    "accuracy": 0.786207,
+    "ppv": 0.75641,
+    "npv": 0.820896,
+    "vme_rate": 0.169014,
+    "me_rate": 0.256757,
     "threshold": 0.5,
-    "note": "v3 NCBI-only model; confusion matrix not in threshold audit JSON"
+    "source": "validation_results/test_predictions_cefotaxime_v4.csv",
+    "note": "Current deployed NCBI-only model from data/models_v4/ (433 training isolates).",
+    "live": {
+      "tp": 59,
+      "tn": 55,
+      "fp": 19,
+      "fn": 12,
+      "flips_vs_fixed": 0,
+      "metrics_equal_fixed": true,
+      "note": "Adaptive-threshold rule produced zero label flips on the test split."
+    }
   },
-  "cefotaxime_v4": {
-    "auc": 0.7793,
-    "n_test": 1000,
-    "n_test_resistant": 167,
-    "n_test_susceptible": 833,
-    "accuracy": 0.859,
-    "threshold": 0.5,
-    "note": "v4 combined model; NOT deployed (production uses v3)"
+  "withdrawn_combined_cefotaxime_result": {
+    "reported_auc": 0.7793,
+    "status": "Withdrawn: source summary has no row-level predictions for independent recomputation."
   },
   "bvbrc_benchmark": {
     "auc": 0.9333,
@@ -70,14 +103,22 @@
     "vme_rate": 0.172,
     "me_rate": 0.048,
     "threshold": 0.2,
-    "note": "In-corpus benchmark on BV-BRC holdout. NOT independent external validation."
+    "note": "In-corpus benchmark on BV-BRC holdout, NOT independent external validation. Labels derived with EUCAST v14.0 disk breakpoints. Not used to train the deployed model."
   },
-  "generated_at": "2026-11-03",
+  "generated_at": "2026-11-08",
   "notes": {
-    "meropenem": "From threshold_audit_20260912_165224.json",
-    "ciprofloxacin": "From threshold_audit_20260912_162504.json",
-    "cefotaxime_v3": "From training_summary_v3.csv (AUC, accuracy only; CM unavailable)",
-    "cefotaxime_v4": "From training_summary_v4.csv (retrained on BV-BRC, NOT deployed)",
-    "bvbrc_benchmark": "FROM bvbrc_validation_summary_20260914_070116.json \u2014 in-corpus benchmark, not independent external validation"
+    "meropenem": "Recomputed from validation_results/test_predictions_meropenem_v4.csv. Supersedes threshold_audit_20260912_165224.json, whose split overlapped the training set (92/125 rows).",
+    "ciprofloxacin": "Recomputed from validation_results/test_predictions_ciprofloxacin_v4.csv. Supersedes threshold_audit_20260912_162504.json, whose split overlapped the training set (103/140 rows).",
+    "cefotaxime": "Recomputed from validation_results/test_predictions_cefotaxime_v4.csv; the earlier 79.31% accuracy is superseded by 78.62%.",
+    "withdrawn_combined_cefotaxime_result": "The reported 0.7793 AUC is withdrawn; no prediction-level output is available.",
+    "bvbrc_benchmark": "From validation_results/bvbrc_validation_summary_20260914_070116.json; in-corpus benchmark at t=0.20, not independent external validation.",
+    "verification": "validation_results/regenerated_predictions_verification.json and validation_results/regenerated_predictions_manifest.json"
+  },
+  "live_decision_rule": {
+    "formula": "adaptive_threshold = 0.50 + min(uncertainty*0.5, 0.15); label = RESISTANT if probability >= adaptive_threshold",
+    "confidence": "HIGH if uncertainty <= 0.05, MEDIUM if <= 0.15, else LOW",
+    "applies_to": "All three deployed models; matches bactoai_pipeline.get_adaptive_threshold and get_confidence_level.",
+    "result": "Identical confusion matrices and AUC to the fixed 0.50 rule on all 412 test isolates.",
+    "columns": "validation_results/test_predictions_*.csv contain uncertainty, adaptive_threshold, live_pred_binary, live_label, confidence."
   }
 }

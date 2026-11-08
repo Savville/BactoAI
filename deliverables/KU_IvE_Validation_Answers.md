@@ -1,24 +1,7 @@
 # BactoAI: Responses to KU IvE Validation Guidance Questions
 
-**Prepared by:** BactoAI Engineering Team
-**Date:** 29 October 2026
+**Date:** 8 November 2026
 **Reference document:** *BactoAI: Validating a Genomic AMR Prediction Model* (Dr Kenneth Malongo Iloka, 26 October 2026)
-
----
-
-## Status Summary
-
-| Category | Answered | Partially answered | Not yet done |
-|:---|:---:|:---:|:---:|
-| A. Product and claims (Q1-Q4) | 4 | 0 | 0 |
-| B. Training data (Q5-Q9) | 5 | 0 | 0 |
-| C. Phenotype labels and QC (Q10-Q13) | 3 | 1 | 0 |
-| D. has and model (Q14-Q17) | 4 | 0 | 0 |
-| E. ROC-AUC figures (Q18-Q26) | 6 | 2 | 1 |
-| F. External validation plan (Q27-Q31) | 3 | 1 | 1 |
-| G. Governance and data protection (Q32-Q36) | 2 | 1 | 2 |
-| H. Reproducibility and support (Q37-Q39) | 3 | 0 | 0 |
-| **Total** | **33** | **1** | **5** |
 
 ---
 
@@ -102,7 +85,7 @@ The data acquisition roadmap includes expansion to additional antibiotics (ceftr
 
 Total unique isolates across all three drugs: approximately **1,800 NCBI** plus **3,419 BV-BRC** = **5,219** (with the 600 NCBI cefotaxime isolates counted once).
 
-The "1,800+" claim in the letter refers to the NCBI batch (600 per drug x 3 drugs). With BV-BRC integration, the total training corpus now exceeds 5,200.
+The "1,800+" claim in the letter refers to the NCBI batch (600 per drug x 3 drugs; 1,673 unique isolates after de-duplication). The combined research corpus, including BV-BRC, exceeds 5,200 isolates, but BV-BRC was used only for the non-deployed combined cefotaxime model and benchmark.
 
 ### Q7. Which countries, years and settings are represented? How many are African, how many Kenyan?
 
@@ -110,7 +93,7 @@ The "1,800+" claim in the letter refers to the NCBI batch (600 per drug x 3 drug
 
 The NCBI metadata files contain a `target_acc` (PDT accession) and `taxgroup_name` but no explicit country columns. We queried NCBI BigQuery (`ncbi-pathogen-detect.pdbrowser.isolates`) to cross-reference our 1,673 training set accessions against geographic data.
 
-**African isolates in training set (52 / 1,673 = 3.1%):**
+**African isolates in the current training set (52 / 1,673 = 3.1%):**
 
 | Country | Isolates in Training | Species | Drugs |
 |---------|---------------------|---------|-------|
@@ -151,6 +134,8 @@ The NCBI metadata files contain a `target_acc` (PDT accession) and `taxgroup_nam
 
 **New Kenyan isolates available for retraining:** ~8,453 (our training has only 2)
 
+The figure of two is the number of unique Kenyan accessions in the three current NCBI drug metadata files, not the total number of public Kenyan isolates. A separate enrichment CSV contains seven Kenyan *K. pneumoniae* meropenem records; the PRJNA717739 attribution is from the supplied review message, not a field in that CSV. Only two accessions, GCA_019927625.1 and GCA_020407015.1, occur in the current drug metadata; both are assigned to training, and neither is in a reconstructed holdout. The seven-record enrichment set was not added to deployed model data.
+
 > [!IMPORTANT]
 > **Action completed:** BigQuery geographic enrichment query executed 2026-10-30.
 > See: `scripts/kenya_audit_fast.py`, `data/kenya_audit_fast.json`
@@ -176,12 +161,13 @@ South Africa (9,401), Kenya (6,539), Tanzania (3,019), Nigeria (2,415), Uganda (
 - KEMRI: No public genomic API, requires formal partnership/MOU
 
 > [!NOTE]
-> The 8,462 Kenyan genomes represent a substantial enrichment opportunity. A realistic target for retraining would be 500Ã¢â‚¬â€œ1,000 new Kenyan isolates per antibiotic after deduplication with the existing training set.
+> The 8,462 Kenyan genomes represent an enrichment opportunity. A realistic retraining target would be 500-1,000 new Kenyan isolates per antibiotic after deduplication.
 
 ### Q8. Did you use raw reads, assemblies or pre-computed gene calls? Which pipeline and tool versions?
 
 - **Input type:** Pre-assembled genomes (FASTA format). Assemblies were downloaded from NCBI GenBank (`GCA_*` accessions) and BV-BRC REST API.
 - **No raw read processing is done.** The pipeline starts from assembled genomes.
+- **Assembly versions used:** The exact GCA version suffix and FASTA filename for each required assembly are recorded in `validation_results/all_metadata_genome_manifest.csv`, alongside file size and SHA-256. The cited GCA_019927405.1 is not in the required manifest or local `data/genomes/`, so it was not used for these results. Genome files are not tracked in Git.
 - **Feature extraction pipeline versions:**
   - Python 3.12
   - Biopython (SeqIO for FASTA parsing)
@@ -189,6 +175,7 @@ South Africa (9,401), Kenya (6,539), Tanzania (3,019), Nigeria (2,415), Uganda (
   - scikit-learn SelectKBest (chi-squared) for feature selection
   - XGBoost, Random Forest, LightGBM as classifiers
   - scikit-learn CalibratedClassifierCV (Platt sigmoid scaling)
+- **Library versions:** `requirements-ml.txt` declares scikit-learn 1.7.2 and XGBoost 3.2.0. The serialized estimator confirms scikit-learn 1.7.2, but the exact XGBoost training version is not established; the serialized model emits a version-compatibility warning when loaded. Local verification used scikit-learn 1.8.0 and XGBoost 3.2.0; these are verification-runtime versions.
   - imbalanced-learn SMOTE for class rebalancing
 
 ### Q9. Did you use any data outside NCBI?
@@ -208,26 +195,27 @@ No other external datasets have been used for training so far. The Liverpool *E.
 
 ### Q10. Which AST methods are in your data? Did you mix methods?
 
-Yes, two methods are present:
-1. **Broth microdilution (MIC):** Used in the NCBI batch (all three drugs, 600 isolates each).
+Yes, two sources/types are represented:
+1. **Each deployed `metadata_{drug}.csv`:** 600 NCBI Pathogen Detection labels and 0 BV-BRC labels, for meropenem, ciprofloxacin and cefotaxime. Calls are pre-classified S/I/R and recorded as `MIC_or_mixed`; exact per-record laboratory method and breakpoint edition are not consistently available.
 2. **Disk diffusion (zone diameter in mm):** Used in the BV-BRC batch (cefotaxime only, 3,419 isolates).
 
-The cefotaxime v4 model is trained on mixed-modality data. Meropenem and ciprofloxacin models use only MIC-derived labels.
+All three deployed models use the 600-row-per-drug NCBI metadata. BV-BRC cefotaxime disk-diffusion labels are used only in a separate research benchmark, not by the deployed models.
 
 ### Q11. Which breakpoint standard and version did you use to convert MICs to S/I/R?
 
-- **BV-BRC (disk diffusion):** EUCAST clinical breakpoints for *Enterobacterales* vs cefotaxime:
+- **BV-BRC (disk diffusion):** EUCAST v14.0 clinical breakpoints for *Enterobacterales* vs cefotaxime (5 µg disc):
   - Resistant: zone diameter <= 17 mm
-  - Intermediate: 18-25 mm (mapped to Resistant under clinical default)
-  - Susceptible: zone diameter >= 26 mm
-- **NCBI data:** The NCBI Pathogen Detection AST Browser provides pre-classified S/I/R labels. The specific breakpoint standard and version used by the original submitters varies by record and has **not been re-harmonized to a single version**.
+  - Intermediate / Area of Technical Uncertainty: 17-19 mm (mapped to Resistant under the clinical default)
+  - Susceptible: zone diameter >= 20 mm
+- **NCBI data (all deployed models):** The NCBI Pathogen Detection AST Browser provides pre-classified S/I/R labels recorded as `MIC_or_mixed`. The specific breakpoint standard and version used by the original submitters varies by record and has **not been re-harmonised to a single version**.
 
 > [!WARNING]
-> **Gap:** The NCBI labels have not been re-interpreted with a single breakpoint version. The BV-BRC labels were standardized to EUCAST. For a formal validation, all labels should be re-interpreted using one standard and version (e.g., EUCAST v14.0 or CLSI M100 Ed34).
+> **Gap:** The deployed models use NCBI labels only; they were not re-interpreted with a single breakpoint version. The BV-BRC labels were standardised to EUCAST v14.0 but are used only by the non-deployed combined cefotaxime model and the BV-BRC benchmark. For the NPHL validation, all labels should be re-interpreted using one standard and version (e.g., EUCAST v14.0 or CLSI M100 Ed34).
 
 ### Q12. How did you treat intermediate results, missing values and conflicting records?
 
-- **Intermediate results:** Mapped to Resistant (clinical default: "intermediate = resistant" policy, documented in validation JSON as `intermediate_policy: resistant`).
+- **Intermediate results:** One intermediate row each is present in meropenem and ciprofloxacin metadata, both encoded as `resistant = 1`; cefotaxime has none. The original sampling/mapping rationale and the handling of other intermediate records cannot be reconstructed from available source inputs.
+- **ND/DD/NS:** No such rows are present in the shipped metadata. The original pre-filter counts and exclusion process are unavailable.
 - **Missing values:** Rows with missing `asm_acc` or `resistant` fields are dropped in `extract_features()` via `metadata_df.dropna(subset=["asm_acc", "resistant"])`.
 - **Duplicates:** De-duplicated by assembly accession using `metadata_df.drop_duplicates(subset="asm_acc")`.
 - **Conflicting records:** Not explicitly handled. If the same isolate has conflicting S/R labels across sources, only the first occurrence (after de-duplication) is retained.
@@ -243,15 +231,15 @@ The cefotaxime v4 model is trained on mixed-modality data. Meropenem and ciprofl
 
 ---
 
-## D. has and Model
+## D. Features and Model
 
-### Q14. What input has does the model use? How are they generated?
+### Q14. What input features does the model use? How are they generated?
 
 The model uses two feature types:
 
 1. **K-mer frequencies (k=5):** Each genome is decomposed into all 5-character substrings. The `CountVectorizer` tokenizes these, then `SelectKBest(chi2)` selects the top 50,000 most informative k-mers. For the v4 cefotaxime model, 1,321 unique 5-mers passed the chi-squared test.
 
-2. **AMR gene signature has (18 binary has):** Presence/absence of known resistance gene k-mer markers. These cover:
+2. **AMR gene signature features (18 binary features):** Presence/absence of known resistance gene k-mer markers. These cover:
    - Carbapenemases: *blaKPC*, *blaNDM*, *blaVIM*, *blaIMP*, *blaOXA-48*
    - Penicillinases: *blaTEM*, *blaSHV*
    - Cephalosporinases: *blaCTX-M*, *blaPER*, *blaACC*
@@ -264,14 +252,12 @@ Combined feature matrix: k-mer counts + gene signatures concatenated via `scipy.
 
 ### Q15. Which algorithm(s) did you train, and why?
 
-A **soft-voting ensemble** of three classifiers:
+A loaded model object is `CalibratedClassifierCV`, wrapping a soft-voting `VotingClassifier` of three base learners:
 1. **XGBoost** (300 estimators, max depth 6, learning rate 0.05) -- gradient-boosted trees perform well on tabular/sparse feature matrices.
 2. **Random Forest** (200 estimators, max depth 10, balanced class weights) -- provides diversity and is strong to overfitting.
 3. **LightGBM** (300 estimators, max depth 6, learning rate 0.05) -- fast gradient boosting with leaf-wise growth.
 
-Each ensemble is wrapped in `CalibratedClassifierCV(method="sigmoid", cv=5)` for Platt scaling to produce calibrated probability outputs.
-
-A **deep ensemble** of 5 such calibrated voter models (seeds: 42, 123, 456, 789, 1024) provides uncertainty estimation through prediction variance across the ensemble.
+Five such calibrated model objects are saved per drug (seeds: 42, 123, 456, 789, 1024). Their mean probability is the prediction; their standard deviation is the uncertainty. The deployment is not a single 15-model ensemble.
 
 ### Q16. How did you handle class imbalance?
 
@@ -287,7 +273,7 @@ Hyperparameters are currently **fixed** (not tuned via grid search or Bayesian o
 - LightGBM: `n_estimators=300, max_depth=6, learning_rate=0.05`
 - Feature selection: `SelectKBest(chi2, k=50,000+18)`
 
-The 5-fold cross-validation in `CalibratedClassifierCV` is applied within the training partition only. The 25% test holdout is not used during hyperparameter selection or calibration.
+The 5-fold `CalibratedClassifierCV(method="sigmoid")` is fitted on the training partition. The holdout is not used to fit the Platt calibrator, but it is used for reported evaluation and for the saved conformal nonconformity scores. The available record does not establish whether the original adaptive-threshold constants were selected using test results.
 
 ---
 
@@ -295,12 +281,13 @@ The 5-fold cross-validation in `CalibratedClassifierCV` is applied within the tr
 
 ### Q18. For each drug, how many isolates were in the test set, and what proportion?
 
-| Drug | Total | Train | Test | Test proportion |
-|:---|:---:|:---:|:---:|:---:|
-| Meropenem (v3) | ~497 | ~373 | 125 (69R, 56S) | 25% |
-| Ciprofloxacin (v3) | ~573 | ~430 | 140 (68R, 72S) | 25% |
-| Cefotaxime (v3, NCBI only) | ~580 | ~435 | 145 (71R, 74S) | 25% |
-| Cefotaxime (v4, combined) | 4,019 | 2,997 | 1,000 (167R, 833S) | 25% |
+| Drug | Metadata rows | Usable (FASTA present) | Train | Test | Test proportion |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Meropenem (deployed v4) | 600 | 493 | 369 | **124 (70R, 54S)** | 25% |
+| Ciprofloxacin (deployed v4) | 600 | 572 | 429 | **143 (70R, 73S)** | 25% |
+| Cefotaxime (deployed v4, NCBI only) | 600 | 578 | 433 | **145 (71R, 74S)** | 25% |
+
+The split is reconstructed by dropping missing labels and duplicate accessions, shuffling with seed 42, removing missing or unreadable FASTAs, and applying a stratified 25% split. The old `threshold_audit` counts (125/140/147) came from a different, non-equivalent split. The earlier cefotaxime accuracy 79.31% (115/145) is superseded by 78.62% (114/145); old row-level predictions are unavailable to explain the one-call difference. The per-accession assignment is in `validation_results/test_split_*.csv`.
 
 ### Q19. Was the split random, or were related isolates kept together?
 
@@ -309,7 +296,7 @@ The split is **random**, using `train_test_split(test_size=0.25, random_state=42
 **Related isolates (same SNP cluster, sequence type or clade) are NOT kept together.** The pipeline does not use phylogenetic or SNP-cluster-aware splitting.
 
 > [!WARNING]
-> **Gap:** A relatedness-aware split has not been performed. Random splits can inflate AUC when near-clonal isolates appear in both training and test sets. Re-computing the AUC under a phylogeny-aware or sequence-type-aware split is required before formal validation.
+> **Gap:** No ANI, SNP-cluster or phylogeny-based train/test comparison has been run. Relatedness across the random split is unknown; possible leakage remains an unmeasured limitation.
 
 ### Q20. How did you confirm that no isolate appears in both training and testing?
 
@@ -325,78 +312,67 @@ The split happens via `train_test_split()` in `train_deep_ensemble()`, and featu
 
 ### Q22. Was the test set used once, after all model choices were fixed?
 
-The internal test holdout is evaluated at the end of training for each of the 5 ensemble members. All model architecture and hyperparameter choices are fixed before training begins (no iterative tuning on the test set). However, the same holdout data was used for:
+The internal holdout is evaluated at the end of training for each of the five saved models. Available code shows no iterative hyperparameter tuning on the holdout. The holdout is used for:
 - Per-model AUC reporting
 - Overall ensemble AUC reporting
-- Calibration score computation for conformal prediction
+- Saved nonconformity scores for conformal prediction
 
-The test set was not used to select hyperparameters or has.
+The Platt calibrator is fitted only within the training partition. No record explains who selected the adaptive-threshold or confidence constants, why those values were chosen, or whether test performance informed the original choices.
 
 ### Q23. Please confirm the ciprofloxacin and cefotaxime results separately. Are both exactly 0.872?
 
-From the v3 training summary (`data/training_summary_v3.csv`):
+The current deployed artifact is under `data/models_v4/`; no `models_v3/` artifact is available. `joblib.load()` returns `CalibratedClassifierCV` wrapping a soft-voting `VotingClassifier` with XGBoost, Random Forest and LightGBM. Five such top-level models are used per drug.
 
-| Drug | ROC-AUC |
-|:---|:---|
-| Meropenem | **0.9415** |
-| Ciprofloxacin | **0.9559** |
-| Cefotaxime | **0.8721** |
+| Drug | Current v4 holdout AUC | Historical summary |
+|:--|--:|:--|
+| Meropenem | **0.942063** | — |
+| Ciprofloxacin | **0.877299** | — |
+| Cefotaxime | **0.872288** | `training_summary_v3.csv` records 0.872097 and 79.31% accuracy |
 
-The two values are **not identical**: ciprofloxacin = 0.9559 and cefotaxime = 0.872. They were rounded to the same two decimal places (0.87) in the draft letter, which produced the appearance of identical figures. When reported to three decimal places, they differ.
+The current cefotaxime v4 prediction CSV and `summary_cefotaxime.json` agree at AUC 0.872288 and 78.62% accuracy. The v3 summary has no corresponding model or row-level predictions, so it cannot be confirmed as the same model or reconciled with v4; its 79.31% accuracy is withdrawn.
 
-For the v4 cefotaxime model (retrained on 4,019 genomes), the internal AUC is 0.7793 and the in-corpus BV-BRC benchmark AUC is **0.9333**.
+The old 0.9871 and 0.9559 figures are from the non-equivalent `threshold_audit` split and are withdrawn. The BV-BRC benchmark AUC of 0.9333 can be recomputed from its 500-row CSV, but is in-corpus, not independent validation. The 0.7793 combined-model AUC is only in a training summary; without its 1,000-row prediction output it is withdrawn from reported results.
 
 ### Q24. For each drug, give sensitivity, specificity, VME rate and ME rate at the decision threshold, with 95% CIs.
 
-**From the threshold audit (v3 internal holdout at threshold=0.50) with Wilson 95% CIs:**
+**Current deployed holdout results.** The live rule gave the same calls as fixed 0.50 in the test CSVs, so both columns below are identical. Wilson 95% intervals are shown for sensitivity and specificity.
 
-| Drug | n_test | Sens | 95% CI | Spec | 95% CI | PPV | NPV | MCC | VME rate* | ME rate** | AUC | 95% CI |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Meropenem | 125 | 97.1% | [90.0%, 99.2%] | 96.4% | [87.9%, 99.0%] | 97.1% | 96.4% | 0.935 | 2.9% (2/69) | 3.6% (2/56) | 0.9871 | [0.973, 1.000] |
-| Ciprofloxacin | 140 | 94.1% | [87.8%, 97.3%] | 94.4% | [88.0%, 97.5%] | 94.1% | 94.4% | 0.886 | 5.9% (4/68) | 5.6% (4/72) | 0.9559 | [0.920, 0.992] |
-| Cefotaxime v4 external (500 genomes, t=0.20) | 500 | 82.8% | [77.6%, 87.0%] | 95.2% | [91.8%, 97.2%] | 94.5% | 84.7% | 0.786 | 17.2% (43/250) | 4.8% (12/250) | 0.9333 | [0.917, 0.949] |
+| Drug | n | Sensitivity | Spec. | VME | ME | Low confidence | AUC (95% CI) |
+|:---|--:|--:|--:|--:|--:|--:|:--|
+| Meropenem | 124 | 91.4% [82.5, 96.0] | 87.0% [75.6, 93.6] | 8.6% (6/70) | 13.0% (7/54) | 0/124 | 0.9421 [0.9009, 0.9832] |
+| Ciprofloxacin | 143 | 80.0% [69.2, 87.7] | 83.6% [73.4, 90.3] | 20.0% (14/70) | 16.4% (12/73) | 0/143 | 0.8773 [0.8189, 0.9357] |
+| Cefotaxime | 145 | 83.1% [72.7, 90.1] | 74.3% [63.4, 82.9] | 16.9% (12/71) | 25.7% (19/74) | 0/145 | 0.8723 [0.8132, 0.9314] |
 
 *VME = Very Major Error = resistant isolates called susceptible = FN / total resistant.
 **ME = Major Error = susceptible isolates called resistant = FP / total susceptible.
 
-**Method:** Wilson score intervals (exact for binomial proportions, recommended by Newcombe 1998).
-AUC CIs computed via Delta method approximation (Hanley & McNeil 1982).
-Ciprofloxacin CIs derived from threshold audit confusion matrix (tp=68, tn=68, fp=4, fn=4, n=140).
+**Method:** Wilson score intervals for proportions; AUC CIs via the Hanley & McNeil (1982) delta-method approximation.
 
-> [Ã¢Å“â€œ] **Done:** 95% confidence intervals computed via `scripts/compute_q24_cis.py`.
-> Results in `validation_results/q24_ci_report_*.md` and `q24_ci_*.json`.
+The code hard-codes an adaptive threshold of `0.50 + min(0.5 × uncertainty, 0.15)` and confidence cutoffs of 0.05/0.15. The repository does not document who selected these values or whether test performance was used. The code comment says the threshold increase is intended to reduce false positives; it can also increase false-susceptible calls, and has not been validated as a safety feature. All 412 holdout rows are HIGH under these heuristic cutoffs; no test call changes under the live rule.
+
+The BV-BRC benchmark's stored operating point at 0.20 has TP=207, TN=238, FP=12, FN=43. Its AUC is recomputable from the CSV; the threshold's selection rationale is not documented, and this result is not independent validation.
+
+> **Verification:** values recomputed from `validation_results/test_predictions_*.csv`.
+> CIs in `validation_results/regenerated_metrics_ci.md` and `.json`.
+> The earlier `q24_ci_*` files were computed from the leaky `threshold_audit` split and are superseded.
 
 ### Q25. How did the model compare with a rule-based tool?
 
-**PARTIAL, AMRFinderPlus comparison pending installation.**
+No head-to-head comparison against AMRFinderPlus or ResFinder has been run. Neither tool is installed in this environment. A comparison script exists at `scripts/amrfinder_baseline.py`, but it has not been run.
 
-AMRFinderPlus (NCBI) and ResFinder (CGE/DANMAP) are not currently installed in this environment.
-The comparison script is ready (`scripts/amrfinder_baseline.py`) but requires:
-- `conda install -c bioconda amrfinderplus` (Linux/macOS), or
-- Docker: `docker run --rm -v $(pwd):/data ncbitaxonomy/amrfinder amrfinder /data/genome.fna`
-
-**Partial rule-based evidence already available:**
-The model uses 18 AMR gene signature has as direct inputs (see Q26 below). These are
-k-mer-based proxies for known resistance genes. A simplified rule-based comparison can be
-made by thresholding these gene signatures:
+The model uses 18 AMR gene-signature features as direct inputs (see Q26). They are k-mer proxies for known resistance markers; using them as a simple rule-based baseline would not be equivalent to full gene detection.
 
 | Drug | Gene markers used | Rule-based logic |
 |------|------------------|-----------------|
-| Meropenem | blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48 | Any carbapenemase gene Ã¢â€ â€™ RESISTANT |
-| Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR mutation OR efflux Ã¢â€ â€™ RESISTANT |
-| Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase Ã¢â€ â€™ RESISTANT |
-
-This gene-signature-only approach is an intermediate baseline. Full AMRFinderPlus
-comparison will be run on a Linux workstation once the tool is installed.
-
-> [!] **Action required:** Install AMRFinderPlus on a Linux environment and run
-> `scripts/amrfinder_baseline.py --run` on the test genomes.
+| Meropenem | blaKPC, blaNDM, blaVIM, blaIMP, blaOXA-48 | Any carbapenemase marker -> resistant |
+| Ciprofloxacin | gyrA mutations, parC mutations, acrAB | QRDR marker or efflux marker -> resistant |
+| Cefotaxime | blaCTX-M, blaTEM, blaSHV, blaPER, blaACC | Any ESBL/cephalosporinase marker -> resistant |
 
 ### Q26. Which genes or mutations drive predictions? Are they biologically plausible?
 
-The 18 AMR gene signature has are biologically curated and directly relevant:
+The 18 AMR gene-signature features are biologically motivated:
 
-| Drug | Key driving has | Biological basis |
+| Drug | Key driving features | Biological basis |
 |:---|:---|:---|
 | Meropenem | *blaKPC*, *blaNDM*, *blaVIM*, *blaIMP*, *blaOXA-48* | Known carbapenemase genes |
 | Ciprofloxacin | *gyrA* mutations, *parC* mutations, *acrAB* efflux | QRDR mutations and efflux-mediated fluoroquinolone resistance |
@@ -410,8 +386,7 @@ These are the standard resistance determinants recognized by NCBI AMRFinderPlus,
 
 ### Q27. Which independent dataset(s) will you test on before the letter is sent?
 
-One external validation has already been completed:
-- **BV-BRC *E. coli* cefotaxime cohort (500-genome holdout):** ROC-AUC = 0.9333, sensitivity 82.8%, specificity 95.2%.
+No independent external validation has been completed. The BV-BRC 500-row benchmark CSV reproduces AUC 0.9333 and the stored 0.20 operating point (TP=207, TN=238, FP=12, FN=43). It is an in-corpus result, not independent validation; the rationale for choosing 0.20 is undocumented. The 0.7793 combined-model AUC is withdrawn because its 1,000-row prediction output is unavailable for independent recomputation.
 
 For the remaining drugs and for a truly independent test, the following datasets from Section 3.2 are planned:
 1. Liverpool *E. coli* WGS-AST dataset (762 isolates, 2025)
@@ -422,7 +397,7 @@ Overlap checks will compare BioSample and SRA accessions against our master isol
 
 ### Q28. How many Kenyan or East African isolates with AST data are available in public databases?
 
-**Not yet quantified**, see Q7 above for exact BigQuery results. As of October 2026:
+See Q7 for the BigQuery counts. As of October 2026:
 
 - Kenyan genomes with AST in NCBI BigQuery: **8,462**
 - East African genomes (5 countries): **17,173**
@@ -467,13 +442,15 @@ Yes. The plan is to:
 |:---|:---|:---|:---|
 | ML prediction backend | Render (Web Service) | USA (Oregon) | `bactoai-kt0q.onrender.com` |
 | Website frontend | Vercel / Lovable | USA | `bactoai.co.ke` |
-| Backend database | Supabase (PostgreSQL) | USA (AWS us-east-1) | `ofuxwgapzjgcrsuiqpyu.supabase.co` |
-| Website database | Supabase (PostgreSQL) | USA (AWS) | `ojnecaomcicsayeweoab.supabase.co` |
+| Backend database | Supabase (PostgreSQL) | Previously documented as AWS `us-east-1`; not independently verified | `ofuxwgapzjgcrsuiqpyu.supabase.co` |
+| Website database | Supabase (PostgreSQL) | Region not verified | `ojnecaomcicsayeweoab.supabase.co` |
 
 **Data handling:**
 - Uploaded genome files are processed in-memory on the Render backend. They are not written to persistent disk (Render uses an ephemeral filesystem that is wiped on every redeploy).
 - Prediction metadata (drug probabilities, confidence scores, timestamps) is stored in the Supabase `submissions` table.
 - No genomic sequence data is retained after prediction completes.
+- Automated retention for prediction records, feedback and IP audit entries is not implemented; these records may persist indefinitely.
+- Live backend RLS and the Render key role have not been independently verified. The local backend migration names the website project as its target, while backend configuration names a different project.
 
 > [!WARNING]
 > **Gap for NPHL:** If NPHL genomic data is uploaded, hosting in USA servers constitutes cross-border data transfer under the Data Protection Act, 2019. Before processing NPHL data, either (a) deploy a Kenya-hosted instance, or (b) obtain explicit written consent and a data protection impact assessment for cross-border transfer.
@@ -506,25 +483,22 @@ BactoAI was selected for a **CDIE Catalyst Grant** administered through the Keny
 - **Code repository:** GitHub, synchronized across two remotes:
   - `origin`: `https://github.com/Savville/BactoAI.git` (personal)
   - `bactoai-eng`: `https://github.com/bactoai-eng/BACTOAI.git` (organization)
-- **Environment:** Python 3.12, dependencies listed in `requirements.txt` and `requirements-ml.txt`, virtual environment in `.venv/`
+- **Environment:** dependencies are listed in `requirements.txt` and `requirements-ml.txt`. The `.venv/` directory is excluded from the updated branch.
 - **Accession lists:** Assembly accessions are in the metadata CSV files (`data/metadata_*.csv`)
-- **Reproducibility:** Yes, another person can rerun the pipeline:
-  1. Clone the repository
-  2. Install dependencies (`pip install -r requirements.txt -r requirements-ml.txt`)
-  3. Download genomes using `scripts/download_bvbrc_genomes.py` (or place FASTA files in `data/genomes/`)
-  4. Train: `python bactoai_pipeline.py --train`
-  5. Predict: `python bactoai_pipeline.py --predict --fasta path/to/genome.fna`
+- **Metric verification:** `python scripts/verify_regenerated_predictions.py` recomputes metrics from the included prediction CSVs and compares them with saved summaries and calibration scores.
+- **Prediction regeneration:** `python scripts/regenerate_test_predictions.py --workers 8` requires the genome FASTAs in `data/genomes/`. These files (about 8.76 GB) are not tracked in Git. Accession, size and SHA-256 values are in `validation_results/all_metadata_genome_manifest.csv`; full regeneration requires obtaining the matching FASTAs.
+- **Training:** The pipeline can be retrained from the metadata and genome FASTAs, but that is distinct from reproducing the deployed artifacts.
 - **Random seeds:** Fixed at `[42, 123, 456, 789, 1024]` for reproducibility.
 
 ### Q38. What are the main limitations of the current models and data?
 
 1. **Species imbalance:** Over 85% of cefotaxime training genomes are *E. coli*. Performance on *K. pneumoniae*, *A. baumannii*, and *P. aeruginosa* is likely weaker.
-2. **Geographic skew:** Training data is predominantly from North America and Europe. Zero or near-zero Kenyan isolates. Performance on local strains is unknown.
-3. **Method mixing:** The cefotaxime v4 model mixes MIC-derived and disk-diffusion-derived labels without re-harmonization to a single breakpoint version.
+2. **Geographic skew:** Training data is predominantly from North America and Europe. Two unique Kenyan isolates occur in deployed metadata; both are in training and none in the test split. Performance on local strains is unknown.
+3. **Label provenance and breakpoint drift:** The deployed models use NCBI pre-classified S/I/R calls recorded as `MIC_or_mixed`; the breakpoint standard and edition vary by submitting laboratory and have not been re-harmonised. The BV-BRC disk-diffusion labels (EUCAST v14.0) apply only to the non-deployed combined cefotaxime model and the BV-BRC benchmark.
 4. **No relatedness-aware split:** Random splitting may inflate AUC when clonally related isolates span the train/test boundary.
 5. **No formal genome QC:** No contamination, completeness, or species-confirmation checks.
 6. **K-mer proxy for gene detection:** Using three 6-mers per gene is a rough proxy, not equivalent to full-length gene detection (AMRFinderPlus, ResFinder).
-7. **Drug model maturity gap:** Meropenem and ciprofloxacin remain at v3 (600 genomes each), while cefotaxime has been upgraded to v4 (4,019 genomes).
+7. **Deployment scope:** All three deployed models were trained on the 600-row NCBI metadata (369, 429 and 433 usable training isolates for meropenem, ciprofloxacin and cefotaxime). The 0.7793 combined-model figure is withdrawn pending prediction-level evidence.
 8. **No rule-based baseline comparison** yet.
 
 ### Q39. What support do you need from KU?
@@ -544,16 +518,6 @@ BactoAI was selected for a **CDIE Catalyst Grant** administered through the Keny
 | This document with response column completed | **Done** (this file) |
 | Master isolate table (CSV) with accessions, source, metadata, and partition assignments | **Partially done** -- metadata CSVs exist per drug but lack country, partition assignment, and BioSample columns. Needs consolidation. |
 | Results table per drug (model + rule-based baseline, original + relatedness-aware split, external test) | **Partially done** -- model results exist; rule-based baseline and relatedness-aware split are missing. |
-| Two-page technical summary for NPHL | **Not yet written.** |
+| Two-page technical summary for NPHL | **Done** -- `deliverables/NPHL_Technical_Summary.md`. |
 | Revised letter (Annex A) with all placeholders completed | **Partially completable** -- many placeholders can now be filled from these answers. |
 | Link to code repository with software versions and random seeds | **Done** -- `https://github.com/bactoai-eng/BACTOAI.git`, seeds `[42, 123, 456, 789, 1024]`, Python 3.12. |
-
----
-
-## Immediate Action Items (by Fri 30 Oct)
-
-1. **Confirm ciprofloxacin vs cefotaxime ROC-AUC** -- Done: Cipro = 0.9559, Cefo = 0.8721. Not identical.
-2. **Run BigQuery geographic enrichment** to count African/Kenyan isolates in training data.
-3. **Compute 95% confidence intervals** (Wilson or bootstrap) for all reported metrics.
-4. **Run AMRFinderPlus** on the test isolates for a rule-based baseline comparison.
-5. **Begin the master isolate table** consolidating all three drugs with BioSample accessions, country, year, and partition assignments.

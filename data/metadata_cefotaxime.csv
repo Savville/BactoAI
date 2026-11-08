@@ -1,0 +1,601 @@
+target_acc,taxgroup_name,antibiotic,phenotype,asm_acc,resistant
+PDT000113802.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527415.2,1
+PDT000114093.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527325.2,1
+PDT001467099.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829835.1,1
+PDT001467278.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833415.1,1
+PDT002391484.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043860375.1,1
+PDT000158310.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001874865.1,1
+PDT000158307.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001874695.1,1
+PDT000130464.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315655.1,1
+PDT000145746.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001709275.1,1
+PDT000326684.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_003194325.1,1
+PDT001128437.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019928205.1,1
+PDT000015905.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000417185.1,1
+PDT000094669.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_001442575.1,1
+PDT000111408.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534365.2,1
+PDT000966227.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003195.1,1
+PDT000966250.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003005.1,1
+PDT000966209.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003655.1,1
+PDT001467026.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828375.1,1
+PDT001467056.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828975.1,1
+PDT000290062.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002948565.1,1
+PDT000298143.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_003010655.1,1
+PDT000290013.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_002947845.1,1
+PDT000107061.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016536745.2,1
+PDT000111411.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534435.2,1
+PDT000966284.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002315.1,1
+PDT000898648.1,E.coli and Shigella,cefotaxime,resistant,GCA_015672995.1,1
+PDT000898693.1,E.coli and Shigella,cefotaxime,resistant,GCA_015674015.1,1
+PDT001467247.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832795.1,1
+PDT001466981.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827465.1,1
+PDT001467073.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829315.1,1
+PDT001467136.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830575.1,1
+PDT001467224.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832335.1,1
+PDT002693024.1,E.coli and Shigella,cefotaxime,resistant,GCA_049209075.1,1
+PDT002839250.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_051414835.1,1
+PDT000331111.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_003204175.1,1
+PDT000130451.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315855.1,1
+PDT000113697.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527955.2,1
+PDT000114676.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521315.2,1
+PDT000966348.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001275.1,1
+PDT000966342.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001135.1,1
+PDT001467178.1,E.coli and Shigella,cefotaxime,resistant,GCA_025831415.1,1
+PDT001467071.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829275.1,1
+PDT001467261.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833075.1,1
+PDT002391498.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043859735.1,1
+PDT000217003.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002180315.1,1
+PDT000855225.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014840405.1,1
+PDT001128452.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019928505.1,1
+PDT000107053.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016536875.2,1
+PDT000107051.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016536925.2,1
+PDT000113805.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527455.2,1
+PDT000114595.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522555.2,1
+PDT003089535.1,E.coli and Shigella,cefotaxime,resistant,GCA_055029395.1,1
+PDT000216782.1,E.coli and Shigella,cefotaxime,resistant,GCA_002180095.1,1
+PDT001467074.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829335.1,1
+PDT001467155.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830955.1,1
+PDT001467040.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828635.1,1
+PDT001467246.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832775.1,1
+PDT001128441.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019928285.1,1
+PDT001128537.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019930325.1,1
+PDT000107137.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016535545.2,1
+PDT000114224.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525635.2,1
+PDT000113605.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016528415.2,1
+PDT000107118.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537155.2,1
+PDT000114327.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016523405.2,1
+PDT000494597.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_004799225.1,1
+PDT000966321.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001595.1,1
+PDT001467160.1,E.coli and Shigella,cefotaxime,resistant,GCA_025831055.1,1
+PDT000497533.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_004924315.1,1
+PDT000343387.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_003288375.1,1
+PDT001128460.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019928665.1,1
+PDT000106921.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537745.2,1
+PDT000107119.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537625.2,1
+PDT000113688.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016528235.2,1
+PDT000966357.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001015.1,1
+PDT000898688.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673905.1,1
+PDT001467287.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833595.1,1
+PDT000021113.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000534235.1,1
+PDT002391492.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043860015.1,1
+PDT000050775.2,Pseudomonas aeruginosa,cefotaxime,resistant,GCA_000937495.2,1
+PDT000107077.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016536465.2,1
+PDT000107152.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534885.2,1
+PDT000216786.1,E.coli and Shigella,cefotaxime,resistant,GCA_002180275.1,1
+PDT000966238.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003135.1,1
+PDT001018094.1,E.coli and Shigella,cefotaxime,resistant,GCA_018259915.1,1
+PDT000898691.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673965.1,1
+PDT000751080.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_013180385.1,1
+PDT000114232.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525485.2,1
+PDT000106847.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539795.2,1
+PDT000106943.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537045.2,1
+PDT001018092.1,E.coli and Shigella,cefotaxime,resistant,GCA_018263275.1,1
+PDT001467027.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828395.1,1
+PDT001467204.1,E.coli and Shigella,cefotaxime,resistant,GCA_025831935.1,1
+PDT001467290.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833655.1,1
+PDT002391479.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043861645.1,1
+PDT001128525.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019930085.1,1
+PDT002711654.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049381505.1,1
+PDT002650442.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049102235.1,1
+PDT000856410.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014842715.1,1
+PDT000107097.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016536325.2,1
+PDT000114578.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522915.2,1
+PDT000113599.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016528595.2,1
+PDT000113591.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016529645.2,1
+PDT000114708.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016520875.2,1
+PDT000595116.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_008709745.1,1
+PDT000966246.1,E.coli and Shigella,cefotaxime,resistant,GCA_018021675.1,1
+PDT002650440.1,E.coli and Shigella,cefotaxime,resistant,GCA_048689055.1,1
+PDT001466971.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827275.1,1
+PDT001467109.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830035.1,1
+PDT001467102.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829895.1,1
+PDT000219691.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002197505.1,1
+PDT000113231.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016529965.2,1
+PDT000114736.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016520195.2,1
+PDT001018086.1,E.coli and Shigella,cefotaxime,resistant,GCA_018264175.1,1
+PDT000898706.1,E.coli and Shigella,cefotaxime,resistant,GCA_015674275.1,1
+PDT001467020.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828255.1,1
+PDT002391418.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043905645.1,1
+PDT000870018.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014946945.1,1
+PDT000966273.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002435.1,1
+PDT001466993.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827715.1,1
+PDT002391488.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043860195.1,1
+PDT002391475.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043863065.1,1
+PDT002391421.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043905605.1,1
+PDT000148423.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001720705.1,1
+PDT000111406.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534705.2,1
+PDT000114702.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521035.2,1
+PDT000114309.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016523855.2,1
+PDT000023708.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_000586635.1,1
+PDT000216781.1,E.coli and Shigella,cefotaxime,resistant,GCA_002180055.1,1
+PDT000966275.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002415.1,1
+PDT001467002.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827875.1,1
+PDT000130460.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315695.1,1
+PDT000292900.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002968495.1,1
+PDT001128422.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019927905.1,1
+PDT000111407.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534465.2,1
+PDT000114293.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016524035.2,1
+PDT000114110.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016526335.2,1
+PDT000898784.1,E.coli and Shigella,cefotaxime,resistant,GCA_015675925.1,1
+PDT001128414.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019927745.1,1
+PDT000022733.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000566905.1,1
+PDT000114335.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016523195.2,1
+PDT000106851.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539675.2,1
+PDT000114286.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016524255.2,1
+PDT000111413.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534475.2,1
+PDT000114622.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521855.2,1
+PDT000106860.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539365.2,1
+PDT000369044.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_003431865.1,1
+PDT000966256.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002955.1,1
+PDT000898750.1,E.coli and Shigella,cefotaxime,resistant,GCA_015675225.1,1
+PDT000898778.1,E.coli and Shigella,cefotaxime,resistant,GCA_015675755.1,1
+PDT001466988.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827615.1,1
+PDT001467291.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833675.1,1
+PDT001467277.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833395.1,1
+PDT001467184.1,E.coli and Shigella,cefotaxime,resistant,GCA_025831535.1,1
+PDT001769959.1,E.coli and Shigella,cefotaxime,resistant,GCA_032865675.1,1
+PDT000267680.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002796425.1,1
+PDT002391465.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043863225.1,1
+PDT000130456.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315775.1,1
+PDT000855219.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014840295.1,1
+PDT000106828.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016540205.2,1
+PDT000114573.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522995.2,1
+PDT000113592.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016529535.2,1
+PDT000595113.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_008709665.1,1
+PDT001467221.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832275.1,1
+PDT001467088.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829605.1,1
+PDT000218722.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002192315.1,1
+PDT000130446.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315975.1,1
+PDT000855228.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014840475.1,1
+PDT002711680.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049383925.1,1
+PDT000114213.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525695.2,1
+PDT000107143.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016535355.2,1
+PDT000898670.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673555.1,1
+PDT001467149.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830835.1,1
+PDT001467154.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830935.1,1
+PDT001467131.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830475.1,1
+PDT000380977.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_003571545.1,1
+PDT000130445.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315985.1,1
+PDT001128453.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019928525.1,1
+PDT000022734.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000566925.1,1
+PDT000015903.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000417245.1,1
+PDT000015890.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000401195.1,1
+PDT000114587.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522865.2,1
+PDT000114333.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016523295.2,1
+PDT000106901.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016538465.2,1
+PDT000113686.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016528365.2,1
+PDT000966304.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001895.1,1
+PDT000898684.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673805.1,1
+PDT001467058.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829025.1,1
+PDT001467228.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832415.1,1
+PDT002693030.1,E.coli and Shigella,cefotaxime,resistant,GCA_049208975.1,1
+PDT002391487.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043860235.1,1
+PDT002391510.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043858225.1,1
+PDT000016116.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000406445.1,1
+PDT000113236.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016529835.2,1
+PDT000966224.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003465.1,1
+PDT001467233.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832515.1,1
+PDT001467091.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829675.1,1
+PDT001467105.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829935.1,1
+PDT002693050.1,E.coli and Shigella,cefotaxime,resistant,GCA_049208565.1,1
+PDT002391460.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043863345.1,1
+PDT000870022.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_014947005.1,1
+PDT002711663.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049383445.1,1
+PDT000114334.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016523275.2,1
+PDT000114229.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525535.2,1
+PDT000114258.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525005.2,1
+PDT002719905.1,Enterobacter cloacae,cefotaxime,resistant,GCA_049600895.1,1
+PDT000966318.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001655.1,1
+PDT001018079.1,E.coli and Shigella,cefotaxime,resistant,GCA_018258815.1,1
+PDT001467104.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829945.1,1
+PDT001467085.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829545.1,1
+PDT002391507.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043859305.1,1
+PDT002391457.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043863365.1,1
+PDT000130448.5,Klebsiella pneumoniae,cefotaxime,resistant,GCA_022315935.1,1
+PDT001428970.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_025367575.1,1
+PDT000022726.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000566745.1,1
+PDT000107115.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537215.2,1
+PDT001467273.1,E.coli and Shigella,cefotaxime,resistant,GCA_025833315.1,1
+PDT001467129.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830435.1,1
+PDT002391458.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043863405.1,1
+PDT000197021.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002055855.1,1
+PDT000113796.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527675.2,1
+PDT000107142.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016535365.2,1
+PDT000114607.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522215.2,1
+PDT000094633.1,Acinetobacter baumannii,cefotaxime,resistant,GCA_001441565.1,1
+PDT000294790.1,E.coli and Shigella,cefotaxime,resistant,GCA_003000615.1,1
+PDT000898642.1,E.coli and Shigella,cefotaxime,resistant,GCA_015672775.1,1
+PDT001467032.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828495.1,1
+PDT001467051.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828875.1,1
+PDT000158312.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001875025.1,1
+PDT000310188.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_003071305.1,1
+PDT002716950.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049538255.1,1
+PDT000106893.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016538655.2,1
+PDT000106840.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539895.2,1
+PDT000213276.1,E.coli and Shigella,cefotaxime,resistant,GCA_002157245.1,1
+PDT000966249.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002705.1,1
+PDT000898708.1,E.coli and Shigella,cefotaxime,resistant,GCA_015674335.1,1
+PDT001467140.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830655.1,1
+PDT001467223.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832315.1,1
+PDT001467152.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830895.1,1
+PDT002391441.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043905145.1,1
+PDT001128408.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019927625.1,1
+PDT000106928.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537505.2,1
+PDT000106788.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016540985.2,1
+PDT000107150.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016535175.2,1
+PDT000114668.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521435.2,1
+PDT000106863.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539185.2,1
+PDT002710476.1,E.coli and Shigella,cefotaxime,resistant,GCA_049354835.1,1
+PDT001467063.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829115.1,1
+PDT001467217.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832205.1,1
+PDT000217000.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_002180175.1,1
+PDT002711683.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049383985.1,1
+PDT000382358.1,Salmonella enterica,cefotaxime,resistant,GCA_003571625.1,1
+PDT000114276.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016524735.2,1
+PDT000106897.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016538585.2,1
+PDT000106859.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539385.2,1
+PDT000111418.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016533125.2,1
+PDT000106858.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539405.2,1
+PDT000114601.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522415.2,1
+PDT000966359.1,E.coli and Shigella,cefotaxime,resistant,GCA_017000975.1,1
+PDT000898682.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673815.1,1
+PDT001467157.1,E.coli and Shigella,cefotaxime,resistant,GCA_025830995.1,1
+PDT001467038.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828595.1,1
+PDT001466963.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827115.1,1
+PDT001467245.1,E.coli and Shigella,cefotaxime,resistant,GCA_025832755.1,1
+PDT001467009.1,E.coli and Shigella,cefotaxime,resistant,GCA_025828015.1,1
+PDT001466965.1,E.coli and Shigella,cefotaxime,resistant,GCA_025827155.1,1
+PDT000106934.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016537315.2,1
+PDT000114614.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016522325.2,1
+PDT000114706.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016520935.2,1
+PDT000114711.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016520815.2,1
+PDT000113181.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016530105.2,1
+PDT000106831.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016540105.2,1
+PDT000114629.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521655.2,1
+PDT000898799.1,E.coli and Shigella,cefotaxime,resistant,GCA_015676195.1,1
+PDT001467065.1,E.coli and Shigella,cefotaxime,resistant,GCA_025829145.1,1
+PDT000106836.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539945.2,1
+PDT000114682.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521245.2,1
+PDT000966242.1,E.coli and Shigella,cefotaxime,resistant,GCA_017003095.1,1
+PDT000898681.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673775.1,1
+PDT000898664.1,E.coli and Shigella,cefotaxime,resistant,GCA_015673295.1,1
+PDT002693019.1,E.coli and Shigella,cefotaxime,resistant,GCA_049210585.1,1
+PDT002391443.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043904905.1,1
+PDT001128426.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_019927985.1,1
+PDT002553315.1,E.coli and Shigella,cefotaxime,resistant,GCA_046375985.1,1
+PDT000106776.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016541325.2,1
+PDT000114231.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016525445.2,1
+PDT000106844.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016539805.2,1
+PDT000966346.1,E.coli and Shigella,cefotaxime,resistant,GCA_017001255.1,1
+PDT000966285.1,E.coli and Shigella,cefotaxime,resistant,GCA_017002335.1,1
+PDT002391477.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043861665.1,1
+PDT002391446.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_043904845.1,1
+PDT000158309.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_001874715.1,1
+PDT002650409.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_049102505.1,1
+PDT000015902.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000417545.1,1
+PDT000015891.2,Klebsiella pneumoniae,cefotaxime,resistant,GCA_000417305.1,1
+PDT001185294.1,Klebsiella pneumoniae,cefotaxime,resistant,GCA_020985265.1,1
+PDT000111405.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534625.2,1
+PDT000113793.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016527735.2,1
+PDT000114669.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016521395.2,1
+PDT000111403.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016534695.2,1
+PDT000114299.2,Acinetobacter baumannii,cefotaxime,resistant,GCA_016524145.2,1
+PDT002776229.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502375.1,0
+PDT000898587.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671605.1,0
+PDT001128536.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019930305.1,0
+PDT001087998.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258565.1,0
+PDT001087980.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259305.1,0
+PDT000966268.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017002535.1,0
+PDT002692998.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049262785.1,0
+PDT001087981.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259285.1,0
+PDT001088020.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259085.1,0
+PDT001087994.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258305.1,0
+PDT000898582.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671505.1,0
+PDT001412331.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_025026715.1,0
+PDT001088038.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258785.1,0
+PDT002120825.1,Salmonella enterica,cefotaxime,susceptible,GCA_037450615.1,0
+PDT000521581.1,E.coli and Shigella,cefotaxime,susceptible,GCA_006265155.1,0
+PDT000966352.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001075.1,0
+PDT002693001.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209775.1,0
+PDT001278071.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789805.2,0
+PDT001347517.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979545.1,0
+PDT001347445.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980345.1,0
+PDT001347424.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980755.1,0
+PDT001580489.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948125.1,0
+PDT001580401.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949805.1,0
+PDT000966276.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017002455.1,0
+PDT000966215.1,E.coli and Shigella,cefotaxime,susceptible,GCA_018021715.1,0
+PDT002804523.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050914315.1,0
+PDT001580455.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027951245.1,0
+PDT001087996.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258525.1,0
+PDT000966324.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001575.1,0
+PDT000855243.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_014840795.1,0
+PDT001278026.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022788905.1,0
+PDT002371020.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041860995.1,0
+PDT001088045.1,Salmonella enterica,cefotaxime,susceptible,GCA_019257905.1,0
+PDT002693010.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209335.1,0
+PDT001278049.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789365.1,0
+PDT001580492.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948865.1,0
+PDT001580497.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027950085.1,0
+PDT001278072.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789825.1,0
+PDT002553318.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046376045.1,0
+PDT000107054.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016536845.2,0
+PDT000966344.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001325.1,0
+PDT002693021.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209135.1,0
+PDT001278043.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789245.1,0
+PDT001278057.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789525.1,0
+PDT001128533.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019930245.1,0
+PDT001347527.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023965255.1,0
+PDT001347534.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979345.1,0
+PDT001088010.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258045.1,0
+PDT000094625.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_001441415.1,0
+PDT001128419.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019927845.1,0
+PDT001347487.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_024738565.1,0
+PDT001347425.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980705.1,0
+PDT000898592.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671685.1,0
+PDT001580484.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027950105.1,0
+PDT001412326.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_025026605.1,0
+PDT002553322.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046376125.1,0
+PDT001278073.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789845.1,0
+PDT001278022.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022788815.1,0
+PDT001128401.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019927485.1,0
+PDT002553331.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046376305.1,0
+PDT002776230.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502335.1,0
+PDT001347478.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980085.1,0
+PDT001088033.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258905.1,0
+PDT001088003.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258165.1,0
+PDT001927055.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_032720775.1,0
+PDT001278023.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022788805.1,0
+PDT001278061.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789595.1,0
+PDT001412327.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_025026635.1,0
+PDT001087990.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258385.1,0
+PDT000966206.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017003695.1,0
+PDT002804537.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050915235.1,0
+PDT002693026.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049212865.1,0
+PDT001278046.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789305.1,0
+PDT001347452.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980285.1,0
+PDT001347443.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980425.1,0
+PDT002553335.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046376385.1,0
+PDT000966265.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017002935.1,0
+PDT000898608.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672035.1,0
+PDT002804535.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050914035.1,0
+PDT002776218.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502635.1,0
+PDT001278105.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790485.1,0
+PDT001278032.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789045.1,0
+PDT001088031.1,Salmonella enterica,cefotaxime,susceptible,GCA_019257985.1,0
+PDT000106868.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016539145.2,0
+PDT000358737.1,E.coli and Shigella,cefotaxime,susceptible,GCA_003075555.1,0
+PDT001278090.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790185.1,0
+PDT001347450.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980305.1,0
+PDT001580430.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027951265.1,0
+PDT002371037.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861165.1,0
+PDT000966333.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001435.1,0
+PDT002693045.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208665.1,0
+PDT002804522.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050915975.1,0
+PDT001580398.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949825.1,0
+PDT001088017.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258605.1,0
+PDT002553172.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046370605.1,0
+PDT000521580.1,E.coli and Shigella,cefotaxime,susceptible,GCA_006265085.1,0
+PDT002693008.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209655.1,0
+PDT001128455.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019928565.1,0
+PDT001087991.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258345.1,0
+PDT000898583.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671515.1,0
+PDT002693067.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208245.1,0
+PDT002693007.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209675.1,0
+PDT001347398.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981255.1,0
+PDT001347392.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981355.1,0
+PDT001580440.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949285.1,0
+PDT001088013.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258865.1,0
+PDT001088000.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258265.1,0
+PDT000966313.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001795.1,0
+PDT002693049.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208585.1,0
+PDT002776215.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502695.1,0
+PDT001580414.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948705.1,0
+PDT002693059.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208375.1,0
+PDT001128413.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019927725.1,0
+PDT001128528.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019930145.1,0
+PDT001347411.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981155.1,0
+PDT001088034.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258935.1,0
+PDT000898588.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671645.1,0
+PDT002693053.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208485.1,0
+PDT000021117.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_000534315.1,0
+PDT001128456.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019928585.1,0
+PDT001347514.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023982385.1,0
+PDT001088012.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258885.1,0
+PDT000114253.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016525155.2,0
+PDT001278076.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789905.2,0
+PDT001278050.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789385.1,0
+PDT001347472.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980105.1,0
+PDT000106917.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016537675.2,0
+PDT000898580.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671445.1,0
+PDT002693083.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049207945.1,0
+PDT001580496.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948065.1,0
+PDT000898805.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_015676835.1,0
+PDT000898578.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671285.1,0
+PDT002693018.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209175.1,0
+PDT002692994.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209845.1,0
+PDT000898596.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671805.1,0
+PDT001278078.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789945.1,0
+PDT001088041.1,Salmonella enterica,cefotaxime,susceptible,GCA_019257885.1,0
+PDT002553166.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046370485.1,0
+PDT002693074.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208105.1,0
+PDT000473852.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_004322955.1,0
+PDT001278087.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790115.1,0
+PDT002371035.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861145.1,0
+PDT002693062.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049266275.1,0
+PDT002373670.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861295.1,0
+PDT000966257.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017002625.1,0
+PDT002693082.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049207965.1,0
+PDT001278059.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789565.1,0
+PDT001347416.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023982575.1,0
+PDT001580467.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949005.1,0
+PDT001088047.1,Salmonella enterica,cefotaxime,susceptible,GCA_019257855.1,0
+PDT001128449.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019928445.1,0
+PDT001128440.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019928265.1,0
+PDT000021118.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_000534335.1,0
+PDT001278029.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022788955.1,0
+PDT001347438.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980505.1,0
+PDT001580437.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948505.1,0
+PDT000898594.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671755.1,0
+PDT002650451.1,E.coli and Shigella,cefotaxime,susceptible,GCA_048689035.1,0
+PDT002693064.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208305.1,0
+PDT001278106.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790505.1,0
+PDT001347405.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981235.1,0
+PDT001087977.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259345.1,0
+PDT002553170.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046370565.1,0
+PDT002553164.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046370425.1,0
+PDT000966217.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017003555.1,0
+PDT000898595.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671765.1,0
+PDT002693057.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208525.1,0
+PDT002693015.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209235.1,0
+PDT001087995.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258285.1,0
+PDT001088042.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258765.1,0
+PDT001278038.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789135.1,0
+PDT001347506.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979705.1,0
+PDT000289953.1,E.coli and Shigella,cefotaxime,susceptible,GCA_002948655.1,0
+PDT000898614.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672135.1,0
+PDT000855239.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_014840695.1,0
+PDT001278093.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790245.1,0
+PDT001278040.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789185.2,0
+PDT002371012.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041860915.1,0
+PDT001088046.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258645.1,0
+PDT002693048.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208605.1,0
+PDT002693065.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208285.1,0
+PDT001149151.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_020407045.1,0
+PDT001347522.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979485.1,0
+PDT001088004.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259185.1,0
+PDT002120826.1,Salmonella enterica,cefotaxime,susceptible,GCA_037450635.1,0
+PDT000966216.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017003575.1,0
+PDT000966334.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001375.1,0
+PDT000898573.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671165.1,0
+PDT002804529.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050916075.1,0
+PDT000855241.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_014840735.1,0
+PDT001347406.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023961335.1,0
+PDT002373665.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861245.1,0
+PDT001088006.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258175.1,0
+PDT001278030.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022788985.1,0
+PDT000114306.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016523795.2,0
+PDT000966345.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001295.1,0
+PDT000898627.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672395.1,0
+PDT001278064.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789665.1,0
+PDT001347488.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023961255.1,0
+PDT002117535.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_037287365.1,0
+PDT002553328.1,E.coli and Shigella,cefotaxime,susceptible,GCA_046376245.1,0
+PDT002693078.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208045.1,0
+PDT000022736.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_000566965.1,0
+PDT001088040.1,Salmonella enterica,cefotaxime,susceptible,GCA_019257965.1,0
+PDT000966308.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001835.1,0
+PDT000966291.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001955.1,0
+PDT000898626.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672385.1,0
+PDT001278099.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790365.1,0
+PDT002371026.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861055.1,0
+PDT001347412.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023982535.1,0
+PDT001580449.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027950125.1,0
+PDT000106894.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016538605.2,0
+PDT000966197.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017003875.1,0
+PDT002804543.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050913935.1,0
+PDT001347446.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980375.1,0
+PDT002371018.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041860975.1,0
+PDT001580415.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027950185.1,0
+PDT000898585.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671575.1,0
+PDT002776235.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502235.1,0
+PDT000094623.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_001441355.1,0
+PDT002373677.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861365.1,0
+PDT001088027.1,Salmonella enterica,cefotaxime,susceptible,GCA_019235755.1,0
+PDT002804532.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050914075.1,0
+PDT001278074.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789865.1,0
+PDT002371017.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041860965.1,0
+PDT000115280.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016520085.2,0
+PDT001347395.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981335.1,0
+PDT000158306.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_001874945.1,0
+PDT000021107.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_000534115.1,0
+PDT001347471.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980125.1,0
+PDT000898611.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672085.1,0
+PDT002693029.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208995.1,0
+PDT001278094.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790265.1,0
+PDT000898616.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672195.1,0
+PDT002693012.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209315.1,0
+PDT001278034.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789065.1,0
+PDT001347497.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979765.1,0
+PDT000114716.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016520735.2,0
+PDT000898613.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672115.1,0
+PDT001347473.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023982475.1,0
+PDT001347426.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980725.1,0
+PDT001347453.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980245.1,0
+PDT001580439.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948485.1,0
+PDT002371039.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861185.1,0
+PDT001278102.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790415.1,0
+PDT001580474.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027957545.1,0
+PDT001087997.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258325.1,0
+PDT000114724.2,Acinetobacter baumannii,cefotaxime,susceptible,GCA_016520495.2,0
+PDT000898599.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671865.1,0
+PDT001412329.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_025026675.1,0
+PDT000966214.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017003775.1,0
+PDT000898586.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015671595.1,0
+PDT002693006.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049210605.1,0
+PDT002804544.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050913915.1,0
+PDT002693051.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208545.1,0
+PDT001580466.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949025.1,0
+PDT001580502.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948005.1,0
+PDT000222315.1,E.coli and Shigella,cefotaxime,susceptible,GCA_002213265.1,0
+PDT001278089.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022790165.2,0
+PDT001128451.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019928485.1,0
+PDT001347502.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023979725.1,0
+PDT002371043.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_041861225.1,0
+PDT002776234.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502255.1,0
+PDT002776213.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050502735.1,0
+PDT002693039.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208785.1,0
+PDT001347429.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980645.1,0
+PDT001347407.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023981195.1,0
+PDT001580423.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949625.1,0
+PDT000898806.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_015676875.1,0
+PDT002804520.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050914355.1,0
+PDT001278039.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789145.1,0
+PDT001128420.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_019927855.1,0
+PDT001580417.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027949665.1,0
+PDT001088032.1,Salmonella enterica,cefotaxime,susceptible,GCA_019235805.1,0
+PDT000094628.1,Acinetobacter baumannii,cefotaxime,susceptible,GCA_001441475.1,0
+PDT000898633.1,E.coli and Shigella,cefotaxime,susceptible,GCA_015672505.1,0
+PDT002693032.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049208905.1,0
+PDT002693084.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049207925.1,0
+PDT001088008.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258205.1,0
+PDT001087999.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259205.1,0
+PDT002804533.1,E.coli and Shigella,cefotaxime,susceptible,GCA_050914015.1,0
+PDT001278062.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789625.1,0
+PDT001921801.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_032463405.1,0
+PDT001347454.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023980225.1,0
+PDT001580494.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948085.1,0
+PDT001087988.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259225.1,0
+PDT001087986.1,Salmonella enterica,cefotaxime,susceptible,GCA_019259245.1,0
+PDT001088043.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258745.1,0
+PDT000855213.1,Salmonella enterica,cefotaxime,susceptible,GCA_014840755.1,0
+PDT000267827.1,E.coli and Shigella,cefotaxime,susceptible,GCA_002796445.1,0
+PDT002693075.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049210545.1,0
+PDT002693005.1,E.coli and Shigella,cefotaxime,susceptible,GCA_049209695.1,0
+PDT000855238.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_014840655.1,0
+PDT000966349.1,E.coli and Shigella,cefotaxime,susceptible,GCA_017001235.1,0
+PDT001278067.2,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_022789725.2,0
+PDT001087978.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258425.1,0
+PDT001088021.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258545.1,0
+PDT001347489.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_023961235.1,0
+PDT001580436.1,Klebsiella pneumoniae,cefotaxime,susceptible,GCA_027948545.1,0
+PDT001088019.1,Salmonella enterica,cefotaxime,susceptible,GCA_019258485.1,0

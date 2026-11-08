@@ -1,2 +1,2 @@
-antibiotic,num_models,accuracy,roc_auc,n_test_resistant,n_test_susceptible,use_smote,seeds_used,per_model_aucs,trained_at
-cefotaxime,5,0.859,0.7792769802531792,167,833,True,"[42, 123, 456, 789, 1024]","[0.7807506236027345, 0.7808656396690412, 0.7776164357958752, 0.7784287367641667, 0.7784215482600226]",2026-09-14T00:34:06.375027
+antibiotic,num_models,accuracy,roc_auc,n_train_resistant,n_train_susceptible,n_train_total,n_test_resistant,n_test_susceptible,n_test_total,use_smote,seeds_used,per_model_aucs,trained_at,data_sources,bvbrc_raw,bvbrc_valid_phenotype,bvbrc_excluded_no_phenotype
+cefotaxime,5,0.859,0.7792769802531792,561,2017,2578,167,833,1000,True,"[42, 123, 456, 789, 1024]","[0.7807506236027345, 0.7808656396690412, 0.7776164357958752, 0.7784287367641667, 0.7784215482600226]",2026-09-14T00:34:06.375027,"NCBI Pathogen Detection (600) + BV-BRC (1,978 valid phenotypes from 3,419 raw)",3419,1978,1441

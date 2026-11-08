@@ -51,10 +51,12 @@ data/train_genomes/
 data/test_genomes/
 data/*.csv
 data/*.zip
+!data/metadata_*.csv
+!data/BVBRC_genome_amr.csv
 
-# DO NOT ignore the models and transformers - we need these in production!
-!data/models/
-!data/transformers/
+# Active production models and transformers
+data/models/
+data/transformers/
 !data/models_v4/
 !data/transformers_v4/
 !data/bigquery_output/

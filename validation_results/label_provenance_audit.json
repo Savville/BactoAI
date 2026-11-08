@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-11-08",
+  "question": "Did any deployed-model labels come from BV-BRC, and how were I/ND/DD/NS handled?",
+  "deployed_scope": "All three deployed models use data/metadata_{drug}.csv only (600 rows each).",
+  "per_drug": {
+    "meropenem": {
+      "file": "data/metadata_meropenem.csv",
+      "rows": 600,
+      "unique_asm_acc": 600,
+      "source": {
+        "ncbi_rows": 600,
+        "bvbrc_rows": 0,
+        "ncbi_evidence": "target_acc begins with NCBI Pathogen Detection 'PDT' prefix",
+        "bvbrc_evidence": "BV-BRC rows use numeric genome IDs (e.g. 562.99681), not GCA_ accessions",
+        "gca_asm_acc_rows": 600,
+        "non_gca_asm_acc_rows": 0
+      },
+      "phenotype_counts": {
+        "susceptible": 300,
+        "resistant": 299,
+        "intermediate": 1
+      },
+      "resistant_counts": {
+        "1": 300,
+        "0": 300
+      },
+      "intermediate_rows": 1,
+      "intermediate_detail": [
+        {
+          "target_acc": "PDT000077415.3",
+          "asm_acc": "GCA_012773715.1",
+          "phenotype": "intermediate",
+          "resistant": 1
+        }
+      ],
+      "split": {
+        "train": 369,
+        "test": 124,
+        "dropped_no_fasta": 107
+      }
+    },
+    "ciprofloxacin": {
+      "file": "data/metadata_ciprofloxacin.csv",
+      "rows": 600,
+      "unique_asm_acc": 600,
+      "source": {
+        "ncbi_rows": 600,
+        "bvbrc_rows": 0,
+        "ncbi_evidence": "target_acc begins with NCBI Pathogen Detection 'PDT' prefix",
+        "bvbrc_evidence": "BV-BRC rows use numeric genome IDs (e.g. 562.99681), not GCA_ accessions",
+        "gca_asm_acc_rows": 600,
+        "non_gca_asm_acc_rows": 0
+      },
+      "phenotype_counts": {
+        "susceptible": 300,
+        "resistant": 299,
+        "intermediate": 1
+      },
+      "resistant_counts": {
+        "1": 300,
+        "0": 300
+      },
+      "intermediate_rows": 1,
+      "intermediate_detail": [
+        {
+          "target_acc": "PDT000107119.2",
+          "asm_acc": "GCA_016537625.2",
+          "phenotype": "intermediate",
+          "resistant": 1
+        }
+      ],
+      "split": {
+        "train": 429,
+        "test": 143,
+        "dropped_no_fasta": 28
+      }
+    },
+    "cefotaxime": {
+      "file": "data/metadata_cefotaxime.csv",
+      "rows": 600,
+      "unique_asm_acc": 600,
+      "source": {
+        "ncbi_rows": 600,
+        "bvbrc_rows": 0,
+        "ncbi_evidence": "target_acc begins with NCBI Pathogen Detection 'PDT' prefix",
+        "bvbrc_evidence": "BV-BRC rows use numeric genome IDs (e.g. 562.99681), not GCA_ accessions",
+        "gca_asm_acc_rows": 600,
+        "non_gca_asm_acc_rows": 0
+      },
+      "phenotype_counts": {
+        "resistant": 300,
+        "susceptible": 300
+      },
+      "resistant_counts": {
+        "1": 300,
+        "0": 300
+      },
+      "intermediate_rows": 0,
+      "intermediate_detail": [],
+      "split": {
+        "train": 433,
+        "test": 145,
+        "dropped_no_fasta": 22
+      }
+    }
+  },
+  "excluded_phenotypes": {
+    "rule": "scripts/ncbi_bigquery.py filters AST_phenotypes to ('r','s','resistant','susceptible','i','intermediate'). ND (not determined), DD (double disk / no interpretation) and NS (non-susceptible) rows were excluded at the BigQuery query stage.",
+    "reconstructable": false,
+    "why_not": "The original metadata-sampling script is not in the repository, so the pre-filter counts of ND/DD/NS cannot be reconstructed from the shipped 600-row files. Only the filter rule is documented in code."
+  },
+  "intermediate_policy": {
+    "rule": "Intermediate (I) is mapped to resistant=1 (clinical default).",
+    "evidence": "The phenotype column retains the literal 'intermediate' while resistant=1."
+  },
+  "kenya": {
+    "enrichment_file": "data/bigquery_output/enrichment_meropenem.csv",
+    "enrichment_unique_isolates": 7,
+    "bioproject": "PRJNA717739 (single Kenyan study, Nairobi)",
+    "where_two_came_from": "The figure of 2 is the overlap between the 7 Kenyan enrichment candidates and the 1,673 unique accessions actually present in the three deployed metadata files. It is not a count of all public Kenyan isolates.",
+    "per_drug": {
+      "meropenem": {
+        "in_metadata": [
+          "GCA_019927625.1",
+          "GCA_020407015.1"
+        ],
+        "split": {
+          "GCA_019927625.1": "train",
+          "GCA_020407015.1": "train"
+        }
+      },
+      "ciprofloxacin": {
+        "in_metadata": [],
+        "split": {}
+      },
+      "cefotaxime": {
+        "in_metadata": [
+          "GCA_019927625.1"
+        ],
+        "split": {
+          "GCA_019927625.1": "train"
+        }
+      }
+    },
+    "leakage_assessment": "No Kenyan enrichment isolate is in any test split. All are in the training partition (or absent from that drug's metadata). Because the same study isolates are not split across train and test, there is no Kenyan cross-split leakage. The broader limitation remains that the split is random and not phylogeny-aware, so near-clonal isolates from other studies could still span the boundary."
+  },
+  "ab_baumannii": {
+    "accessions": {
+      "GCA_016540985.2": {
+        "cefotaxime": [
+          {
+            "target_acc": "PDT000106788.2",
+            "taxgroup_name": "Acinetobacter baumannii",
+            "phenotype": "resistant",
+            "resistant": 1
+          }
+        ]
+      },
+      "GCA_016535175.2": {
+        "cefotaxime": [
+          {
+            "target_acc": "PDT000107150.2",
+            "taxgroup_name": "Acinetobacter baumannii",
+            "phenotype": "resistant",
+            "resistant": 1
+          }
+        ]
+      }
+    },
+    "note": "Both accessions are present only in the cefotaxime metadata. Their target_acc values are NCBI Pathogen Detection IDs, so the labels are NCBI-derived, not BV-BRC. Whether the current NCBI AST table still exposes these records could not be re-queried without BigQuery access; that is a source-currency question, not a provenance question."
+  },
+  "assembly_versions": {
+    "manifest": "validation_results\\all_metadata_genome_manifest.csv",
+    "unique_accessions": 1673,
+    "files_present": 1524,
+    "files_missing": 149,
+    "version_rule": "The FASTA filename and the asm_acc column carry the exact version used (e.g. GCA_019927405.1). NCBI may since have released a newer version; that drift was not re-queried.",
+    "examples": [
+      {
+        "asm_acc": "GCA_016535175.2",
+        "fasta_file": "GCA_016535175.2.fna",
+        "file_exists": true,
+        "sha256": "848d539486cf34186a4580215af2c3bad5cfd739779419bee84651dc65b5cd46"
+      },
+      {
+        "asm_acc": "GCA_016540985.2",
+        "fasta_file": "GCA_016540985.2.fna",
+        "file_exists": true,
+        "sha256": "00c000a08f8f7056c0d414c64068c2481e3f8cfe13b7ab440ce911f16d201c0b"
+      },
+      {
+        "asm_acc": "GCA_019927625.1",
+        "fasta_file": "GCA_019927625.1.fna",
+        "file_exists": true,
+        "sha256": "8c950220462ea252457f1065474c0fcc7692f0546f05d75b8be357d94e175a94"
+      }
+    ]
+  },
+  "cefotaxime_cross_check": {
+    "combined_file": "data/metadata_combined_cefotaxime.csv",
+    "combined_rows": 4019,
+    "combined_source_counts": {
+      "BVBRC": 3419,
+      "NCBI": 600
+    },
+    "deployed_rows_matched": 600,
+    "deployed_source_counts": {
+      "NCBI": 600
+    },
+    "conclusion": "All 600 deployed cefotaxime rows match the NCBI (MIC_or_mixed) subset; none come from the 3,419 BV-BRC disk-diffusion rows."
+  }
+}

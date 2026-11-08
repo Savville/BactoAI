@@ -1,0 +1,601 @@
+target_acc,taxgroup_name,antibiotic,phenotype,asm_acc,resistant
+PDT000107935.2,Acinetobacter baumannii,meropenem,resistant,GCA_016535115.2,1
+PDT000106784.2,Acinetobacter baumannii,meropenem,resistant,GCA_016541005.2,1
+PDT000209485.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143105.1,1
+PDT000534390.1,Acinetobacter baumannii,meropenem,resistant,GCA_006492155.1,1
+PDT000855235.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840605.1,1
+PDT000016119.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406605.1,1
+PDT000016141.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000409105.1,1
+PDT000158306.1,Acinetobacter baumannii,meropenem,resistant,GCA_001874945.1,1
+PDT000107082.2,Acinetobacter baumannii,meropenem,resistant,GCA_016536375.2,1
+PDT000209082.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138005.1,1
+PDT002810215.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050957565.1,1
+PDT000217003.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002180315.1,1
+PDT000219963.1,E.coli and Shigella,meropenem,resistant,GCA_002201835.1,1
+PDT002810211.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050957025.1,1
+PDT001128390.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019927265.1,1
+PDT000016128.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406625.1,1
+PDT000425012.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003969655.1,1
+PDT000106833.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540055.2,1
+PDT000209023.1,Acinetobacter baumannii,meropenem,resistant,GCA_002136775.1,1
+PDT001815336.1,E.coli and Shigella,meropenem,resistant,GCA_032536185.1,1
+PDT000130462.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022315675.1,1
+PDT001770851.1,Klebsiella pneumoniae,meropenem,resistant,GCA_031034115.1,1
+PDT000016127.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406585.1,1
+PDT000016146.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000409025.1,1
+PDT000424957.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968275.1,1
+PDT000424951.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968135.1,1
+PDT002900508.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052265705.1,1
+PDT000106814.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540395.2,1
+PDT000106832.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540125.2,1
+PDT000209494.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143265.1,1
+PDT002080300.1,Klebsiella pneumoniae,meropenem,resistant,GCA_036669215.1,1
+PDT000870021.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014946955.1,1
+PDT000133654.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_021712895.1,1
+PDT001395180.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024715135.1,1
+PDT001395367.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024718935.1,1
+PDT001395184.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024715205.1,1
+PDT001340454.1,E.coli and Shigella,meropenem,resistant,GCA_023866455.1,1
+PDT002391439.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905225.1,1
+PDT000218724.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002192375.1,1
+PDT000855221.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840315.1,1
+PDT002900538.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266325.1,1
+PDT000106828.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540205.2,1
+PDT000595113.1,Acinetobacter baumannii,meropenem,resistant,GCA_008709665.1,1
+PDT000218722.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002192315.1,1
+PDT000130446.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022315975.1,1
+PDT000855228.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840475.1,1
+PDT002711680.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049383925.1,1
+PDT002900526.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266085.1,1
+PDT001395169.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714915.1,1
+PDT000106787.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540905.2,1
+PDT001488004.4,Klebsiella pneumoniae,meropenem,resistant,GCA_027144125.4,1
+PDT002674958.1,Klebsiella pneumoniae,meropenem,resistant,GCA_048590305.1,1
+PDT000380983.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003571805.1,1
+PDT001395186.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024715255.1,1
+PDT001395156.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714655.1,1
+PDT000107126.2,Acinetobacter baumannii,meropenem,resistant,GCA_016535825.2,1
+PDT000144955.1,Acinetobacter baumannii,meropenem,resistant,GCA_001706195.1,1
+PDT000421915.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003950595.1,1
+PDT002839248.1,Klebsiella pneumoniae,meropenem,resistant,GCA_051414815.1,1
+PDT001744152.2,Klebsiella pneumoniae,meropenem,resistant,GCA_031045875.2,1
+PDT000380976.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003571525.1,1
+PDT000111520.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022316285.1,1
+PDT001395173.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714985.1,1
+PDT002808488.1,E.coli and Shigella,meropenem,resistant,GCA_050956805.1,1
+PDT000140747.2,E.coli and Shigella,meropenem,resistant,GCA_012642945.1,1
+PDT002391471.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863125.1,1
+PDT000217002.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002180295.1,1
+PDT000158317.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001875125.1,1
+PDT000292899.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002968475.1,1
+PDT002716949.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049538235.1,1
+PDT000016120.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406665.1,1
+PDT000173722.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_021712735.1,1
+PDT001684052.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_029635965.2,1
+PDT001395162.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714765.1,1
+PDT000209544.1,Acinetobacter baumannii,meropenem,resistant,GCA_002144925.1,1
+PDT000209083.1,Acinetobacter baumannii,meropenem,resistant,GCA_002137995.1,1
+PDT000030568.1,E.coli and Shigella,meropenem,resistant,GCA_000692815.1,1
+PDT000421922.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003951195.1,1
+PDT000030614.1,Klebsiella pneumoniae,meropenem,resistant,GCA_000692195.1,1
+PDT000130468.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022315575.1,1
+PDT001428969.1,Klebsiella pneumoniae,meropenem,resistant,GCA_025367465.1,1
+PDT000425032.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003970065.1,1
+PDT002900514.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052265825.1,1
+PDT000107141.2,Acinetobacter baumannii,meropenem,resistant,GCA_016535445.2,1
+PDT000021114.1,Klebsiella pneumoniae,meropenem,resistant,GCA_000534255.1,1
+PDT002900519.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052265935.1,1
+PDT000016122.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406705.1,1
+PDT000016130.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406645.1,1
+PDT000311293.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003073895.1,1
+PDT000144951.1,Acinetobacter baumannii,meropenem,resistant,GCA_001706135.1,1
+PDT000077415.3,E.coli and Shigella,meropenem,intermediate,GCA_012773715.1,1
+PDT002125217.2,Klebsiella pneumoniae,meropenem,resistant,GCA_037725565.2,1
+PDT002391458.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863405.1,1
+PDT000197021.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002055855.1,1
+PDT000292998.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_002968955.1,1
+PDT002900542.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266405.1,1
+PDT000209480.1,Acinetobacter baumannii,meropenem,resistant,GCA_002142995.1,1
+PDT000144981.2,Acinetobacter baumannii,meropenem,resistant,GCA_001706775.2,1
+PDT002810207.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050956945.1,1
+PDT002857362.1,Klebsiella pneumoniae,meropenem,resistant,GCA_051549675.1,1
+PDT000226507.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022299675.1,1
+PDT000197020.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002055765.1,1
+PDT000855237.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840645.1,1
+PDT001128448.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019928395.1,1
+PDT000534413.1,Acinetobacter baumannii,meropenem,resistant,GCA_006492625.1,1
+PDT002810212.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050957305.1,1
+PDT002857366.1,Klebsiella pneumoniae,meropenem,resistant,GCA_051549735.1,1
+PDT001128436.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019928185.1,1
+PDT001230705.1,Klebsiella pneumoniae,meropenem,resistant,GCA_021773985.1,1
+PDT002991822.1,Acinetobacter baumannii,meropenem,resistant,GCA_053651035.1,1
+PDT002857364.1,Klebsiella pneumoniae,meropenem,resistant,GCA_051549705.1,1
+PDT000231449.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022299635.1,1
+PDT000219971.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002202255.1,1
+PDT000148432.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001720905.1,1
+PDT001149149.1,Klebsiella pneumoniae,meropenem,resistant,GCA_020407015.1,1
+PDT000424960.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968315.1,1
+PDT002391443.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043904905.1,1
+PDT002147335.1,Klebsiella pneumoniae,meropenem,resistant,GCA_038512135.1,1
+PDT002110220.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_037104505.1,1
+PDT000106840.2,Acinetobacter baumannii,meropenem,resistant,GCA_016539895.2,1
+PDT000144980.2,Acinetobacter baumannii,meropenem,resistant,GCA_001706735.2,1
+PDT002391441.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905145.1,1
+PDT001986229.1,Klebsiella pneumoniae,meropenem,resistant,GCA_033726815.1,1
+PDT000595124.1,Klebsiella pneumoniae,meropenem,resistant,GCA_008704185.1,1
+PDT001128408.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019927625.1,1
+PDT000343385.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003288335.1,1
+PDT000101123.2,Acinetobacter baumannii,meropenem,resistant,GCA_016541645.2,1
+PDT000130464.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022315655.1,1
+PDT000145746.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001709275.1,1
+PDT000326684.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003194325.1,1
+PDT000015905.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000417185.1,1
+PDT000521580.1,E.coli and Shigella,meropenem,resistant,GCA_006265085.1,1
+PDT002711652.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049381405.1,1
+PDT000311291.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003073735.1,1
+PDT000209050.1,Acinetobacter baumannii,meropenem,resistant,GCA_002137345.1,1
+PDT000209099.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138315.1,1
+PDT000595122.1,Klebsiella pneumoniae,meropenem,resistant,GCA_008704155.1,1
+PDT000016137.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406405.1,1
+PDT000352616.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003324405.1,1
+PDT000209551.1,Acinetobacter baumannii,meropenem,resistant,GCA_002145065.1,1
+PDT002391444.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043904885.1,1
+PDT002391462.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863325.1,1
+PDT002810210.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050957005.1,1
+PDT002110214.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_037104415.1,1
+PDT000209513.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143655.1,1
+PDT000326963.1,Acinetobacter baumannii,meropenem,resistant,GCA_003194535.1,1
+PDT001504104.1,E.coli and Shigella,meropenem,resistant,GCA_026421045.1,1
+PDT002391449.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043904785.1,1
+PDT001823068.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_030504675.1,1
+PDT001504105.1,E.coli and Shigella,meropenem,resistant,GCA_026421065.1,1
+PDT000231448.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022299695.1,1
+PDT002391417.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905625.1,1
+PDT000016134.3,Klebsiella pneumoniae,meropenem,resistant,GCA_000406765.2,1
+PDT002900535.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266265.1,1
+PDT000106921.2,Acinetobacter baumannii,meropenem,resistant,GCA_016537745.2,1
+PDT001016879.1,Acinetobacter baumannii,meropenem,resistant,GCA_018221425.1,1
+PDT000050775.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_000937495.2,1
+PDT001395160.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714735.1,1
+PDT000106854.2,Acinetobacter baumannii,meropenem,resistant,GCA_016539465.2,1
+PDT000106861.2,Acinetobacter baumannii,meropenem,resistant,GCA_016539425.2,1
+PDT000209488.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143145.1,1
+PDT001159521.1,Enterobacter cloacae,meropenem,resistant,GCA_020540925.1,1
+PDT000425034.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003970615.1,1
+PDT001395154.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714615.1,1
+PDT001395170.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024714935.1,1
+PDT000209084.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138035.1,1
+PDT000209885.1,Acinetobacter baumannii,meropenem,resistant,GCA_002148725.1,1
+PDT000145745.2,Acinetobacter baumannii,meropenem,resistant,GCA_001713685.2,1
+PDT002391457.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863365.1,1
+PDT000130448.5,Klebsiella pneumoniae,meropenem,resistant,GCA_022315935.1,1
+PDT001428970.1,Klebsiella pneumoniae,meropenem,resistant,GCA_025367575.1,1
+PDT002900529.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266145.1,1
+PDT000106782.2,Acinetobacter baumannii,meropenem,resistant,GCA_016541185.2,1
+PDT000494597.1,Acinetobacter baumannii,meropenem,resistant,GCA_004799225.1,1
+PDT001744136.2,Klebsiella pneumoniae,meropenem,resistant,GCA_031046155.2,1
+PDT000343387.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003288375.1,1
+PDT001395183.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024715195.1,1
+PDT002391505.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043859275.1,1
+PDT002857365.1,Klebsiella pneumoniae,meropenem,resistant,GCA_051549725.1,1
+PDT001395057.2,Enterobacter cloacae,meropenem,resistant,GCA_024706725.1,1
+PDT000107146.2,Acinetobacter baumannii,meropenem,resistant,GCA_016535185.2,1
+PDT000106796.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540785.2,1
+PDT000209557.1,Acinetobacter baumannii,meropenem,resistant,GCA_002145175.1,1
+PDT002810203.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050956655.1,1
+PDT000563636.1,Klebsiella pneumoniae,meropenem,resistant,GCA_007955295.1,1
+PDT002650445.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049102055.1,1
+PDT002391421.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905605.1,1
+PDT000148423.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001720705.1,1
+PDT001778385.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_030253475.1,1
+PDT002857506.1,E.coli and Shigella,meropenem,resistant,GCA_051549655.1,1
+PDT001184877.1,E.coli and Shigella,meropenem,resistant,GCA_020985225.1,1
+PDT000425003.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003969485.1,1
+PDT002008631.1,Acinetobacter baumannii,meropenem,resistant,GCA_033970345.1,1
+PDT000294792.1,Acinetobacter baumannii,meropenem,resistant,GCA_002996805.1,1
+PDT000209028.1,Acinetobacter baumannii,meropenem,resistant,GCA_002136885.1,1
+PDT000209478.1,Acinetobacter baumannii,meropenem,resistant,GCA_002142935.1,1
+PDT000209100.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138345.1,1
+PDT000310772.1,E.coli and Shigella,meropenem,resistant,GCA_003073835.1,1
+PDT000521581.1,E.coli and Shigella,meropenem,resistant,GCA_006265155.1,1
+PDT002900543.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052266425.1,1
+PDT000421926.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003951575.1,1
+PDT000015896.3,Klebsiella pneumoniae,meropenem,resistant,GCA_000417225.2,1
+PDT000424995.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003969305.1,1
+PDT000290012.1,Acinetobacter baumannii,meropenem,resistant,GCA_002947415.1,1
+PDT000198416.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022300175.1,1
+PDT000751082.1,Klebsiella pneumoniae,meropenem,resistant,GCA_013180445.1,1
+PDT000140731.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_021712855.1,1
+PDT000106810.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540525.2,1
+PDT000107149.2,Acinetobacter baumannii,meropenem,resistant,GCA_016535275.2,1
+PDT000421932.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003952035.1,1
+PDT000158318.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001875135.1,1
+PDT000424958.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968295.1,1
+PDT000106941.2,Acinetobacter baumannii,meropenem,resistant,GCA_016537075.2,1
+PDT000209535.1,Acinetobacter baumannii,meropenem,resistant,GCA_002144725.1,1
+PDT000144971.2,Acinetobacter baumannii,meropenem,resistant,GCA_001706555.2,1
+PDT000421931.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003952055.1,1
+PDT002391428.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905425.1,1
+PDT000167139.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_001875205.1,1
+PDT000534417.1,Acinetobacter baumannii,meropenem,resistant,GCA_006492705.1,1
+PDT002711663.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049383445.1,1
+PDT000209097.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138305.1,1
+PDT000534490.1,Acinetobacter baumannii,meropenem,resistant,GCA_006494175.1,1
+PDT002808491.1,E.coli and Shigella,meropenem,resistant,GCA_050956855.1,1
+PDT002391433.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905355.1,1
+PDT000424993.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003969295.1,1
+PDT000424946.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968035.1,1
+PDT001395174.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_024715015.1,1
+PDT000094628.1,Acinetobacter baumannii,meropenem,resistant,GCA_001441475.1,1
+PDT000106794.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540745.2,1
+PDT000209484.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143035.1,1
+PDT000200502.3,Klebsiella pneumoniae,meropenem,resistant,GCA_022300055.1,1
+PDT000022733.1,Klebsiella pneumoniae,meropenem,resistant,GCA_000566905.1,1
+PDT001830466.2,E.coli and Shigella,meropenem,resistant,GCA_032337975.2,1
+PDT002391432.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905385.1,1
+PDT002810204.1,Klebsiella pneumoniae,meropenem,resistant,GCA_050956725.1,1
+PDT000870019.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014946935.1,1
+PDT000294804.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_002997005.1,1
+PDT001398902.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_024734815.1,1
+PDT001766230.1,Klebsiella pneumoniae,meropenem,resistant,GCA_030128995.1,1
+PDT000016143.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000408965.1,1
+PDT001795319.1,Acinetobacter baumannii,meropenem,resistant,GCA_031113405.1,1
+PDT000217702.1,Acinetobacter baumannii,meropenem,resistant,GCA_002184565.1,1
+PDT002391466.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863245.1,1
+PDT001744202.2,Klebsiella pneumoniae,meropenem,resistant,GCA_031044835.2,1
+PDT000106766.2,Acinetobacter baumannii,meropenem,resistant,GCA_019217325.1,1
+PDT000209548.1,Acinetobacter baumannii,meropenem,resistant,GCA_002144975.1,1
+PDT000209096.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138245.1,1
+PDT000331123.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003204465.1,1
+PDT001128438.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019928215.1,1
+PDT000311292.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003073795.1,1
+PDT000209533.1,Acinetobacter baumannii,meropenem,resistant,GCA_002144685.1,1
+PDT000144950.1,Acinetobacter baumannii,meropenem,resistant,GCA_001706115.1,1
+PDT002391437.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905265.1,1
+PDT000276842.1,E.coli and Shigella,meropenem,resistant,GCA_002860105.1,1
+PDT002391440.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905185.1,1
+PDT001744192.2,Klebsiella pneumoniae,meropenem,resistant,GCA_031045065.2,1
+PDT000855232.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840555.1,1
+PDT002711655.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049381525.1,1
+PDT000015909.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000417365.1,1
+PDT000158304.1,Acinetobacter baumannii,meropenem,resistant,GCA_001874885.1,1
+PDT000209501.1,Acinetobacter baumannii,meropenem,resistant,GCA_002143425.1,1
+PDT000534464.1,Acinetobacter baumannii,meropenem,resistant,GCA_006493655.1,1
+PDT000424972.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968395.1,1
+PDT000424979.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968985.1,1
+PDT000106827.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540145.2,1
+PDT000209044.1,Acinetobacter baumannii,meropenem,resistant,GCA_002137225.1,1
+PDT000534420.1,Acinetobacter baumannii,meropenem,resistant,GCA_006492795.1,1
+PDT002391454.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863445.1,1
+PDT000016115.2,Klebsiella pneumoniae,meropenem,resistant,GCA_000406425.1,1
+PDT000424963.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003968425.1,1
+PDT000209022.1,Acinetobacter baumannii,meropenem,resistant,GCA_002136745.1,1
+PDT002391431.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043905345.1,1
+PDT000144503.1,Klebsiella pneumoniae,meropenem,resistant,GCA_001704235.1,1
+PDT000855233.1,Klebsiella pneumoniae,meropenem,resistant,GCA_014840575.1,1
+PDT001149148.1,Klebsiella pneumoniae,meropenem,resistant,GCA_020406995.1,1
+PDT001963714.1,Acinetobacter baumannii,meropenem,resistant,GCA_033142715.1,1
+PDT000209086.1,Acinetobacter baumannii,meropenem,resistant,GCA_002138055.1,1
+PDT001795322.1,Acinetobacter baumannii,meropenem,resistant,GCA_031113395.1,1
+PDT000209554.1,Acinetobacter baumannii,meropenem,resistant,GCA_002145125.1,1
+PDT002808495.1,E.coli and Shigella,meropenem,resistant,GCA_050957175.1,1
+PDT002391452.1,Klebsiella pneumoniae,meropenem,resistant,GCA_043863515.1,1
+PDT000219690.1,Klebsiella pneumoniae,meropenem,resistant,GCA_002197225.1,1
+PDT001381287.1,Klebsiella pneumoniae,meropenem,resistant,GCA_024580215.1,1
+PDT002650446.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049102035.1,1
+PDT000114630.2,Acinetobacter baumannii,meropenem,resistant,GCA_016521705.2,1
+PDT000106808.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540485.2,1
+PDT000352589.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003324315.1,1
+PDT001128406.2,Klebsiella pneumoniae,meropenem,resistant,GCA_019927585.1,1
+PDT000294806.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_003000695.1,1
+PDT000209054.1,Acinetobacter baumannii,meropenem,resistant,GCA_002137425.1,1
+PDT000325637.1,E.coli and Shigella,meropenem,resistant,GCA_003194265.1,1
+PDT000421918.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003951115.1,1
+PDT000130449.2,Klebsiella pneumoniae,meropenem,resistant,GCA_022315955.1,1
+PDT000311282.1,Klebsiella pneumoniae,meropenem,resistant,GCA_003073675.1,1
+PDT002716947.1,Klebsiella pneumoniae,meropenem,resistant,GCA_049538195.1,1
+PDT000186894.2,Pseudomonas aeruginosa,meropenem,resistant,GCA_021712935.1,1
+PDT002900513.1,Pseudomonas aeruginosa,meropenem,resistant,GCA_052265805.1,1
+PDT000106830.2,Acinetobacter baumannii,meropenem,resistant,GCA_016540065.2,1
+PDT001795321.1,Acinetobacter baumannii,meropenem,resistant,GCA_031113375.1,1
+PDT000534463.1,Acinetobacter baumannii,meropenem,resistant,GCA_006493645.1,1
+PDT000107053.2,Acinetobacter baumannii,meropenem,susceptible,GCA_016536875.2,0
+PDT000107051.2,Acinetobacter baumannii,meropenem,susceptible,GCA_016536925.2,0
+PDT000209013.1,Acinetobacter baumannii,meropenem,susceptible,GCA_002136605.1,0
+PDT000209064.1,Acinetobacter baumannii,meropenem,susceptible,GCA_002137635.1,0
+PDT003089535.1,E.coli and Shigella,meropenem,susceptible,GCA_055029395.1,0
+PDT002136323.1,E.coli and Shigella,meropenem,susceptible,GCA_038080255.1,0
+PDT001830678.2,E.coli and Shigella,meropenem,susceptible,GCA_032333335.2,0
+PDT001830952.2,E.coli and Shigella,meropenem,susceptible,GCA_032329755.2,0
+PDT001830786.2,E.coli and Shigella,meropenem,susceptible,GCA_032331935.2,0
+PDT000565846.1,E.coli and Shigella,meropenem,susceptible,GCA_012995545.1,0
+PDT000844582.1,E.coli and Shigella,meropenem,susceptible,GCA_020469085.1,0
+PDT000639580.1,E.coli and Shigella,meropenem,susceptible,GCA_012006285.1,0
+PDT000566218.1,E.coli and Shigella,meropenem,susceptible,GCA_012988805.1,0
+PDT000395503.1,E.coli and Shigella,meropenem,susceptible,GCA_003772905.1,0
+PDT000395181.1,E.coli and Shigella,meropenem,susceptible,GCA_003794055.1,0
+PDT000844616.1,E.coli and Shigella,meropenem,susceptible,GCA_014745735.1,0
+PDT000550370.1,E.coli and Shigella,meropenem,susceptible,GCA_012310365.1,0
+PDT000395330.1,E.coli and Shigella,meropenem,susceptible,GCA_003793235.1,0
+PDT000566172.1,E.coli and Shigella,meropenem,susceptible,GCA_012989405.1,0
+PDT000544283.1,E.coli and Shigella,meropenem,susceptible,GCA_012312385.1,0
+PDT000550350.1,E.coli and Shigella,meropenem,susceptible,GCA_012310045.1,0
+PDT000395402.1,E.coli and Shigella,meropenem,susceptible,GCA_003791365.1,0
+PDT000395031.1,E.coli and Shigella,meropenem,susceptible,GCA_012072165.1,0
+PDT000485914.1,E.coli and Shigella,meropenem,susceptible,GCA_004567665.1,0
+PDT000543240.1,E.coli and Shigella,meropenem,susceptible,GCA_004566755.1,0
+PDT001341147.1,E.coli and Shigella,meropenem,susceptible,GCA_023879955.1,0
+PDT001340182.1,E.coli and Shigella,meropenem,susceptible,GCA_023859785.1,0
+PDT001341205.1,E.coli and Shigella,meropenem,susceptible,GCA_023881125.1,0
+PDT001340608.1,E.coli and Shigella,meropenem,susceptible,GCA_023869545.1,0
+PDT001463441.1,E.coli and Shigella,meropenem,susceptible,GCA_025783955.2,0
+PDT001340248.1,E.coli and Shigella,meropenem,susceptible,GCA_023861105.1,0
+PDT001341482.1,E.coli and Shigella,meropenem,susceptible,GCA_023886665.1,0
+PDT001340192.1,E.coli and Shigella,meropenem,susceptible,GCA_023859985.1,0
+PDT001341557.1,E.coli and Shigella,meropenem,susceptible,GCA_023889945.1,0
+PDT001341427.1,E.coli and Shigella,meropenem,susceptible,GCA_023885565.1,0
+PDT001463391.1,E.coli and Shigella,meropenem,susceptible,GCA_025782955.2,0
+PDT001341414.1,E.coli and Shigella,meropenem,susceptible,GCA_023885305.1,0
+PDT001340452.1,E.coli and Shigella,meropenem,susceptible,GCA_023866425.1,0
+PDT001443609.2,E.coli and Shigella,meropenem,susceptible,GCA_025580725.2,0
+PDT001340510.1,E.coli and Shigella,meropenem,susceptible,GCA_023867575.1,0
+PDT001467074.1,E.coli and Shigella,meropenem,susceptible,GCA_025829335.1,0
+PDT001467155.1,E.coli and Shigella,meropenem,susceptible,GCA_025830955.1,0
+PDT001467040.1,E.coli and Shigella,meropenem,susceptible,GCA_025828635.1,0
+PDT001467246.1,E.coli and Shigella,meropenem,susceptible,GCA_025832775.1,0
+PDT002776230.1,E.coli and Shigella,meropenem,susceptible,GCA_050502335.1,0
+PDT002674864.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_048586085.1,0
+PDT001744180.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_031045325.2,0
+PDT001128441.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019928285.1,0
+PDT001128537.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019930325.1,0
+PDT002145653.1,Pseudomonas aeruginosa,meropenem,susceptible,GCA_038437415.1,0
+PDT001023713.1,Salmonella enterica,meropenem,susceptible,GCA_018477725.1,0
+PDT000517465.1,Salmonella enterica,meropenem,susceptible,GCA_006295895.1,0
+PDT000983342.1,Salmonella enterica,meropenem,susceptible,GCA_017338465.1,0
+PDT000123206.2,Salmonella enterica,meropenem,susceptible,GCA_008412025.1,0
+PDT000359527.1,Salmonella enterica,meropenem,susceptible,GCA_008506165.1,0
+PDT001088033.1,Salmonella enterica,meropenem,susceptible,GCA_019258905.1,0
+PDT001088003.1,Salmonella enterica,meropenem,susceptible,GCA_019258165.1,0
+PDT000385596.1,Salmonella enterica,meropenem,susceptible,GCA_005543715.1,0
+PDT000359415.1,Salmonella enterica,meropenem,susceptible,GCA_008537665.1,0
+PDT000565665.1,Salmonella enterica,meropenem,susceptible,GCA_010916695.1,0
+PDT001983703.1,Salmonella enterica,meropenem,susceptible,GCA_046009675.1,0
+PDT000108231.2,Salmonella enterica,meropenem,susceptible,GCA_008515015.1,0
+PDT000136391.2,Salmonella enterica,meropenem,susceptible,GCA_008426725.1,0
+PDT000269200.2,Salmonella enterica,meropenem,susceptible,GCA_010775315.1,0
+PDT000359509.1,Salmonella enterica,meropenem,susceptible,GCA_008539075.1,0
+PDT000518305.1,Salmonella enterica,meropenem,susceptible,GCA_006339145.1,0
+PDT000144970.1,Acinetobacter baumannii,meropenem,susceptible,GCA_001706525.1,0
+PDT002991851.1,E.coli and Shigella,meropenem,susceptible,GCA_053665735.1,0
+PDT001830449.2,E.coli and Shigella,meropenem,susceptible,GCA_032338235.2,0
+PDT001830919.2,E.coli and Shigella,meropenem,susceptible,GCA_032330095.2,0
+PDT000226502.2,E.coli and Shigella,meropenem,susceptible,GCA_012437555.1,0
+PDT000231447.2,E.coli and Shigella,meropenem,susceptible,GCA_012432815.1,0
+PDT000617729.1,E.coli and Shigella,meropenem,susceptible,GCA_012622865.1,0
+PDT000395470.1,E.coli and Shigella,meropenem,susceptible,GCA_003775545.1,0
+PDT000395313.1,E.coli and Shigella,meropenem,susceptible,GCA_003774205.1,0
+PDT000566164.1,E.coli and Shigella,meropenem,susceptible,GCA_012989585.1,0
+PDT000566019.1,E.coli and Shigella,meropenem,susceptible,GCA_012992645.1,0
+PDT000566199.1,E.coli and Shigella,meropenem,susceptible,GCA_012989765.1,0
+PDT000395132.1,E.coli and Shigella,meropenem,susceptible,GCA_003784305.1,0
+PDT000395264.1,E.coli and Shigella,meropenem,susceptible,GCA_003791145.1,0
+PDT000639585.1,E.coli and Shigella,meropenem,susceptible,GCA_012608795.1,0
+PDT000566224.1,E.coli and Shigella,meropenem,susceptible,GCA_012988585.1,0
+PDT000749473.1,E.coli and Shigella,meropenem,susceptible,GCA_015294705.1,0
+PDT000644846.1,E.coli and Shigella,meropenem,susceptible,GCA_012604515.1,0
+PDT000497324.1,E.coli and Shigella,meropenem,susceptible,GCA_012375575.1,0
+PDT001341422.1,E.coli and Shigella,meropenem,susceptible,GCA_023885465.1,0
+PDT001443573.2,E.coli and Shigella,meropenem,susceptible,GCA_025579545.2,0
+PDT001340680.1,E.coli and Shigella,meropenem,susceptible,GCA_023870995.1,0
+PDT001341005.1,E.coli and Shigella,meropenem,susceptible,GCA_023877125.1,0
+PDT001341875.1,E.coli and Shigella,meropenem,susceptible,GCA_023894665.1,0
+PDT001341172.1,E.coli and Shigella,meropenem,susceptible,GCA_023880465.1,0
+PDT001340277.1,E.coli and Shigella,meropenem,susceptible,GCA_023861685.1,0
+PDT001341183.1,E.coli and Shigella,meropenem,susceptible,GCA_023880685.1,0
+PDT001463561.1,E.coli and Shigella,meropenem,susceptible,GCA_025786855.2,0
+PDT001467295.1,E.coli and Shigella,meropenem,susceptible,GCA_025833755.1,0
+PDT001466964.1,E.coli and Shigella,meropenem,susceptible,GCA_025827125.1,0
+PDT001466978.1,E.coli and Shigella,meropenem,susceptible,GCA_025827415.1,0
+PDT001467234.1,E.coli and Shigella,meropenem,susceptible,GCA_025832535.1,0
+PDT002693047.1,E.coli and Shigella,meropenem,susceptible,GCA_049208625.1,0
+PDT002693081.1,E.coli and Shigella,meropenem,susceptible,GCA_049207985.1,0
+PDT002991288.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_053676115.1,0
+PDT001744146.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_031046015.2,0
+PDT000714374.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_011682905.1,0
+PDT001128418.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019927825.1,0
+PDT000022725.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_000566725.1,0
+PDT001276634.1,Pseudomonas aeruginosa,meropenem,susceptible,GCA_022966415.1,0
+PDT000940997.1,Salmonella enterica,meropenem,susceptible,GCA_017220865.1,0
+PDT000604716.1,Salmonella enterica,meropenem,susceptible,GCA_009090445.1,0
+PDT000269264.2,Salmonella enterica,meropenem,susceptible,GCA_010447735.1,0
+PDT000728670.1,Salmonella enterica,meropenem,susceptible,GCA_014574935.1,0
+PDT000728719.1,Salmonella enterica,meropenem,susceptible,GCA_014574575.1,0
+PDT001088028.1,Salmonella enterica,meropenem,susceptible,GCA_019258005.1,0
+PDT001088037.1,Salmonella enterica,meropenem,susceptible,GCA_019257925.1,0
+PDT000385783.1,Salmonella enterica,meropenem,susceptible,GCA_005689015.1,0
+PDT001974853.1,Salmonella enterica,meropenem,susceptible,GCA_046018755.1,0
+PDT000565653.1,Salmonella enterica,meropenem,susceptible,GCA_011553755.1,0
+PDT000644772.1,Salmonella enterica,meropenem,susceptible,GCA_010385065.1,0
+PDT000565577.1,Salmonella enterica,meropenem,susceptible,GCA_010878745.1,0
+PDT001974954.2,Salmonella enterica,meropenem,susceptible,GCA_046008575.1,0
+PDT000385558.1,Salmonella enterica,meropenem,susceptible,GCA_005544195.1,0
+PDT000385603.1,Salmonella enterica,meropenem,susceptible,GCA_005446705.1,0
+PDT000593921.1,Salmonella enterica,meropenem,susceptible,GCA_008757915.1,0
+PDT000518373.1,Salmonella enterica,meropenem,susceptible,GCA_006340655.1,0
+PDT000134431.2,Salmonella enterica,meropenem,susceptible,GCA_008412685.1,0
+PDT000565831.1,Salmonella enterica,meropenem,susceptible,GCA_011758155.1,0
+PDT000843339.1,Salmonella enterica,meropenem,susceptible,GCA_046041455.1,0
+PDT001128227.2,Salmonella enterica,meropenem,susceptible,GCA_011408855.2,0
+PDT001974995.1,Salmonella enterica,meropenem,susceptible,GCA_046014715.1,0
+PDT000094633.1,Acinetobacter baumannii,meropenem,susceptible,GCA_001441565.1,0
+PDT000209546.1,Acinetobacter baumannii,meropenem,susceptible,GCA_002144955.1,0
+PDT000198909.3,E.coli and Shigella,meropenem,susceptible,GCA_012479815.1,0
+PDT000588640.1,E.coli and Shigella,meropenem,susceptible,GCA_012438605.1,0
+PDT000395107.1,E.coli and Shigella,meropenem,susceptible,GCA_003784225.1,0
+PDT000395222.1,E.coli and Shigella,meropenem,susceptible,GCA_003791505.1,0
+PDT000395359.1,E.coli and Shigella,meropenem,susceptible,GCA_015334125.1,0
+PDT000610397.1,E.coli and Shigella,meropenem,susceptible,GCA_012449705.1,0
+PDT000566031.1,E.coli and Shigella,meropenem,susceptible,GCA_012992405.1,0
+PDT000645124.1,E.coli and Shigella,meropenem,susceptible,GCA_012598865.1,0
+PDT000524496.3,E.coli and Shigella,meropenem,susceptible,GCA_012288875.2,0
+PDT000714233.1,E.coli and Shigella,meropenem,susceptible,GCA_012855335.1,0
+PDT000639510.1,E.coli and Shigella,meropenem,susceptible,GCA_012609915.1,0
+PDT000497343.1,E.coli and Shigella,meropenem,susceptible,GCA_012375175.1,0
+PDT000395384.1,E.coli and Shigella,meropenem,susceptible,GCA_003783785.1,0
+PDT001166126.1,E.coli and Shigella,meropenem,susceptible,GCA_020690525.1,0
+PDT000645075.1,E.coli and Shigella,meropenem,susceptible,GCA_012598205.1,0
+PDT000550394.1,E.coli and Shigella,meropenem,susceptible,GCA_012316565.1,0
+PDT000639518.1,E.coli and Shigella,meropenem,susceptible,GCA_012609515.1,0
+PDT000550337.1,E.coli and Shigella,meropenem,susceptible,GCA_012308965.1,0
+PDT000294790.1,E.coli and Shigella,meropenem,susceptible,GCA_003000615.1,0
+PDT000543134.1,E.coli and Shigella,meropenem,susceptible,GCA_004566665.1,0
+PDT000898642.1,E.coli and Shigella,meropenem,susceptible,GCA_015672775.1,0
+PDT001340642.1,E.coli and Shigella,meropenem,susceptible,GCA_023870225.1,0
+PDT001340178.1,E.coli and Shigella,meropenem,susceptible,GCA_023859705.1,0
+PDT001341820.1,E.coli and Shigella,meropenem,susceptible,GCA_023891945.1,0
+PDT001340373.1,E.coli and Shigella,meropenem,susceptible,GCA_023863605.1,0
+PDT001341879.1,E.coli and Shigella,meropenem,susceptible,GCA_023894745.1,0
+PDT001463455.1,E.coli and Shigella,meropenem,susceptible,GCA_025784235.2,0
+PDT001341765.1,E.coli and Shigella,meropenem,susceptible,GCA_023890705.1,0
+PDT001341207.1,E.coli and Shigella,meropenem,susceptible,GCA_023881165.1,0
+PDT001340709.1,E.coli and Shigella,meropenem,susceptible,GCA_023871565.1,0
+PDT001467032.1,E.coli and Shigella,meropenem,susceptible,GCA_025828495.1,0
+PDT001467051.1,E.coli and Shigella,meropenem,susceptible,GCA_025828875.1,0
+PDT000201878.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_022299955.1,0
+PDT001744186.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_031045235.2,0
+PDT001128401.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019927485.1,0
+PDT001067438.1,Salmonella enterica,meropenem,susceptible,GCA_018873275.1,0
+PDT001198103.1,Salmonella enterica,meropenem,susceptible,GCA_021104955.1,0
+PDT000550600.1,Salmonella enterica,meropenem,susceptible,GCA_007862505.1,0
+PDT000128767.2,Salmonella enterica,meropenem,susceptible,GCA_008476115.1,0
+PDT000134424.2,Salmonella enterica,meropenem,susceptible,GCA_008476585.1,0
+PDT000385810.1,Salmonella enterica,meropenem,susceptible,GCA_005415375.1,0
+PDT000586265.1,Salmonella enterica,meropenem,susceptible,GCA_008552075.1,0
+PDT000359523.1,Salmonella enterica,meropenem,susceptible,GCA_008505565.1,0
+PDT000594060.1,Salmonella enterica,meropenem,susceptible,GCA_008759835.1,0
+PDT000671498.1,Salmonella enterica,meropenem,susceptible,GCA_011218885.1,0
+PDT000269455.2,Salmonella enterica,meropenem,susceptible,GCA_009580245.1,0
+PDT000132446.2,Salmonella enterica,meropenem,susceptible,GCA_008476325.1,0
+PDT000550657.1,Salmonella enterica,meropenem,susceptible,GCA_007865465.1,0
+PDT000593902.1,Salmonella enterica,meropenem,susceptible,GCA_008757575.1,0
+PDT000584502.3,Salmonella enterica,meropenem,susceptible,GCA_008394015.2,0
+PDT000593942.1,Salmonella enterica,meropenem,susceptible,GCA_008759275.1,0
+PDT000269344.2,Salmonella enterica,meropenem,susceptible,GCA_010129805.1,0
+PDT002553331.1,E.coli and Shigella,meropenem,susceptible,GCA_046376305.1,0
+PDT000106839.2,Acinetobacter baumannii,meropenem,susceptible,GCA_016540015.2,0
+PDT000113170.2,Acinetobacter baumannii,meropenem,susceptible,GCA_016532475.2,0
+PDT003089556.1,E.coli and Shigella,meropenem,susceptible,GCA_055028075.1,0
+PDT000124872.2,E.coli and Shigella,meropenem,susceptible,GCA_012707245.1,0
+PDT001830465.2,E.coli and Shigella,meropenem,susceptible,GCA_032338015.2,0
+PDT000201876.2,E.coli and Shigella,meropenem,susceptible,GCA_012479925.1,0
+PDT001830492.2,E.coli and Shigella,meropenem,susceptible,GCA_032337635.2,0
+PDT001830631.2,E.coli and Shigella,meropenem,susceptible,GCA_032333975.2,0
+PDT000394942.1,E.coli and Shigella,meropenem,susceptible,GCA_012074165.1,0
+PDT000645082.1,E.coli and Shigella,meropenem,susceptible,GCA_012598085.1,0
+PDT000550399.1,E.coli and Shigella,meropenem,susceptible,GCA_012316645.1,0
+PDT000588813.1,E.coli and Shigella,meropenem,susceptible,GCA_012453765.1,0
+PDT000550360.1,E.coli and Shigella,meropenem,susceptible,GCA_012314005.1,0
+PDT000394918.1,E.coli and Shigella,meropenem,susceptible,GCA_012074685.1,0
+PDT000395378.1,E.coli and Shigella,meropenem,susceptible,GCA_003774925.1,0
+PDT000607894.1,E.coli and Shigella,meropenem,susceptible,GCA_012449925.1,0
+PDT000844643.1,E.coli and Shigella,meropenem,susceptible,GCA_014737595.1,0
+PDT000844592.1,E.coli and Shigella,meropenem,susceptible,GCA_020469005.1,0
+PDT000639577.1,E.coli and Shigella,meropenem,susceptible,GCA_012609015.1,0
+PDT000550387.1,E.coli and Shigella,meropenem,susceptible,GCA_012314985.1,0
+PDT000394971.1,E.coli and Shigella,meropenem,susceptible,GCA_012073585.1,0
+PDT000644929.1,E.coli and Shigella,meropenem,susceptible,GCA_012602715.1,0
+PDT000687440.1,E.coli and Shigella,meropenem,susceptible,GCA_012701285.1,0
+PDT000543130.1,E.coli and Shigella,meropenem,susceptible,GCA_004567265.1,0
+PDT001341108.1,E.coli and Shigella,meropenem,susceptible,GCA_023879185.1,0
+PDT001341898.1,E.coli and Shigella,meropenem,susceptible,GCA_023895175.1,0
+PDT001354779.1,E.coli and Shigella,meropenem,susceptible,GCA_024165985.1,0
+PDT001341395.1,E.coli and Shigella,meropenem,susceptible,GCA_023884905.1,0
+PDT001463674.1,E.coli and Shigella,meropenem,susceptible,GCA_025789655.2,0
+PDT001341769.1,E.coli and Shigella,meropenem,susceptible,GCA_023890805.1,0
+PDT001340210.1,E.coli and Shigella,meropenem,susceptible,GCA_023860345.1,0
+PDT001341873.1,E.coli and Shigella,meropenem,susceptible,GCA_023894615.1,0
+PDT001340450.1,E.coli and Shigella,meropenem,susceptible,GCA_023866375.1,0
+PDT001340597.1,E.coli and Shigella,meropenem,susceptible,GCA_023869325.1,0
+PDT001341188.1,E.coli and Shigella,meropenem,susceptible,GCA_023880785.1,0
+PDT001340724.1,E.coli and Shigella,meropenem,susceptible,GCA_023871855.1,0
+PDT001467138.1,E.coli and Shigella,meropenem,susceptible,GCA_025830615.1,0
+PDT001467095.1,E.coli and Shigella,meropenem,susceptible,GCA_025829755.1,0
+PDT002776229.1,E.coli and Shigella,meropenem,susceptible,GCA_050502375.1,0
+PDT002674923.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_048587305.1,0
+PDT001903551.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_032122855.2,0
+PDT000424990.1,Pseudomonas aeruginosa,meropenem,susceptible,GCA_003969225.1,0
+PDT000976924.1,Salmonella enterica,meropenem,susceptible,GCA_017252635.1,0
+PDT001108950.1,Salmonella enterica,meropenem,susceptible,GCA_019598325.1,0
+PDT000469997.1,Salmonella enterica,meropenem,susceptible,GCA_005836365.1,0
+PDT000504070.1,Salmonella enterica,meropenem,susceptible,GCA_005912605.1,0
+PDT001251232.2,Salmonella enterica,meropenem,susceptible,GCA_026945345.1,0
+PDT000269279.2,Salmonella enterica,meropenem,susceptible,GCA_010561405.1,0
+PDT000518393.1,Salmonella enterica,meropenem,susceptible,GCA_006341635.1,0
+PDT000123218.2,Salmonella enterica,meropenem,susceptible,GCA_008475145.1,0
+PDT000129256.2,Salmonella enterica,meropenem,susceptible,GCA_008517365.1,0
+PDT000627281.1,Salmonella enterica,meropenem,susceptible,GCA_010930135.1,0
+PDT000385829.1,Salmonella enterica,meropenem,susceptible,GCA_005545345.1,0
+PDT001983682.1,Salmonella enterica,meropenem,susceptible,GCA_046010255.1,0
+PDT000138068.2,Salmonella enterica,meropenem,susceptible,GCA_008522905.1,0
+PDT000108296.2,Salmonella enterica,meropenem,susceptible,GCA_008407605.1,0
+PDT000570208.1,Salmonella enterica,meropenem,susceptible,GCA_008174325.1,0
+PDT000593842.1,Salmonella enterica,meropenem,susceptible,GCA_008748795.1,0
+PDT000107043.2,Salmonella enterica,meropenem,susceptible,GCA_008408025.1,0
+PDT000565613.1,Salmonella enterica,meropenem,susceptible,GCA_010939295.1,0
+PDT000269074.2,Salmonella enterica,meropenem,susceptible,GCA_010383755.1,0
+PDT000518347.1,Salmonella enterica,meropenem,susceptible,GCA_006338625.1,0
+PDT000269381.2,Salmonella enterica,meropenem,susceptible,GCA_009525255.1,0
+PDT000728783.1,Salmonella enterica,meropenem,susceptible,GCA_014576855.1,0
+PDT000120084.2,Salmonella enterica,meropenem,susceptible,GCA_008517125.1,0
+PDT001195919.1,Salmonella enterica,meropenem,susceptible,GCA_046023915.1,0
+PDT000385775.1,Salmonella enterica,meropenem,susceptible,GCA_005689115.1,0
+PDT000385836.1,Salmonella enterica,meropenem,susceptible,GCA_005545455.1,0
+PDT002553171.1,E.coli and Shigella,meropenem,susceptible,GCA_046370585.1,0
+PDT000502741.2,E.coli and Shigella,meropenem,susceptible,GCA_018340715.1,0
+PDT002991234.1,Acinetobacter baumannii,meropenem,susceptible,GCA_053676895.1,0
+PDT000114305.2,Acinetobacter baumannii,meropenem,susceptible,GCA_016523775.2,0
+PDT000115254.5,E.coli and Shigella,meropenem,susceptible,GCA_012714365.1,0
+PDT001830419.2,E.coli and Shigella,meropenem,susceptible,GCA_032338595.2,0
+PDT001830924.2,E.coli and Shigella,meropenem,susceptible,GCA_032330055.2,0
+PDT001830561.2,E.coli and Shigella,meropenem,susceptible,GCA_032335175.2,0
+PDT000395019.1,E.coli and Shigella,meropenem,susceptible,GCA_012073065.1,0
+PDT000645123.1,E.coli and Shigella,meropenem,susceptible,GCA_012598925.1,0
+PDT000394907.1,E.coli and Shigella,meropenem,susceptible,GCA_012074285.1,0
+PDT000628128.1,E.coli and Shigella,meropenem,susceptible,GCA_012614945.1,0
+PDT000395358.1,E.coli and Shigella,meropenem,susceptible,GCA_003774485.1,0
+PDT000395182.1,E.coli and Shigella,meropenem,susceptible,GCA_003783045.1,0
+PDT000645018.1,E.coli and Shigella,meropenem,susceptible,GCA_012600685.1,0
+PDT000604849.1,E.coli and Shigella,meropenem,susceptible,GCA_012449905.1,0
+PDT000628178.1,E.coli and Shigella,meropenem,susceptible,GCA_012614925.1,0
+PDT000645140.1,E.coli and Shigella,meropenem,susceptible,GCA_012619685.1,0
+PDT000645026.1,E.coli and Shigella,meropenem,susceptible,GCA_012600565.1,0
+PDT000565877.1,E.coli and Shigella,meropenem,susceptible,GCA_012995205.1,0
+PDT000714242.1,E.coli and Shigella,meropenem,susceptible,GCA_012855175.1,0
+PDT001125427.1,E.coli and Shigella,meropenem,susceptible,GCA_019903585.1,0
+PDT001463398.1,E.coli and Shigella,meropenem,susceptible,GCA_025783095.2,0
+PDT001341236.1,E.coli and Shigella,meropenem,susceptible,GCA_023881735.1,0
+PDT001463498.1,E.coli and Shigella,meropenem,susceptible,GCA_025785585.2,0
+PDT001340413.1,E.coli and Shigella,meropenem,susceptible,GCA_023865635.1,0
+PDT001463652.1,E.coli and Shigella,meropenem,susceptible,GCA_025789215.2,0
+PDT001341187.1,E.coli and Shigella,meropenem,susceptible,GCA_023880765.1,0
+PDT001340594.1,E.coli and Shigella,meropenem,susceptible,GCA_023869235.1,0
+PDT001341909.1,E.coli and Shigella,meropenem,susceptible,GCA_023895395.1,0
+PDT001340047.1,E.coli and Shigella,meropenem,susceptible,GCA_023857085.1,0
+PDT001340722.1,E.coli and Shigella,meropenem,susceptible,GCA_023871825.1,0
+PDT001341110.1,E.coli and Shigella,meropenem,susceptible,GCA_023879225.1,0
+PDT001467172.1,E.coli and Shigella,meropenem,susceptible,GCA_025831295.1,0
+PDT001467296.1,E.coli and Shigella,meropenem,susceptible,GCA_025833775.1,0
+PDT001467251.1,E.coli and Shigella,meropenem,susceptible,GCA_025832855.1,0
+PDT002693008.1,E.coli and Shigella,meropenem,susceptible,GCA_049209655.1,0
+PDT001903559.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_032182185.2,0
+PDT002670307.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_048758935.1,0
+PDT003050718.1,Klebsiella pneumoniae,meropenem,susceptible,GCA_054470995.1,0
+PDT001128455.2,Klebsiella pneumoniae,meropenem,susceptible,GCA_019928565.1,0
+PDT000425006.1,Pseudomonas aeruginosa,meropenem,susceptible,GCA_003969565.1,0
+PDT000430052.1,Pseudomonas aeruginosa,meropenem,susceptible,GCA_003977895.1,0
+PDT001258719.1,Salmonella enterica,meropenem,susceptible,GCA_022490545.1,0
+PDT000532600.1,Salmonella enterica,meropenem,susceptible,GCA_006532935.1,0
+PDT001135949.1,Salmonella enterica,meropenem,susceptible,GCA_020096095.1,0
+PDT001276570.1,Salmonella enterica,meropenem,susceptible,GCA_022967555.1,0
+PDT000108238.2,Salmonella enterica,meropenem,susceptible,GCA_008470965.1,0
+PDT000594073.1,Salmonella enterica,meropenem,susceptible,GCA_008761135.1,0
