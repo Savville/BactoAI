@@ -3,6 +3,8 @@
 **Date:** 2026-10-27  
 **Symptom:** LiveAnalyzer shows "The prediction engine hit an error while analyzing this genome." (500 HTML)
 
+> **Historical note:** The project-redirection steps below are not current configuration instructions. The repository account guide and current backend settings identify `ofuxwgapzjgcrsuiqpyu` as the backend project and `ojnecaomcicsayeweoab` as the website project. Do not change the Render backend's Supabase URL based on this incident report without first verifying the intended migration and database schema.
+
 ---
 
 ## Root Cause Analysis

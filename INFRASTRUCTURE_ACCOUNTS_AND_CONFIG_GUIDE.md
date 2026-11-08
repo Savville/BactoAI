@@ -1,7 +1,7 @@
 # BactoAI Infrastructure, Accounts, and Environment Reference
 
 Date: October 27, 2026  
-Status: Verified Active (`status: ok`)
+Status: Repository reference only; live account ownership and settings have not been independently re-verified.
 
 This document maps all active accounts, databases, GitHub remotes, hosting services, and environment variables across the BactoAI ecosystem.
 
@@ -15,7 +15,7 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
 
 * **Project ID:** `ofuxwgapzjgcrsuiqpyu`
 * **Project Name in Dashboard:** `bactoai`
-* **Account Owner:** Personal / ML Engineering account
+* **Account Owner:** Described in prior notes as the personal / ML engineering account; dashboard email not recorded here
 * **Host URL:** `https://ofuxwgapzjgcrsuiqpyu.supabase.co`
 * **Purpose:** Stores backend prediction history, validation feedback, and server authentication.
 * **Tables:**
@@ -29,7 +29,7 @@ BactoAI uses two distinct Supabase projects. They serve different layers and do 
 ### Website Database (Public Web App)
 
 * **Project ID:** `ojnecaomcicsayeweoab`
-* **Account Owner:** Web Collaborator / Lovable Account
+* **Account Owner:** Described in prior notes as the web collaborator / Lovable account; dashboard email not recorded here
 * **Host URL:** `https://ojnecaomcicsayeweoab.supabase.co`
 * **Purpose:** Powers the public React application.
 * **Tables:**
@@ -110,7 +110,7 @@ VITE_SUPABASE_URL="https://ojnecaomcicsayeweoab.supabase.co"
 
 # Prediction Engine Connection (Official Render Deployment)
 MODEL_API_URL="https://bactoai-kt0q.onrender.com/api/v1"
-MODEL_API_KEY="0f31dfb7ccc763239c15c817e4a059184a093466286bb7f9b3f0000b994ae786"
+MODEL_API_KEY=<set in hosting secret settings>
 ```
 
 ---

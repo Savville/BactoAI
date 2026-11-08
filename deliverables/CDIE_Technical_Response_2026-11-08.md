@@ -4,6 +4,33 @@
 
 The evidence bundle contains the requested scripts, test splits, prediction CSVs, model manifest and verification, drug metadata, and BV-BRC table. The prediction CSVs include uncertainty, adaptive threshold, live label and confidence.
 
+## Reviewer checklist
+
+Status: **Done** means supported by the included repository evidence; **Partial** means the available evidence is incomplete; **Owner action** requires dashboard access, missing source data, or a new analysis.
+
+| Reviewer request | Status | Response |
+|:--|:--|:--|
+| Requested scripts, split/prediction CSVs, manifests, metadata, BV-BRC data; explain “E.coli isolates.csv” | **Done / Partial** | Files are in the branch and evidence bundle. That filename was not found in the repository. |
+| Add uncertainty, adaptive threshold, live label and confidence; report live and fixed-threshold metrics | **Done** | Included for 412 rows. Live and fixed-0.50 results match; LOW confidence is 0 for each drug. |
+| Identify deployed model classes and whether RF/LightGBM are used | **Done** | Five calibrated soft-voting models per drug; each base voting model includes XGBoost, Random Forest and LightGBM. |
+| Training software versions and live-path prediction comparison | **Partial** | scikit-learn 1.7.2 is recorded; exact XGBoost training version is not established. A 30-isolate local live-path check passed, but this is not a direct Render execution. |
+| Label sources, per-drug NCBI/BV-BRC counts, and I/ND/DD/NS handling | **Partial** | Deployed metadata has 600 NCBI labels and zero BV-BRC labels per drug. Available intermediate/missing-result evidence is incomplete; historical filtering rules cannot all be recovered. |
+| Assembly versions used for FASTAs | **Done** | Exact accessions and checksums are listed in the genome manifest; this records the versions used, not newer NCBI replacements. |
+| Kenyan-isolate count, source and train/test assignment | **Partial** | The two Kenyan accessions in deployed metadata are in training. A separate enrichment file has seven records; its study attribution comes from the supplied review, and relatedness was not assessed. |
+| Supabase regions, RLS screenshots, Render key role, read-only access and retention | **Owner action** | Check the backend Supabase project and website Supabase project separately, plus the active production Render service. Repository notes do not prove live settings or dashboard-account email ownership. No automated retention period is configured for records/logs. |
+| Remove superseded record, correct old performance values, and avoid invalid population script | **Done** | Superseded deliverables and invalid audit results were removed from the branch; `populate_isolate_table.py` was not run. |
+| Explain v3/v4 cefotaxime AUC difference and deployed model | **Partial** | Production uses v4 according to local artifacts and the supplied Render review. The old v3 model/predictions are unavailable, so its AUC difference cannot be reconciled. |
+| Explain test-size and cefotaxime accuracy changes | **Partial** | The old split was non-equivalent and is withdrawn. The old cefotaxime row-level output is unavailable, so the one-call difference cannot be traced. |
+| Reproduce 0.9333 and 0.7793 results | **Done** | 0.9333 is reproducible as an in-corpus benchmark, not external validation; 0.7793 is withdrawn for lack of row-level predictions. |
+| Calibration data, threshold origin and test-data involvement | **Partial** | Platt calibration is fitted within training data. The test set is used for evaluation and saved conformal scores. The original rationale/selection history for thresholds is undocumented. |
+| ANI/SNP or other train/test relatedness analysis | **Owner action** | No relatedness analysis has been run; possible leakage remains unmeasured. |
+
+### Which accounts and projects to check
+
+The repository account guide maps `ofuxwgapzjgcrsuiqpyu` to the **backend/ML Supabase project** and `ojnecaomcicsayeweoab` to the **website Supabase project**. It maps `bactoai-kt0q.onrender.com` to the **active production Render service** under the official BactoAI account, and `bactoai.onrender.com` to a deprecated personal deployment. The guide does not identify which of your two email logins owns each dashboard; confirm the account email in the dashboard before changing settings. For the reviewers’ backend questions, start with the backend project and active production Render service, and verify the website project separately.
+
+The older `PREDICTION_PIPELINE_FIX.md` recommends redirecting the backend to the website Supabase project. That conflicts with the current backend configuration and account guide; do not use that instruction as the current configuration without confirming the intended migration. The backend migration target also needs owner review.
+
 | Drug | n (R/S) | Sensitivity | Specificity | VME | ME | Low confidence | AUC (95% CI) |
 |:--|--:|--:|--:|--:|--:|--:|:--|
 | Meropenem | 124 (70/54) | 91.4% | 87.0% | 8.6% (6/70) | 13.0% (7/54) | 0/124 | 0.9421 (0.9009–0.9832) |
@@ -38,7 +65,7 @@ The “two Kenyan isolates” figure counts unique accessions in the deployed NC
 
 ## Repository and remaining checks
 
-The website and backend Supabase projects will remain separate through the CDIE deadline; afterward, their boundaries should be reviewed against data trust, access control and operational ownership before deciding whether to consolidate. Backend region, live RLS, and Render key role remain unverified. The local backend migration points to the website project and defines permissive policies, while backend configuration names another project. Prediction records, feedback and IP logs have no automated retention policy; uploaded FASTA files are not retained. The project owner still needs to verify the region and key role, provide Table Editor screenshots, and grant the requested read-only access.
+The website and backend Supabase projects will remain separate through the CDIE deadline; afterward, their boundaries should be reviewed against data trust, access control and operational ownership before deciding whether to consolidate. The account guide identifies the backend as `ofuxwgapzjgcrsuiqpyu` and the website as `ojnecaomcicsayeweoab`, but region, live RLS, Render key role, dashboard-account ownership and read-only access remain unverified. The local backend migration points to the website project and defines permissive policies, while backend configuration names the backend project. Prediction records, feedback and IP logs have no automated retention policy; uploaded FASTA files are not retained. The project owner still needs to verify both projects' settings, provide Table Editor screenshots, and grant the requested read-only access.
 
 The requested `metadata_{drug}.csv` and `BVBRC_genome_amr.csv` are included in the repository branch. The tracked `.venv` and obsolete `data/models/` and `data/transformers/` assets are removed from the branch index without deleting local copies. The current loader uses the v4 directories. “E.coli isolates.csv” was not found in the repository; its source cannot be identified without a path or copy. `populate_isolate_table.py` was not run. The model files in branch history are ordinary Git objects; the Dockerfile has no Git LFS pull step.
 
