@@ -1,7 +1,7 @@
 # BactoAI Infrastructure, Accounts, and Environment Reference
 
 Date: October 27, 2026  
-Status: Updated 2026-11-08 with owner-provided account details; Render backend URL confirmed, key value remains masked.
+Status: Updated 2026-11-08 with owner-provided account details; Render backend URL and public key confirmed.
 
 This document records known accounts, configured project references, and deployment settings. Treat values masked in dashboard screenshots and any unconfirmed project ownership as unresolved.
 
@@ -62,7 +62,7 @@ Both remotes point to the same codebase and are synchronized on the `main` branc
 | Render service `srv-daob3gv40ujc73ejs44g` | `bactoai@gmail.com` (owner-provided) | Public hostname and current health not confirmed from the supplied settings screenshot | ML prediction API / Gunicorn service |
 | `https://bactoai.onrender.com` | Previously described as a personal account | Status not re-confirmed | Confirm the service and hostname before use |
 
-The owner confirms the Render `SUPABASE_URL` is `https://ofuxwgapzjgcrsuiqpyu.supabase.co`, the backend project. The screenshot masks the `SUPABASE_KEY`, so its role is not confirmed. The service's public hostname and current health are also unconfirmed.
+The owner confirms the Render `SUPABASE_URL` is `https://ofuxwgapzjgcrsuiqpyu.supabase.co`, the backend project, and that Render uses the Supabase public/publishable key (`sb_publishable_...`), equivalent in purpose to the legacy `anon` key. The service's public hostname and current health are still unconfirmed.
 
 ---
 
@@ -79,7 +79,7 @@ SUPABASE_KEY=<key value not shown; role unverified>
 
 Render dashboard variables (service `srv-daob3gv40ujc73ejs44g`):
 * `SUPABASE_URL`: Confirmed by the owner as `https://ofuxwgapzjgcrsuiqpyu.supabase.co` (backend project).
-* `SUPABASE_KEY`: Present; masked in the supplied screenshot. Key role is unconfirmed.
+* `SUPABASE_KEY`: Confirmed by the owner as the Supabase public/publishable key (`sb_publishable_...`), equivalent in purpose to the legacy `anon` key.
 * `BACTOAI_SECRET`: `<session_signing_secret>`
 * `BACTOAI_ADMIN_USER`: `bactoai`
 * `BACTOAI_ADMIN_PASS`: `<admin_password>`
